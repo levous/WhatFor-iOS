@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB69EC8019ABA2C4005BA0EB /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB69EC7F19ABA2C4005BA0EB /* Storyboard.storyboard */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB69EC7F19ABA2C4005BA0EB /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = View/Storyboard.storyboard; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB69EC7E19ABA2A7005BA0EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB69EC7F19ABA2C4005BA0EB /* Storyboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		FB933CA619AB9D9100B71A64 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		FB933CBA19AB9D9100B71A64 /* WhatFor */ = {
 			isa = PBXGroup;
 			children = (
+				FB69EC7E19ABA2A7005BA0EB /* View */,
 				FB933CC319AB9D9100B71A64 /* RZAppDelegate.h */,
 				FB933CC419AB9D9100B71A64 /* RZAppDelegate.m */,
 				FB933CC919AB9D9100B71A64 /* Images.xcassets */,
@@ -231,6 +242,7 @@
 			files = (
 				FB933CBF19AB9D9100B71A64 /* InfoPlist.strings in Resources */,
 				FB933CCA19AB9D9100B71A64 /* Images.xcassets in Resources */,
+				FB69EC8019ABA2C4005BA0EB /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +466,7 @@
 				FB933CE319AB9D9100B71A64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB933CE419AB9D9100B71A64 /* Build configuration list for PBXNativeTarget "WhatForTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +475,7 @@
 				FB933CE619AB9D9100B71A64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
