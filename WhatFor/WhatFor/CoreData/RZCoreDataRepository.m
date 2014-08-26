@@ -166,6 +166,13 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
+        if ([error code] == 134100) {
+            // this is a model incompatibility issue and we need to blow away the data
+            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+            // it's still going to crash... but it'll start next run
+            
+        }
+        
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
