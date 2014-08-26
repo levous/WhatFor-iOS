@@ -12,9 +12,10 @@
 
 @implementation Milestone
 
-@dynamic title;
 @dynamic createDate;
 @dynamic summary;
+@dynamic title;
+@dynamic sortOrder;
 @dynamic milestoneGoal;
 
 @end

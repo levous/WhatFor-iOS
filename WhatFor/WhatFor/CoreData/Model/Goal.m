@@ -12,9 +12,10 @@
 
 @implementation Goal
 
-@dynamic title;
-@dynamic summary;
 @dynamic createDate;
+@dynamic summary;
+@dynamic title;
+@dynamic sortOrder;
 @dynamic goalMilestones;
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RZCoreDataRepository.h"
 
 @interface RZAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+@property (strong, nonatomic, readonly) RZCoreDataRepository *coreDataRepository;
 @end

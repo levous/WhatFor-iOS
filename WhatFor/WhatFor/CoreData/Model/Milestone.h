@@ -13,9 +13,10 @@
 
 @interface Milestone : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * createDate;
 @property (nonatomic, retain) NSString * summary;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSNumber * sortOrder;
 @property (nonatomic, retain) Goal *milestoneGoal;
 
 @end

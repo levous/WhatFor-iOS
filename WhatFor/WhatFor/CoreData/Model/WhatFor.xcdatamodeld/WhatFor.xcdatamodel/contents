@@ -2,18 +2,20 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" defaultDateTimeInterval="0" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="goalMilestones" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Milestone" inverseName="milestoneGoal" inverseEntity="Milestone" syncable="YES"/>
     </entity>
     <entity name="Milestone" representedClassName="Milestone" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="milestoneGoal" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="goalMilestones" inverseEntity="Goal" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Milestone" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Goal" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Milestone" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

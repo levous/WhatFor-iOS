@@ -13,9 +13,10 @@
 
 @interface Goal : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSDate * createDate;
+@property (nonatomic, retain) NSString * summary;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSNumber * sortOrder;
 @property (nonatomic, retain) NSOrderedSet *goalMilestones;
 @end
 

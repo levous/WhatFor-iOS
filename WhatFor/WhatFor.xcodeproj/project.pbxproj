@@ -27,14 +27,25 @@
 		FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDED19ACD95400A4686F /* RZTestingRepository.m */; };
 		FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDF019ACDF5600A4686F /* RZSeedDataInserter.m */; };
 		FBD4DDF219ACDF5600A4686F /* RZSeedDataInserter.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDF019ACDF5600A4686F /* RZSeedDataInserter.m */; };
-		FBD4DE0119ACE0E100A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDFE19ACE0E100A4686F /* Goal.m */; };
-		FBD4DE0219ACE0E100A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDFE19ACE0E100A4686F /* Goal.m */; };
-		FBD4DE0319ACE0E100A4686F /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE0019ACE0E100A4686F /* Milestone.m */; };
-		FBD4DE0419ACE0E100A4686F /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE0019ACE0E100A4686F /* Milestone.m */; };
 		FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE0619ACE5B000A4686F /* RZCoreDataRepositoryTests.m */; };
 		FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */; };
+		FBD4DE1819ACF55500A4686F /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1719ACF55500A4686F /* RZTesterViewController.m */; };
+		FBD4DE1919ACF55500A4686F /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1719ACF55500A4686F /* RZTesterViewController.m */; };
+		FBD4DE2019ACFA0300A4686F /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1F19ACFA0300A4686F /* RZGoalListViewController.m */; };
+		FBD4DE2119ACFA0300A4686F /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1F19ACFA0300A4686F /* RZGoalListViewController.m */; };
+		FBD4DE2419AD1AF900A4686F /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2319AD1AF900A4686F /* RZMilestoneCell.m */; };
+		FBD4DE2519AD1AF900A4686F /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2319AD1AF900A4686F /* RZMilestoneCell.m */; };
+		FBD4DE2C19AD233400A4686F /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2B19AD233400A4686F /* RZGoalListViewModel.m */; };
+		FBD4DE2D19AD233400A4686F /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2B19AD233400A4686F /* RZGoalListViewModel.m */; };
+		FBD4DE3019AD256F00A4686F /* MilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2F19AD256F00A4686F /* MilestoneViewModel.m */; };
+		FBD4DE3119AD257000A4686F /* MilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE2F19AD256F00A4686F /* MilestoneViewModel.m */; };
+		FBD4DE3719AD298600A4686F /* RZGoalListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */; };
+		FBD4DE4A19AD30A800A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4919AD30A800A4686F /* Goal.m */; };
+		FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4919AD30A800A4686F /* Goal.m */; };
+		FBD4DE4E19AD30A900A4686F /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4D19AD30A900A4686F /* Milestone.m */; };
+		FBD4DE4F19AD30A900A4686F /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4D19AD30A900A4686F /* Milestone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,14 +83,25 @@
 		FBD4DDED19ACD95400A4686F /* RZTestingRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZTestingRepository.m; path = CoreData/RZTestingRepository.m; sourceTree = "<group>"; };
 		FBD4DDEF19ACDF5600A4686F /* RZSeedDataInserter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZSeedDataInserter.h; path = CoreData/RZSeedDataInserter.h; sourceTree = "<group>"; };
 		FBD4DDF019ACDF5600A4686F /* RZSeedDataInserter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZSeedDataInserter.m; path = CoreData/RZSeedDataInserter.m; sourceTree = "<group>"; };
-		FBD4DDFD19ACE0E100A4686F /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
-		FBD4DDFE19ACE0E100A4686F /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
-		FBD4DDFF19ACE0E100A4686F /* Milestone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestone.h; sourceTree = "<group>"; };
-		FBD4DE0019ACE0E100A4686F /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
 		FBD4DE0519ACE14200A4686F /* ModelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
 		FBD4DE0619ACE5B000A4686F /* RZCoreDataRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZCoreDataRepositoryTests.m; path = CoreData/RZCoreDataRepositoryTests.m; sourceTree = "<group>"; };
 		FBD4DE1119ACEAD500A4686F /* WhatFor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatFor.xcdatamodel; sourceTree = "<group>"; };
 		FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZSeedDataInserterTests.m; path = CoreData/RZSeedDataInserterTests.m; sourceTree = "<group>"; };
+		FBD4DE1619ACF55500A4686F /* RZTesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTesterViewController.h; sourceTree = "<group>"; };
+		FBD4DE1719ACF55500A4686F /* RZTesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTesterViewController.m; sourceTree = "<group>"; };
+		FBD4DE1E19ACFA0300A4686F /* RZGoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZGoalListViewController.h; path = View/RZGoalListViewController.h; sourceTree = "<group>"; };
+		FBD4DE1F19ACFA0300A4686F /* RZGoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZGoalListViewController.m; path = View/RZGoalListViewController.m; sourceTree = "<group>"; };
+		FBD4DE2219AD1AF900A4686F /* RZMilestoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZMilestoneCell.h; path = View/RZMilestoneCell.h; sourceTree = "<group>"; };
+		FBD4DE2319AD1AF900A4686F /* RZMilestoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZMilestoneCell.m; path = View/RZMilestoneCell.m; sourceTree = "<group>"; };
+		FBD4DE2A19AD233400A4686F /* RZGoalListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZGoalListViewModel.h; path = View/RZGoalListViewModel.h; sourceTree = "<group>"; };
+		FBD4DE2B19AD233400A4686F /* RZGoalListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZGoalListViewModel.m; path = View/RZGoalListViewModel.m; sourceTree = "<group>"; };
+		FBD4DE2E19AD256F00A4686F /* MilestoneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MilestoneViewModel.h; path = View/MilestoneViewModel.h; sourceTree = "<group>"; };
+		FBD4DE2F19AD256F00A4686F /* MilestoneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MilestoneViewModel.m; path = View/MilestoneViewModel.m; sourceTree = "<group>"; };
+		FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewModelTests.m; sourceTree = "<group>"; };
+		FBD4DE4819AD30A800A4686F /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		FBD4DE4919AD30A800A4686F /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		FBD4DE4C19AD30A900A4686F /* Milestone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestone.h; sourceTree = "<group>"; };
+		FBD4DE4D19AD30A900A4686F /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +134,16 @@
 			isa = PBXGroup;
 			children = (
 				FB69EC7F19ABA2C4005BA0EB /* iPhone.storyboard */,
+				FBD4DE1619ACF55500A4686F /* RZTesterViewController.h */,
+				FBD4DE1719ACF55500A4686F /* RZTesterViewController.m */,
+				FBD4DE1E19ACFA0300A4686F /* RZGoalListViewController.h */,
+				FBD4DE1F19ACFA0300A4686F /* RZGoalListViewController.m */,
+				FBD4DE2219AD1AF900A4686F /* RZMilestoneCell.h */,
+				FBD4DE2319AD1AF900A4686F /* RZMilestoneCell.m */,
+				FBD4DE2A19AD233400A4686F /* RZGoalListViewModel.h */,
+				FBD4DE2B19AD233400A4686F /* RZGoalListViewModel.m */,
+				FBD4DE2E19AD256F00A4686F /* MilestoneViewModel.h */,
+				FBD4DE2F19AD256F00A4686F /* MilestoneViewModel.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -174,6 +206,7 @@
 		FB933CD719AB9D9100B71A64 /* WhatForTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBD4DE3519AD298600A4686F /* View */,
 				FBD4DDE719ACD55A00A4686F /* CoreData */,
 				FB933CDD19AB9D9100B71A64 /* WhatForTests.m */,
 				FB933CD819AB9D9100B71A64 /* Supporting Files */,
@@ -217,14 +250,22 @@
 			isa = PBXGroup;
 			children = (
 				FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */,
-				FBD4DDFD19ACE0E100A4686F /* Goal.h */,
-				FBD4DDFE19ACE0E100A4686F /* Goal.m */,
-				FBD4DDFF19ACE0E100A4686F /* Milestone.h */,
-				FBD4DE0019ACE0E100A4686F /* Milestone.m */,
+				FBD4DE4819AD30A800A4686F /* Goal.h */,
+				FBD4DE4919AD30A800A4686F /* Goal.m */,
+				FBD4DE4C19AD30A900A4686F /* Milestone.h */,
+				FBD4DE4D19AD30A900A4686F /* Milestone.m */,
 				FBD4DE0519ACE14200A4686F /* ModelHeader.h */,
 			);
 			name = Model;
 			path = CoreData/Model;
+			sourceTree = "<group>";
+		};
+		FBD4DE3519AD298600A4686F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD4DE0119ACE0E100A4686F /* Goal.m in Sources */,
+				FBD4DE4A19AD30A800A4686F /* Goal.m in Sources */,
+				FBD4DE2019ACFA0300A4686F /* RZGoalListViewController.m in Sources */,
+				FBD4DE4E19AD30A900A4686F /* Milestone.m in Sources */,
+				FBD4DE2419AD1AF900A4686F /* RZMilestoneCell.m in Sources */,
 				FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
 				FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
-				FBD4DE0319ACE0E100A4686F /* Milestone.m in Sources */,
+				FBD4DE3019AD256F00A4686F /* MilestoneViewModel.m in Sources */,
+				FBD4DE1819ACF55500A4686F /* RZTesterViewController.m in Sources */,
+				FBD4DE2C19AD233400A4686F /* RZGoalListViewModel.m in Sources */,
 				FB933CC519AB9D9100B71A64 /* RZAppDelegate.m in Sources */,
 				FB933CC119AB9D9100B71A64 /* main.m in Sources */,
 			);
@@ -338,13 +384,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */,
+				FBD4DE2119ACFA0300A4686F /* RZGoalListViewController.m in Sources */,
 				FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */,
-				FBD4DE0219ACE0E100A4686F /* Goal.m in Sources */,
+				FBD4DE2D19AD233400A4686F /* RZGoalListViewModel.m in Sources */,
 				FB933CDE19AB9D9100B71A64 /* WhatForTests.m in Sources */,
+				FBD4DE4F19AD30A900A4686F /* Milestone.m in Sources */,
+				FBD4DE2519AD1AF900A4686F /* RZMilestoneCell.m in Sources */,
 				FBD4DDEB19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
-				FBD4DE0419ACE0E100A4686F /* Milestone.m in Sources */,
 				FBD4DDF219ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
+				FBD4DE3119AD257000A4686F /* MilestoneViewModel.m in Sources */,
 				FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */,
+				FBD4DE1919ACF55500A4686F /* RZTesterViewController.m in Sources */,
+				FBD4DE3719AD298600A4686F /* RZGoalListViewModelTests.m in Sources */,
 				FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
 				FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */,
 			);

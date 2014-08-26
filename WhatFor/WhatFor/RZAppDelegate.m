@@ -10,12 +10,13 @@
 
 @implementation RZAppDelegate
 
+@synthesize coreDataRepository;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+    coreDataRepository = [[RZCoreDataRepository alloc] init];
     return YES;
 }
 

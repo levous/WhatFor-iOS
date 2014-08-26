@@ -60,7 +60,8 @@
 - (NSArray *)getAllGoals{
     
     NSFetchRequest *request = [self fetchRequestForEntityNamed:@"Goal"];
-    
+    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"sortOrder" ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObjects:sortDesc, nil]];
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (array == nil)

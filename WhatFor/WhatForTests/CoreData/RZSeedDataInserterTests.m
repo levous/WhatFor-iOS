@@ -34,13 +34,16 @@ RZTestingRepository *repos;
     [super tearDown];
 }
 
-- (void)testExample
-{
+- (void)testInsert2GoalsWith4and3Milestones{
     RZSeedDataInserter *inserter = [[RZSeedDataInserter alloc] initWithRepository:repos];
-    [inserter insert2Goals];
+    [inserter insert2GoalsWith4and3Milestones];
     
     NSArray *goals = [repos getAllGoals];
     XCTAssertEqual([goals count], (NSUInteger)2);
+    Goal *goal = [goals objectAtIndex:0];
+    XCTAssertEqual([[goal goalMilestones] count], (NSUInteger)4);
+    goal = [goals objectAtIndex:1];
+    XCTAssertEqual([[goal goalMilestones] count], (NSUInteger)3);
 }
 
 @end

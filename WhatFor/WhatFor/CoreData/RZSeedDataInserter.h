@@ -12,6 +12,7 @@
 @interface RZSeedDataInserter : NSObject
 
 - (id)initWithRepository:(RZCoreDataRepository *)repos;
-- (void)insert2Goals;
+- (void)seedAllData;
+- (void)insert2GoalsWith4and3Milestones;
 
 @end
