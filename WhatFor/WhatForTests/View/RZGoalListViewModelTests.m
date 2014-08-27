@@ -10,13 +10,16 @@
 #import "RZGoalListViewModel.h"
 #import "RZTestingRepository.h"
 #import "RZSeedDataInserter.h"
+#import "Milestone+Enums.h"
+#import "RZUIStyleGuide.h"
+
 
 @interface RZGoalListViewModelTests : XCTestCase
 
 @end
 
 @implementation RZGoalListViewModelTests
-RZGoalListViewModel *listViewModel;
+
 RZTestingRepository *repos;
 RZSeedDataInserter *seedInserter;
 
@@ -28,7 +31,7 @@ RZSeedDataInserter *seedInserter;
     // insert 2 goals with 4 and 3 milestones, respectively
     seedInserter = [[RZSeedDataInserter alloc] initWithRepository:repos];
     [seedInserter insert2GoalsWith4and3Milestones];
-    listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos];
+    
 }
 
 - (void)tearDown
@@ -39,18 +42,60 @@ RZSeedDataInserter *seedInserter;
 
 - (void)testViewModelData
 {
+    NSArray *colors = [NSArray arrayWithObjects:[RZUIStyleGuide fontColorForStatus:RZActivityStatusUnknown], [RZUIStyleGuide fontColorForStatus:RZActivityStatusInProgress], [RZUIStyleGuide fontColorForStatus:RZActivityStatusComplete], [RZUIStyleGuide fontColorForStatus:RZActivityStatusBlocked], nil];
+    
+    NSArray *goals = [repos getAllGoals];
+    Goal *goal = [goals objectAtIndex:0];
+    
+    Milestone *milestone;
+    
+    // set status for validation
+    milestone = [[goal goalMilestones]objectAtIndex:0];
+    [milestone setStatus:RZActivityStatusComplete];
+    milestone = [[goal goalMilestones]objectAtIndex:1];
+    [milestone setStatus:RZActivityStatusInProgress];
+    milestone = [[goal goalMilestones]objectAtIndex:2];
+    [milestone setStatus:RZActivityStatusBlocked];
+    milestone = [[goal goalMilestones]objectAtIndex:3];
+    [milestone setStatus:RZActivityStatusUnknown];
+    
+    RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos];
     XCTAssertEqual((NSUInteger)2, [listViewModel goalCount]);
     XCTAssertEqual((NSUInteger)4, [listViewModel milestoneCountForGoalAtIndex:0]);
     XCTAssertEqual((NSUInteger)3, [listViewModel milestoneCountForGoalAtIndex:1]);
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    MilestoneViewModel *viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
     
-    // for now just checking value but should expland this to verify sh!^ as sh!^ gets implemented
+    NSIndexPath *indexPath;
+    MilestoneViewModel *viewModel;
     
+    indexPath  = [NSIndexPath indexPathForRow:0 inSection:0];
+    viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
     XCTAssertNotNil([viewModel title]);
     XCTAssertNotNil([viewModel summary]);
     XCTAssertEqualObjects([[viewModel status] title], @"Completed");
-    XCTAssertNotNil([[viewModel status] color]);
+    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusComplete]);
+    
+    indexPath  = [NSIndexPath indexPathForRow:1 inSection:0];
+    viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
+    XCTAssertNotNil([viewModel title]);
+    XCTAssertNotNil([viewModel summary]);
+    XCTAssertEqualObjects([[viewModel status] title], @"In Progress");
+    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusInProgress]);
+    
+    indexPath  = [NSIndexPath indexPathForRow:2 inSection:0];
+    viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
+    XCTAssertNotNil([viewModel title]);
+    XCTAssertNotNil([viewModel summary]);
+    XCTAssertEqualObjects([[viewModel status] title], @"Blocked");
+    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusBlocked]);
+    
+    indexPath  = [NSIndexPath indexPathForRow:3 inSection:0];
+    viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
+    XCTAssertNotNil([viewModel title]);
+    XCTAssertNotNil([viewModel summary]);
+    XCTAssertEqualObjects([[viewModel status] title], @"Unknown");
+    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusUnknown]);
+                                                
+    
     
                    
 }

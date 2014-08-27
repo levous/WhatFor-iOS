@@ -13,9 +13,10 @@
 @implementation Milestone
 
 @dynamic createDate;
+@dynamic sortOrder;
 @dynamic summary;
 @dynamic title;
-@dynamic sortOrder;
+@dynamic statusNumber;
 @dynamic milestoneGoal;
 
 @end

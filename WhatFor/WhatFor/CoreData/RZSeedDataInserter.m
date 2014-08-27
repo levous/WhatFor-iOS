@@ -7,6 +7,7 @@
 //
 
 #import "RZSeedDataInserter.h"
+#import "Milestone+Enums.h"
 
 @implementation RZSeedDataInserter
 
@@ -36,16 +37,23 @@ RZCoreDataRepository *_repos;
     Milestone *milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.1"];
     [milestone setSummary:@"Metus pellentesque, nunc porttitor cum phasellus arcu, duis sollicitudin libero purus tristique sodales quis, consequat vehicula aliquam nisl ante, cras porttitor nulla."];
+    [milestone setStatus:RZActivityStatusInProgress];
+    
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.2"];
     [milestone setSummary:@"Lorem ipsum dolor sit amet, natoque viverra iaculis lacinia diam es."];
+    [milestone setStatus:RZActivityStatusComplete];
+    
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.3"];
     [milestone setSummary:@"Libero purus tristique sodales quis, consequat vehicula aliquam nisl ante, cras porttitor nulla libero. Sollicitudin justo hymenaeos. Vivamus integer, tristique nonummy justo nisl ante eget."];
+    [milestone setStatus:RZActivityStatusInProgress];
+    
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.4"];
     [milestone setSummary:@"Cras porttitor nulla libero."];
-
+    [milestone setStatus:RZActivityStatusComplete];
+    
     goal = _repos.createGoal;
     [goal setTitle:@"Goal 2"];
     [goal setSortOrder:[NSNumber numberWithInt:2]];
@@ -53,12 +61,17 @@ RZCoreDataRepository *_repos;
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 2.1"];
     [milestone setSummary:@"Urna odio ipsum per in phasellus curabitur. Commodo etiam varius dolore nulla suscipit egestas, nec morbi vehicula scelerisque eget. Metus per egestas neque placerat, mi nullam gravida, nullam modi sodales felis nec odio. Est vitae tincidunt ac lacus, est libero phasellus pellentesque vestibulum id eleifend, laoreet vestibulum ullamcorper sed phasellus."];
+    [milestone setStatus:RZActivityStatusInProgress];
+    
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 2.2"];
     [milestone setSummary:@"Commodo etiam varius dolore nulla suscipit egestas, nec morbi vehicula scelerisque eget."];
+    [milestone setStatus:RZActivityStatusBlocked];
+    
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 2.3"];
     [milestone setSummary:@"Pellentesque vestibulum id eleifend, laoreet vestibulum ullamcorper sed phasellus."];
+    [milestone setStatus:RZActivityStatusUnknown];
 
     [_repos saveContext];
     

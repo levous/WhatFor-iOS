@@ -10,6 +10,7 @@
     <entity name="Milestone" representedClassName="Milestone" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="statusNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="milestoneGoal" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="goalMilestones" inverseEntity="Goal" syncable="YES"/>
