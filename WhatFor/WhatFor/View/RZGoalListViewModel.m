@@ -14,15 +14,32 @@
 
 RZCoreDataRepository *repos;
 NSArray *goals;
+NSMutableDictionary *filteredMilstones;
 
-- (id)initWithRepository:(RZCoreDataRepository *)coreDataRepository
+- (id)initWithRepository:(RZCoreDataRepository *)coreDataRepository hideCompletedMilestones:(BOOL)hideCompletedMilestones
 {
     self = [super init];
     if (self) {
+        [self setHideCompletedMilestones:hideCompletedMilestones];
         repos = coreDataRepository;
         goals = [repos getAllGoals];
+        [self prepareFilteredMilstones];
     }
     return self;
+}
+
+- (void)prepareFilteredMilstones{
+    filteredMilstones = [NSMutableDictionary dictionary];
+    for (Goal *goal in goals) {
+        NSMutableArray *milestones = [NSMutableArray array];
+        for (Milestone *milestone in [goal goalMilestones]) {
+            if(![self hideCompletedMilestones] || ([milestone status] != RZActivityStatusComplete))
+            {
+                [milestones addObject:milestone];
+            }
+        }
+        [filteredMilstones setObject:milestones forKey:[goal objectID]];
+    }
 }
 
 #pragma mark - View Logic
@@ -52,8 +69,11 @@ NSArray *goals;
 }
 
 - (NSUInteger)milestoneCountForGoalAtIndex:(NSUInteger)index{
+    
     Goal *goal = [goals objectAtIndex:index];
-    return [[goal goalMilestones] count];
+    NSArray *milestones = [filteredMilstones objectForKey:[goal objectID]];
+    if(milestones == nil) return 0;
+    return [milestones count];
 }
 
 - (NSString *)titleForGoalAtIndex:(NSUInteger)index{
@@ -61,11 +81,12 @@ NSArray *goals;
     return [goal title];
 }
 
-- (MilestoneViewModel *)milestoneViewModelAtIndexPath:(NSIndexPath *)indexPath{
+- (RZMilestoneViewModel *)milestoneViewModelAtIndexPath:(NSIndexPath *)indexPath{
     
-
-    Milestone *milestone = [[[goals objectAtIndex:indexPath.section] goalMilestones] objectAtIndex:indexPath.row];
-    MilestoneViewModel *viewModel = [[MilestoneViewModel alloc] init];
+    Goal *goal = [goals objectAtIndex:indexPath.section];
+    NSArray *milestones = [filteredMilstones objectForKey:[goal objectID]];
+    Milestone *milestone = [milestones objectAtIndex:indexPath.row];
+    RZMilestoneViewModel *viewModel = [[RZMilestoneViewModel alloc] init];
     [viewModel setTitle:[milestone title]];
     [viewModel setSummary:[milestone summary]];
     RZActivityStatus status = [milestone status];

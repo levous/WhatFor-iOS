@@ -12,5 +12,5 @@
 @interface RZGoalListViewController : UITableViewController
 
 @property (strong, nonatomic) RZCoreDataRepository *coreDataRepository;
-
+@property (nonatomic) BOOL hideCompleted;
 @end

@@ -59,13 +59,13 @@ RZSeedDataInserter *seedInserter;
     milestone = [[goal goalMilestones]objectAtIndex:3];
     [milestone setStatus:RZActivityStatusUnknown];
     
-    RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos];
+    RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:NO];
     XCTAssertEqual((NSUInteger)2, [listViewModel goalCount]);
     XCTAssertEqual((NSUInteger)4, [listViewModel milestoneCountForGoalAtIndex:0]);
     XCTAssertEqual((NSUInteger)3, [listViewModel milestoneCountForGoalAtIndex:1]);
     
     NSIndexPath *indexPath;
-    MilestoneViewModel *viewModel;
+    RZMilestoneViewModel *viewModel;
     
     indexPath  = [NSIndexPath indexPathForRow:0 inSection:0];
     viewModel = [listViewModel milestoneViewModelAtIndexPath:indexPath];
@@ -98,6 +98,29 @@ RZSeedDataInserter *seedInserter;
     
     
                    
+}
+
+- (void)testHideCompleted
+{
+    NSArray *goals = [repos getAllGoals];
+    
+    Goal *goal = [goals objectAtIndex:0];
+    Milestone *milestone;
+    
+    // set status for validation
+    milestone = [[goal goalMilestones]objectAtIndex:0];
+    [milestone setStatus:RZActivityStatusComplete];
+    milestone = [[goal goalMilestones]objectAtIndex:1];
+    [milestone setStatus:RZActivityStatusComplete];
+    milestone = [[goal goalMilestones]objectAtIndex:2];
+    [milestone setStatus:RZActivityStatusBlocked];
+    milestone = [[goal goalMilestones]objectAtIndex:3];
+    [milestone setStatus:RZActivityStatusUnknown];
+    
+    RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:YES];
+
+    XCTAssertEqual((NSUInteger)2, [listViewModel milestoneCountForGoalAtIndex:0]);
+
 }
 
 @end

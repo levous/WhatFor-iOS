@@ -16,13 +16,13 @@
             return [UIColor grayColor];
             break;
         case RZActivityStatusInProgress:
-            return [UIColor blueColor];
+            return [UIColor colorWithRed:31.0/255 green:58.0/255 blue:147.0/255 alpha:1.0];
             break;
         case RZActivityStatusComplete:
-            return [UIColor greenColor];
+            return [UIColor colorWithRed:30.0/255 green:130.0/255 blue:76.0/255 alpha:1.0];
             break;
         case RZActivityStatusBlocked:
-            return [UIColor redColor];
+            return [UIColor colorWithRed:207.0/255 green:0 blue:15.0/255 alpha:1.0];
             break;
         
         default:

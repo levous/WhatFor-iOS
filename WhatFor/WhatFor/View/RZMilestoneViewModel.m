@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
-#import "MilestoneViewModel.h"
-@implementation MilestoneViewModelStatus
+#import "RZMilestoneViewModel.h"
+@implementation RZMilestoneViewModelStatus
 @synthesize title, color;
 @end
 
-@implementation MilestoneViewModel
+@implementation RZMilestoneViewModel
 @synthesize title, summary, status;
 - (id)init
 {
     self = [super init];
     if (self) {
-        status = [[MilestoneViewModelStatus alloc] init];
+        status = [[RZMilestoneViewModelStatus alloc] init];
     }
     return self;
 }

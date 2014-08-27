@@ -7,9 +7,9 @@
 //
 
 #import "RZGoalListViewController.h"
-#import "RZAppDelegate.h"
 #import "ModelHeader.h"
 #import "RZGoalListViewModel.h"
+#import "RZMilestoneCell.h"
 
 @interface RZGoalListViewController ()
 
@@ -34,18 +34,9 @@ RZGoalListViewModel *goalListViewModel;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    
-
-    //TODO: make this code less strinky.  ie: no app delegate nonsense
-    RZAppDelegate *appDelegate = (RZAppDelegate *)[[UIApplication sharedApplication] delegate];
-    RZCoreDataRepository *repos = [appDelegate coreDataRepository];
-    goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos];
-    
+    goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:[self coreDataRepository] hideCompletedMilestones:self.hideCompleted];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
@@ -78,13 +69,13 @@ RZGoalListViewModel *goalListViewModel;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"milestoneCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	
-    MilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
+    RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
 
-    [[cell textLabel] setText:[viewModel title]];
-    [[cell detailTextLabel] setText:[[viewModel status] title]];
-    [[cell detailTextLabel] setTextColor:[[viewModel status] color]];
+    [[cell titleLabel] setText:[viewModel title]];
+    [[cell statusLabel] setText:[[viewModel status] title]];
+    [[cell statusLabel] setTextColor:[[viewModel status] color]];
     
     return cell;
 }
