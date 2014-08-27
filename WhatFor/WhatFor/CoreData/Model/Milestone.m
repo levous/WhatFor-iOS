@@ -17,6 +17,8 @@
 @dynamic summary;
 @dynamic title;
 @dynamic statusNumber;
+@dynamic pointValue;
+@dynamic dueDate;
 @dynamic milestoneGoal;
 
 @end

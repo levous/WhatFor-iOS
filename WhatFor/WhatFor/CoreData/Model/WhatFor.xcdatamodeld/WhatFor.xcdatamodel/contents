@@ -9,6 +9,8 @@
     </entity>
     <entity name="Milestone" representedClassName="Milestone" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pointValue" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="statusNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>

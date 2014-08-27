@@ -18,6 +18,8 @@
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * statusNumber;
+@property (nonatomic, retain) NSNumber * pointValue;
+@property (nonatomic, retain) NSDate * dueDate;
 @property (nonatomic, retain) Goal *milestoneGoal;
 
 @end
