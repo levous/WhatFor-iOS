@@ -46,6 +46,8 @@ RZGoalListViewModel *goalListViewModel;
     RZCoreDataRepository *repos = [appDelegate coreDataRepository];
     goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos];
     
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,21 +112,34 @@ RZGoalListViewModel *goalListViewModel;
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+#pragma mark ReOrdering
 
-/*
-// Override to support conditional rearranging of the table view.
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    if (sourceIndexPath.section != proposedDestinationIndexPath.section) {
+        NSInteger row = 0;
+        if (sourceIndexPath.section < proposedDestinationIndexPath.section) {
+            row = [tableView numberOfRowsInSection:sourceIndexPath.section] - 1;
+        }
+        return [NSIndexPath indexPathForRow:row inSection:sourceIndexPath.section];
+    }
+    
+    return proposedDestinationIndexPath;
+}
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    
+}
+
+
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
 
 /*
 #pragma mark - Navigation
