@@ -7,6 +7,8 @@
 //
 
 #import "RZGoalListViewModel.h"
+#import "Milestone+Enums.h"
+#import "RZUIStyleGuide.h"
 
 @implementation RZGoalListViewModel
 
@@ -22,6 +24,28 @@ NSArray *goals;
     }
     return self;
 }
+
+#pragma mark - View Logic
+
+- (NSString *)textForStatus:(RZActivityStatus)status{
+    switch (status){
+    
+    case RZActivityStatusInProgress:
+        return @"In Progress";
+        break;
+    case RZActivityStatusComplete:
+        return @"Completed";
+        break;
+    case RZActivityStatusBlocked:
+        return @"Blocked";
+        break;
+    default:
+        return @"Unknown";
+        break;
+    }
+}
+
+#pragma mark - TableView Methods
 
 - (NSUInteger)goalCount{
     return [goals count];
@@ -44,8 +68,9 @@ NSArray *goals;
     MilestoneViewModel *viewModel = [[MilestoneViewModel alloc] init];
     [viewModel setTitle:[milestone title]];
     [viewModel setSummary:[milestone summary]];
-    [[viewModel status] setTitle:@"Completed"];
-    [[viewModel status] setColor:[UIColor greenColor]];
+    RZActivityStatus status = [milestone status];
+    [[viewModel status] setTitle:[self textForStatus:status]];
+    [[viewModel status] setColor:[RZUIStyleGuide fontColorForStatus:status]];
 
     return viewModel;
                                      

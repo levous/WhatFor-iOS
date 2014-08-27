@@ -16,4 +16,11 @@
     #import <CoreData/CoreData.h>
 
 
+typedef NS_ENUM(NSUInteger, RZActivityStatus) {
+    RZActivityStatusUnknown,
+    RZActivityStatusInProgress,
+    RZActivityStatusComplete,
+    RZActivityStatusBlocked
+};
+
 #endif

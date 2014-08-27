@@ -25,6 +25,9 @@
 #pragma mark - Milestones
 - (Milestone *)createMilestoneForGoal:(Goal *)goal;
 
+#pragma mark - clear all
+- (void)clearAllData;
+
 #pragma mark - save
 - (void)saveContext;
 @end

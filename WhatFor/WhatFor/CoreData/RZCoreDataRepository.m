@@ -140,9 +140,15 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WhatFor.sqlite"];
     
+    // handle db upgrade
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+
+    
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[RZCoreDataRepository managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          
@@ -166,18 +172,37 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        if ([error code] == 134100) {
-            // this is a model incompatibility issue and we need to blow away the data
-            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
-            // it's still going to crash... but it'll start next run
+        switch ([error code]){
+            case 134100:
+                // this is a model incompatibility issue and we need to blow away the data
+                NSLog(@"DESTROYING THE DATABASE BECAUSE THE MODEL APPEARS TO HAVE CHANGED\nidentified error: %@, %@", error, [error userInfo]);
+                [self clearAllData];
+                // it might still crash... but it'll start next run.  Let's try to set up the persistent store again.  This is a development solution, not an appropriate consumer practice.  In that case, we need to version appropriately
+                if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+                    NSLog(@"Tried to blow away the database and recreate the persistent store but... Unresolved error %@, %@", error, [error userInfo]);
+                    abort();
+                }
+                break;
+            case 134130:
+                NSLog(@"LOOKS LIKE YOU FORGOT TO VERSION THE DATAMODEL CHANGE!!!! (in xcode data model) \nidentified error: %@, %@", error, [error userInfo]);
+                abort();
+                break;
+                
+            default:
             
-        }
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+                break;
         
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        }
     }
     
     return _persistentStoreCoordinator;
+}
+
+- (void)clearAllData{
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WhatFor.sqlite"];
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
 }
 
 - (void)saveContext

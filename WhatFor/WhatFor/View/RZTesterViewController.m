@@ -39,6 +39,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)clearPressed:(id)sender {
+    RZAppDelegate *appDelegate = (RZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    RZCoreDataRepository *repos = [appDelegate coreDataRepository];
+    [repos clearAllData];
+    
 }
 - (IBAction)reseedPressed:(id)sender {
     
