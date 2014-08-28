@@ -1,15 +1,15 @@
 //
-//  RZMilestoneCell.h
+//  RZMilestonesHeaderCell.h
 //  WhatFor
 //
-//  Created by Rusty Zarse on 8/26/14.
+//  Created by Rusty Zarse on 8/28/14.
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface RZMilestoneCell : UITableViewCell
+@interface RZMilestonesHeaderCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+- (IBAction)addPressed:(id)sender;
 + (NSString *)defaultReuseIdentifier;
 @end

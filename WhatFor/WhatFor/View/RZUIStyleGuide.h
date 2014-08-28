@@ -10,5 +10,5 @@
 
 @interface RZUIStyleGuide : NSObject
 + (UIColor *)fontColorForStatus:(RZActivityStatus)status;
-
++ (void)addGradientBackgroundLightToView:(UIView *)view;
 @end

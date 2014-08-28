@@ -10,7 +10,10 @@
 #import "ModelHeader.h"
 #import "RZGoalListViewModel.h"
 #import "RZMilestoneCell.h"
+#import "RZMilestonesHeaderCell.h"
 #import "RZMilestoneDetailViewController.h"
+#import "RZUIStyleGuide.h"
+
 
 @interface RZGoalListViewController ()
 
@@ -62,15 +65,28 @@ RZGoalListViewModel *goalListViewModel;
     return [goalListViewModel milestoneCountForGoalAtIndex:section];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+/*
+ - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return [goalListViewModel titleForGoalAtIndex:section];
+}
+ */
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    RZMilestonesHeaderCell *sectionHeaderCell = (RZMilestonesHeaderCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestonesHeaderCell defaultReuseIdentifier]];
+    
+    [[sectionHeaderCell titleLabel] setText:[goalListViewModel titleForGoalAtIndex:section]];
+    
+    [RZUIStyleGuide addGradientBackgroundLightToView:sectionHeaderCell.contentView];
+ 
+    return sectionHeaderCell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"milestoneCell";
-    RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestoneCell defaultReuseIdentifier]];
 	
     RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
 

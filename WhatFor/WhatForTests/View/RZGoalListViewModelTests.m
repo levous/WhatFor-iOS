@@ -100,7 +100,7 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel summary]);
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
-    XCTAssertEqualObjects([[viewModel status] title], @"Unknown");
+    XCTAssertEqualObjects([[viewModel status] title], @"Not Started");
     XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusUnknown]);
                                                 
     

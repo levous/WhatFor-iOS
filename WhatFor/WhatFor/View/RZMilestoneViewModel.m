@@ -41,7 +41,7 @@
             return @"Blocked";
             break;
         default:
-            return @"Unknown";
+            return @"Not Started";
             break;
     }
 }

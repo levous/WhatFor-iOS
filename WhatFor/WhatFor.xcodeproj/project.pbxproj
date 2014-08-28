@@ -33,6 +33,13 @@
 		FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
 		FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
 		FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */; };
+		FB13B28419AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */; };
+		FB13B28519AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */; };
+		FB13B28819AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */; };
+		FB13B28919AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */; };
+		FB13B28B19AF6C22008C2027 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB13B28A19AF6C22008C2027 /* QuartzCore.framework */; };
+		FB13B28E19AF7089008C2027 /* RZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28D19AF7089008C2027 /* RZGradientView.m */; };
+		FB13B28F19AF7089008C2027 /* RZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28D19AF7089008C2027 /* RZGradientView.m */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -97,6 +104,14 @@
 		FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RZSharedDateFormatters.h"; sourceTree = "<group>"; };
 		FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RZSharedDateFormatters.m"; sourceTree = "<group>"; };
 		FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNSDateFormatterTests.m; sourceTree = "<group>"; };
+		FB13B28119AF6225008C2027 /* RZEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZEnums.h; sourceTree = "<group>"; };
+		FB13B28219AF656D008C2027 /* RZMilestonesHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestonesHeaderCell.h; sourceTree = "<group>"; };
+		FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestonesHeaderCell.m; sourceTree = "<group>"; };
+		FB13B28619AF6B79008C2027 /* UIView+QuartzEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QuartzEffects.h"; sourceTree = "<group>"; };
+		FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QuartzEffects.m"; sourceTree = "<group>"; };
+		FB13B28A19AF6C22008C2027 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB13B28C19AF7089008C2027 /* RZGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGradientView.h; sourceTree = "<group>"; };
+		FB13B28D19AF7089008C2027 /* RZGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGradientView.m; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB13B28B19AF6C22008C2027 /* QuartzCore.framework in Frameworks */,
 				FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */,
 				FB933CB919AB9D9100B71A64 /* CoreData.framework in Frameworks */,
 				FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */,
@@ -167,6 +183,8 @@
 				FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */,
 				FB13B27719AEC5CD008C2027 /* RZMilestoneDetailViewController.h */,
 				FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */,
+				FB13B28219AF656D008C2027 /* RZMilestonesHeaderCell.h */,
+				FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */,
 				FB0FD48819AD6EA0002AFF9B /* RZMilestoneViewModel.h */,
 				FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */,
 				FB13B27319AE37A5008C2027 /* RZTempViewController.h */,
@@ -177,6 +195,10 @@
 				FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */,
 				FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */,
 				FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */,
+				FB13B28619AF6B79008C2027 /* UIView+QuartzEffects.h */,
+				FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */,
+				FB13B28C19AF7089008C2027 /* RZGradientView.h */,
+				FB13B28D19AF7089008C2027 /* RZGradientView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +225,7 @@
 		FB933CB119AB9D9100B71A64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB13B28A19AF6C22008C2027 /* QuartzCore.framework */,
 				FB933CB219AB9D9100B71A64 /* Foundation.framework */,
 				FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */,
 				FB933CB619AB9D9100B71A64 /* UIKit.framework */,
@@ -219,6 +242,7 @@
 				FB69EC7E19ABA2A7005BA0EB /* View */,
 				FB933CC319AB9D9100B71A64 /* RZAppDelegate.h */,
 				FB933CC419AB9D9100B71A64 /* RZAppDelegate.m */,
+				FB13B28119AF6225008C2027 /* RZEnums.h */,
 				FB933CC919AB9D9100B71A64 /* Images.xcassets */,
 				FB933CBB19AB9D9100B71A64 /* Supporting Files */,
 			);
@@ -415,9 +439,12 @@
 				FB0FD49219AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */,
 				FB0FD49619AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */,
 				FB0FD4A819AD7A95002AFF9B /* Milestone.m in Sources */,
+				FB13B28E19AF7089008C2027 /* RZGradientView.m in Sources */,
 				FB933CC119AB9D9100B71A64 /* main.m in Sources */,
 				FB0FD49C19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
 				FB13B27519AE37A5008C2027 /* RZTempViewController.m in Sources */,
+				FB13B28819AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */,
+				FB13B28419AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */,
 				FB13B27919AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */,
 				FB0FD49419AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
 			);
@@ -439,6 +466,9 @@
 				FBD4DDF219ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */,
 				FB0FD4A919AD7A95002AFF9B /* Milestone.m in Sources */,
+				FB13B28F19AF7089008C2027 /* RZGradientView.m in Sources */,
+				FB13B28919AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */,
+				FB13B28519AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */,
 				FB0FD49919AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */,
 				FB0FD48219AD6432002AFF9B /* Milestone+EmumsTests.m in Sources */,
 				FBD4DE3719AD298600A4686F /* RZGoalListViewModelTests.m in Sources */,

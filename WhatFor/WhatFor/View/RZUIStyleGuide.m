@@ -7,6 +7,7 @@
 //
 
 #import "RZUIStyleGuide.h"
+#import "RZGradientView.h"
 
 @implementation RZUIStyleGuide
 
@@ -29,4 +30,27 @@
             break;
     }
 }
+
++ (void)addGradientBackgroundLightToView:(UIView *)view{
+    RZGradientView *gradientView = [[RZGradientView alloc] initWithFrame:view.bounds];
+    gradientView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    UIColor *colorLighter  = [UIColor colorWithWhite:0.95 alpha:1.0];
+    UIColor *colorDarker = [UIColor colorWithHue:0.625 saturation:0.0 brightness:0.8 alpha:1.0];
+    NSArray *colors =  [NSArray arrayWithObjects:(id)colorDarker.CGColor, colorLighter.CGColor, colorLighter.CGColor, colorDarker.CGColor, nil];
+    NSNumber *stopOne = [NSNumber numberWithFloat:0.00];
+    NSNumber *stopTwo = [NSNumber numberWithFloat:0.1];
+    NSNumber *stopThree     = [NSNumber numberWithFloat:0.95];
+    NSNumber *stopFour = [NSNumber numberWithFloat:1.0];
+    
+    NSArray *locations = [NSArray arrayWithObjects:stopOne, stopTwo, stopThree, stopFour, nil];
+    
+    
+    gradientView.layer.colors = colors;
+    gradientView.layer.locations = locations;
+    
+    [view insertSubview:gradientView atIndex:0];
+}
+
+
 @end
