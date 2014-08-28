@@ -38,21 +38,25 @@ RZCoreDataRepository *_repos;
     [milestone setTitle:@"Milestone 1.1 continuous integration server"];
     [milestone setSummary:@"Metus pellentesque, nunc porttitor cum phasellus arcu, duis sollicitudin libero purus tristique sodales quis, consequat vehicula aliquam nisl ante, cras porttitor nulla."];
     [milestone setStatus:RZActivityStatusInProgress];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*24)]];
     
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.2 core data repository"];
     [milestone setSummary:@"Lorem ipsum dolor sit amet, natoque viverra iaculis lacinia diam es."];
     [milestone setStatus:RZActivityStatusComplete];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*2)]];
     
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.3 test repository"];
     [milestone setSummary:@"Libero purus tristique sodales quis, consequat vehicula aliquam nisl ante, cras porttitor nulla libero. Sollicitudin justo hymenaeos. Vivamus integer, tristique nonummy justo nisl ante eget."];
     [milestone setStatus:RZActivityStatusInProgress];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24+3600)]];
     
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.4 author stories"];
     [milestone setSummary:@"Cras porttitor nulla libero."];
     [milestone setStatus:RZActivityStatusComplete];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*-3)]];
     
     goal = _repos.createGoal;
     [goal setTitle:@"Goal 2 Best Practices"];
@@ -67,11 +71,13 @@ RZCoreDataRepository *_repos;
     [milestone setTitle:@"Milestone 2.2 deliver stories"];
     [milestone setSummary:@"Commodo etiam varius dolore nulla suscipit egestas, nec morbi vehicula scelerisque eget."];
     [milestone setStatus:RZActivityStatusBlocked];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*-30)]];
     
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 2.3 ensure test coverage"];
     [milestone setSummary:@"Pellentesque vestibulum id eleifend, laoreet vestibulum ullamcorper sed phasellus."];
     [milestone setStatus:RZActivityStatusUnknown];
+    [milestone setDueDate:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*90)]];
 
     [_repos saveContext];
     

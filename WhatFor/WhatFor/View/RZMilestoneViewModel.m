@@ -7,18 +7,59 @@
 //
 
 #import "RZMilestoneViewModel.h"
+#import "RZUIStyleGuide.h"
+#import "NSDateFormatter+RZSharedDateFormatters.h"
+
 @implementation RZMilestoneViewModelStatus
 @synthesize title, color;
 @end
 
 @implementation RZMilestoneViewModel
-@synthesize title, summary, status;
-- (id)init
+
+- (id)initWithMilestone:(Milestone *)milestone
 {
     self = [super init];
     if (self) {
-        status = [[RZMilestoneViewModelStatus alloc] init];
+        [self setStatus:[[RZMilestoneViewModelStatus alloc] init]];
+        [self populateFromMilestone:milestone];
     }
     return self;
 }
+
+#pragma mark - View Logic
+
+- (NSString *)textForStatus:(RZActivityStatus)status{
+    switch (status){
+            
+        case RZActivityStatusInProgress:
+            return @"In Progress";
+            break;
+        case RZActivityStatusComplete:
+            return @"Completed";
+            break;
+        case RZActivityStatusBlocked:
+            return @"Blocked";
+            break;
+        default:
+            return @"Unknown";
+            break;
+    }
+}
+
+- (void)populateFromMilestone:(Milestone *)milestone{
+    [self setMilestone:milestone];
+    [self setTitle:[milestone title]];
+    [self setSummary:[milestone summary]];
+    if ([milestone dueDate] == nil) {
+        [self setDateDue:@"no due date"];
+    }else{
+        [self setDateDue:[NSDateFormatter shortStringFromDate:[milestone dueDate]]];
+    }
+    
+    [self setTimeRemaining:@""]; //lazy today.  maybe later
+    RZActivityStatus status = [milestone status];
+    [[self status] setTitle:[self textForStatus:status]];
+    [[self status] setColor:[RZUIStyleGuide fontColorForStatus:status]];
+}
+
 @end

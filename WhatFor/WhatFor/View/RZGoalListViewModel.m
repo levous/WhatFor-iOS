@@ -42,25 +42,7 @@ NSMutableDictionary *filteredMilstones;
     }
 }
 
-#pragma mark - View Logic
 
-- (NSString *)textForStatus:(RZActivityStatus)status{
-    switch (status){
-    
-    case RZActivityStatusInProgress:
-        return @"In Progress";
-        break;
-    case RZActivityStatusComplete:
-        return @"Completed";
-        break;
-    case RZActivityStatusBlocked:
-        return @"Blocked";
-        break;
-    default:
-        return @"Unknown";
-        break;
-    }
-}
 
 #pragma mark - TableView Methods
 
@@ -86,13 +68,7 @@ NSMutableDictionary *filteredMilstones;
     Goal *goal = [goals objectAtIndex:indexPath.section];
     NSArray *milestones = [filteredMilstones objectForKey:[goal objectID]];
     Milestone *milestone = [milestones objectAtIndex:indexPath.row];
-    RZMilestoneViewModel *viewModel = [[RZMilestoneViewModel alloc] init];
-    [viewModel setTitle:[milestone title]];
-    [viewModel setSummary:[milestone summary]];
-    RZActivityStatus status = [milestone status];
-    [[viewModel status] setTitle:[self textForStatus:status]];
-    [[viewModel status] setColor:[RZUIStyleGuide fontColorForStatus:status]];
-
+    RZMilestoneViewModel *viewModel = [[RZMilestoneViewModel alloc] initWithMilestone:milestone];
     return viewModel;
                                      
 }

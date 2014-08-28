@@ -12,7 +12,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="haT-pF-dXF" kind="relationship" relationship="rootViewController" id="oMr-f0-Tyi"/>
+                        <segue destination="haT-pF-dXF" kind="relationship" relationship="rootViewController" id="MVn-zS-FW0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ2-Zh-bOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,6 +93,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdg-94-Z24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="-120"/>
+        </scene>
+        <!--Milestone Detail View Controller-->
+        <scene sceneID="WUe-dh-94r">
+            <objects>
+                <viewController id="sVO-ga-Peh" customClass="RZMilestoneDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dto-ro-wxW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z3h-PG-HCw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Yc-er-0hq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="40" text="Milestone Detail" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-hc-JBX">
+                                <rect key="frame" x="20" y="69" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UlR-f0-zV6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="69" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-RE-dIm">
+                                <rect key="frame" x="19" y="118" width="280" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="avT-Nh-ecC"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="61" placeholderIntrinsicHeight="14" text="Status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="61" translatesAutoresizingMaskIntoConstraints="NO" id="xab-ls-2Jc">
+                                <rect key="frame" x="20" y="222" width="61" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="7QV-3m-rGd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="14" text="Due:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="40" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-09-o0m">
+                                <rect key="frame" x="89" y="222" width="40" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="J9m-0Z-SKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="77" placeholderIntrinsicHeight="14" text="12 Days" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="77" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-7q-DAm">
+                                <rect key="frame" x="208" y="222" width="77" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="mdJ-fv-mNT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="14" text="08/07/14" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="65" translatesAutoresizingMaskIntoConstraints="NO" id="ULm-ia-nL6">
+                                <rect key="frame" x="135" y="222" width="65" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="sZd-5I-BSr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xab-ls-2Jc" firstAttribute="top" secondItem="dD4-RE-dIm" secondAttribute="bottom" constant="14" id="0gz-vK-eNP"/>
+                            <constraint firstItem="QD6-09-o0m" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="89" id="27M-Zo-3AX"/>
+                            <constraint firstItem="dD4-RE-dIm" firstAttribute="top" secondItem="dto-ro-wxW" secondAttribute="bottom" constant="54" id="6EZ-qc-02P"/>
+                            <constraint firstItem="JLJ-hc-JBX" firstAttribute="top" secondItem="dto-ro-wxW" secondAttribute="bottom" constant="5" id="6qo-8G-aoe"/>
+                            <constraint firstItem="xab-ls-2Jc" firstAttribute="bottom" secondItem="8Nb-7q-DAm" secondAttribute="bottom" id="8O5-fD-ipm"/>
+                            <constraint firstAttribute="centerX" secondItem="JLJ-hc-JBX" secondAttribute="centerX" id="Ei1-dd-GpN"/>
+                            <constraint firstItem="8Nb-7q-DAm" firstAttribute="top" secondItem="dD4-RE-dIm" secondAttribute="bottom" constant="14" id="KEg-Uc-ehX"/>
+                            <constraint firstItem="8Nb-7q-DAm" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="208" id="R9e-Dv-FiG"/>
+                            <constraint firstItem="JLJ-hc-JBX" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="20" id="Wzz-yr-jYx"/>
+                            <constraint firstItem="xab-ls-2Jc" firstAttribute="bottom" secondItem="ULm-ia-nL6" secondAttribute="bottom" id="YVu-wf-uXA"/>
+                            <constraint firstItem="QD6-09-o0m" firstAttribute="top" secondItem="dD4-RE-dIm" secondAttribute="bottom" constant="14" id="bZa-EM-LXD"/>
+                            <constraint firstAttribute="trailing" secondItem="JLJ-hc-JBX" secondAttribute="trailing" constant="20" id="dhC-XX-a9P"/>
+                            <constraint firstItem="dD4-RE-dIm" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="19" id="epw-sI-srd"/>
+                            <constraint firstItem="xab-ls-2Jc" firstAttribute="bottom" secondItem="QD6-09-o0m" secondAttribute="bottom" id="hUk-qq-RmK"/>
+                            <constraint firstItem="ULm-ia-nL6" firstAttribute="top" secondItem="dD4-RE-dIm" secondAttribute="bottom" constant="14" id="nEI-bj-Xwt"/>
+                            <constraint firstItem="xab-ls-2Jc" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="20" id="v1h-O2-aKO"/>
+                            <constraint firstAttribute="trailing" secondItem="dD4-RE-dIm" secondAttribute="trailing" constant="21" id="vxM-SW-g0v"/>
+                            <constraint firstItem="ULm-ia-nL6" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="135" id="yqu-eI-DsG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i7M-FI-4tY"/>
+                    <connections>
+                        <outlet property="dateDueLabel" destination="ULm-ia-nL6" id="geT-eN-ZfX"/>
+                        <outlet property="statusLabel" destination="xab-ls-2Jc" id="dkz-bO-JGV"/>
+                        <outlet property="summaryTextView" destination="dD4-RE-dIm" id="0TX-R5-FXA"/>
+                        <outlet property="timeRemainingLabel" destination="8Nb-7q-DAm" id="iqa-Dk-tZk"/>
+                        <outlet property="titleLabel" destination="JLJ-hc-JBX" id="Yua-ZR-J5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ3-Xt-ciI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="-120"/>
         </scene>
         <!--Tester View Controller-->
         <scene sceneID="Iet-8u-Ilw">
@@ -229,6 +341,7 @@
                                 <connections>
                                     <outlet property="statusLabel" destination="nm3-YA-WCU" id="Gzy-in-2GU"/>
                                     <outlet property="titleLabel" destination="9St-OQ-Emi" id="C7a-3O-TLY"/>
+                                    <segue destination="sVO-ga-Peh" kind="push" identifier="milestoneDetailSegue" id="Our-fR-phR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

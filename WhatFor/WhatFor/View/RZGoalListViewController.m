@@ -10,6 +10,7 @@
 #import "ModelHeader.h"
 #import "RZGoalListViewModel.h"
 #import "RZMilestoneCell.h"
+#import "RZMilestoneDetailViewController.h"
 
 @interface RZGoalListViewController ()
 
@@ -132,16 +133,21 @@ RZGoalListViewModel *goalListViewModel;
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"milestoneDetailSegue"]) {
+        RZMilestoneDetailViewController *vc = (RZMilestoneDetailViewController *)[segue destinationViewController];
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        RZMilestoneViewModel *milestoneViewModel = [goalListViewModel milestoneViewModelAtIndexPath:selectedRowIndex];
+        [vc setMilestoneViewModel:milestoneViewModel];
+    }
+    
 }
 
- */
+
 
 @end

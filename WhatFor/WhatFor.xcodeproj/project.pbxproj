@@ -28,6 +28,11 @@
 		FB0FD4A919AD7A95002AFF9B /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD4A719AD7A95002AFF9B /* Milestone.m */; };
 		FB13B27519AE37A5008C2027 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27419AE37A5008C2027 /* RZTempViewController.m */; };
 		FB13B27619AE37A5008C2027 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27419AE37A5008C2027 /* RZTempViewController.m */; };
+		FB13B27919AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */; };
+		FB13B27A19AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */; };
+		FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
+		FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
+		FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -87,6 +92,11 @@
 		FB0FD4A719AD7A95002AFF9B /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
 		FB13B27319AE37A5008C2027 /* RZTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewController.h; sourceTree = "<group>"; };
 		FB13B27419AE37A5008C2027 /* RZTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTempViewController.m; sourceTree = "<group>"; };
+		FB13B27719AEC5CD008C2027 /* RZMilestoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneDetailViewController.h; sourceTree = "<group>"; };
+		FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneDetailViewController.m; sourceTree = "<group>"; };
+		FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RZSharedDateFormatters.h"; sourceTree = "<group>"; };
+		FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RZSharedDateFormatters.m"; sourceTree = "<group>"; };
+		FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNSDateFormatterTests.m; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,20 +159,24 @@
 			isa = PBXGroup;
 			children = (
 				FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */,
-				FB0FD48819AD6EA0002AFF9B /* RZMilestoneViewModel.h */,
-				FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */,
 				FB0FD48A19AD6EA0002AFF9B /* RZGoalListViewController.h */,
 				FB0FD48B19AD6EA0002AFF9B /* RZGoalListViewController.m */,
 				FB0FD48C19AD6EA1002AFF9B /* RZGoalListViewModel.h */,
 				FB0FD48D19AD6EA1002AFF9B /* RZGoalListViewModel.m */,
 				FB0FD48E19AD6EA1002AFF9B /* RZMilestoneCell.h */,
 				FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */,
+				FB13B27719AEC5CD008C2027 /* RZMilestoneDetailViewController.h */,
+				FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */,
+				FB0FD48819AD6EA0002AFF9B /* RZMilestoneViewModel.h */,
+				FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */,
 				FB13B27319AE37A5008C2027 /* RZTempViewController.h */,
 				FB13B27419AE37A5008C2027 /* RZTempViewController.m */,
 				FB0FD49E19AD740B002AFF9B /* RZTesterViewController.h */,
 				FB0FD49F19AD740B002AFF9B /* RZTesterViewController.m */,
 				FB0FD49A19AD6EB0002AFF9B /* RZUIStyleGuide.h */,
 				FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */,
+				FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */,
+				FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */,
+				FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +410,7 @@
 				FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FB0FD49819AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */,
 				FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
+				FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
 				FB933CC519AB9D9100B71A64 /* RZAppDelegate.m in Sources */,
 				FB0FD49219AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */,
 				FB0FD49619AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */,
@@ -402,6 +418,7 @@
 				FB933CC119AB9D9100B71A64 /* main.m in Sources */,
 				FB0FD49C19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
 				FB13B27519AE37A5008C2027 /* RZTempViewController.m in Sources */,
+				FB13B27919AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */,
 				FB0FD49419AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,8 +428,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */,
+				FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */,
 				FB0FD49519AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
 				FB0FD49D19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
+				FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
 				FB13B27619AE37A5008C2027 /* RZTempViewController.m in Sources */,
 				FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */,
 				FB933CDE19AB9D9100B71A64 /* WhatForTests.m in Sources */,
@@ -428,6 +447,7 @@
 				FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */,
 				FB0FD4A119AD740B002AFF9B /* RZTesterViewController.m in Sources */,
 				FB0FD47C19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
+				FB13B27A19AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */,
 				FB0FD49719AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
