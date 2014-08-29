@@ -14,9 +14,10 @@
 @property(nonatomic) BOOL hideCompletedMilestones;
 
 - (id)initWithRepository:(RZCoreDataRepository *)coreDataRepository hideCompletedMilestones:(BOOL)hideCompletedMilestones;
-- (NSUInteger)goalCount;
-- (NSUInteger)milestoneCountForGoalAtIndex:(NSUInteger)index;
-- (NSString *)titleForGoalAtIndex:(NSUInteger)index;
+- (NSInteger)goalCount;
+- (Goal *)goalAtIndex:(NSInteger)index;
+- (NSInteger)milestoneCountForGoalAtIndex:(NSInteger)index;
+- (NSString *)titleForGoalAtIndex:(NSInteger)index;
 - (RZMilestoneViewModel *)milestoneViewModelAtIndexPath:(NSIndexPath *)indexPath;
 
 

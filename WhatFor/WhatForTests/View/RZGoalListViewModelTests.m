@@ -60,9 +60,9 @@ RZSeedDataInserter *seedInserter;
     [milestone setStatus:RZActivityStatusUnknown];
     
     RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:NO];
-    XCTAssertEqual((NSUInteger)2, [listViewModel goalCount]);
-    XCTAssertEqual((NSUInteger)4, [listViewModel milestoneCountForGoalAtIndex:0]);
-    XCTAssertEqual((NSUInteger)3, [listViewModel milestoneCountForGoalAtIndex:1]);
+    XCTAssertEqual((NSInteger)2, [listViewModel goalCount]);
+    XCTAssertEqual((NSInteger)4, [listViewModel milestoneCountForGoalAtIndex:0]);
+    XCTAssertEqual((NSInteger)3, [listViewModel milestoneCountForGoalAtIndex:1]);
     
     NSIndexPath *indexPath;
     RZMilestoneViewModel *viewModel;
@@ -127,8 +127,22 @@ RZSeedDataInserter *seedInserter;
     
     RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:YES];
 
-    XCTAssertEqual((NSUInteger)2, [listViewModel milestoneCountForGoalAtIndex:0]);
+    XCTAssertEqual((NSInteger)2, [listViewModel milestoneCountForGoalAtIndex:0]);
 
 }
+
+- (void)testGoalAtIndex
+{
+    NSArray *goals = [repos getAllGoals];
+    
+    Goal *expected = [goals objectAtIndex:1];
+    
+    RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:YES];
+    
+    Goal *goal = [listViewModel goalAtIndex:1];
+    XCTAssertEqual(goal, expected);
+    
+}
+
 
 @end

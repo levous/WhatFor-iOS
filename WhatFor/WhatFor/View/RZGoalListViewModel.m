@@ -46,11 +46,16 @@ NSMutableDictionary *filteredMilstones;
 
 #pragma mark - TableView Methods
 
-- (NSUInteger)goalCount{
+- (NSInteger)goalCount{
     return [goals count];
 }
 
-- (NSUInteger)milestoneCountForGoalAtIndex:(NSUInteger)index{
+
+- (Goal *)goalAtIndex:(NSInteger)index{
+    return [goals objectAtIndex:index];
+}
+
+- (NSInteger)milestoneCountForGoalAtIndex:(NSInteger)index{
     
     Goal *goal = [goals objectAtIndex:index];
     NSArray *milestones = [filteredMilstones objectForKey:[goal objectID]];
@@ -58,7 +63,7 @@ NSMutableDictionary *filteredMilstones;
     return [milestones count];
 }
 
-- (NSString *)titleForGoalAtIndex:(NSUInteger)index{
+- (NSString *)titleForGoalAtIndex:(NSInteger)index{
     Goal *goal =[goals objectAtIndex:index];
     return [goal title];
 }

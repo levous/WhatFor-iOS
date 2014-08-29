@@ -8,12 +8,12 @@
 
 #import "RZGoalListViewController.h"
 #import "ModelHeader.h"
+#import "RZMilestonesHeaderCell.h"
 #import "RZGoalListViewModel.h"
 #import "RZMilestoneCell.h"
-#import "RZMilestonesHeaderCell.h"
 #import "RZMilestoneDetailViewController.h"
 #import "RZUIStyleGuide.h"
-
+#import "UIView+Helpers.h"
 
 @interface RZGoalListViewController ()
 
@@ -73,14 +73,17 @@ RZGoalListViewModel *goalListViewModel;
  */
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    RZMilestonesHeaderCell *sectionHeaderCell = (RZMilestonesHeaderCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestonesHeaderCell defaultReuseIdentifier]];
+    return [sectionHeaderCell frame].size.height;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     RZMilestonesHeaderCell *sectionHeaderCell = (RZMilestonesHeaderCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestonesHeaderCell defaultReuseIdentifier]];
-    
-    [[sectionHeaderCell titleLabel] setText:[goalListViewModel titleForGoalAtIndex:section]];
-    
+    [[sectionHeaderCell titleButton] setTitle:[goalListViewModel titleForGoalAtIndex:section] forState:UIControlStateNormal];
+    [sectionHeaderCell setTableViewSectionIndex:section];
     [RZUIStyleGuide addGradientBackgroundLightToView:sectionHeaderCell.contentView];
- 
     return sectionHeaderCell;
 }
 
@@ -148,6 +151,12 @@ RZGoalListViewModel *goalListViewModel;
     return YES;
 }
 
+#pragma mark - RZMilestonesHeaderCellDelegate
+
+
+- (void)milestoneAddViewControllerDidCancel:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
+- (void)milestoneAddViewControllerDidSave:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
+
 
 
 #pragma mark - Navigation
@@ -160,6 +169,23 @@ RZGoalListViewModel *goalListViewModel;
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         RZMilestoneViewModel *milestoneViewModel = [goalListViewModel milestoneViewModelAtIndexPath:selectedRowIndex];
         [vc setMilestoneViewModel:milestoneViewModel];
+    }
+    else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"]){
+        //EXAMPLE: really good application of delegate pattern using modal add view controller  http://www.raywenderlich.com/5191/beginning-storyboards-in-ios-5-part-2
+        
+        RZMilestonesHeaderCell *headerCell = (RZMilestonesHeaderCell *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
+        NSInteger section = [headerCell tableViewSectionIndex];
+        Goal *goal = [goalListViewModel goalAtIndex:section];
+        //NOTE: intent is to pass needed goal title and such but the add milestone does not need any knowledge of core data!  Delegate back to this view controller.
+        // Long term, complexity may be refactored out of view model, into an interacter class
+        //  ViewController should contain basic iOS glue stuff; outlets, actions, etc.
+        //  Presenter should contain display-specific business logic, without interacting with the models.
+        //  Interactor should implement the business logic, aka use cases. It maps model data to the form needed by the Presenter and/or ViewController.
+        // http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/
+        UINavigationController *navigationController = [segue destinationViewController];
+        RZMilestoneAddViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
+        [destinationVC setDelegate:self];
+        
     }
     
 }

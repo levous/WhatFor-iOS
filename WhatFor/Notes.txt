@@ -1,0 +1,21 @@
+Architecture of application
+
+Architecture Goals
+------------------
+Can be summed up as looking for "clean architecture".  When methods become complex, they are begging for refactor to a more simple solution.  The following principles will help avoid coding yourself into a corner
+- maintain easy testability
+- avoid the "Huge ViewController"
+- keep UI obsessively separate from business logic.  Even avoid passing CoreData model objects around viewControllers
+- reduce dependencies that require passing many objects deeply into navigation
+- consolodate access to data (repository and core data models) example: by using delegation
+- maintain solid test coverage
+
+I've learned that "the notion that it’s a good idea to hide the framework, UI, or database from the application code is not universally accepted."  Too freakin bad.  Do it
+
+
+VIPER (View, Interactor, Presenter, Entity, Routing)
+ViewController should contain basic iOS glue stuff; outlets, actions, etc.
+Presenter should contain display-specific business logic, without interacting with the models.
+Interactor should implement the business logic, aka use cases. It maps model data to the form needed by the Presenter and/or ViewController.
+
+http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/

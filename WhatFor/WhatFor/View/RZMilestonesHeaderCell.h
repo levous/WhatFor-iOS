@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface RZMilestonesHeaderCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-- (IBAction)addPressed:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *titleButton;
+@property (nonatomic) NSInteger tableViewSectionIndex;
+
 + (NSString *)defaultReuseIdentifier;
+
 @end
+
