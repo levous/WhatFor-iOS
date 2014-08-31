@@ -1,18 +1,18 @@
 //
-//  RZMilestoneAddViewController.m
+//  RZActivityStatusPickerViewController.m
 //  WhatFor
 //
-//  Created by Rusty Zarse on 8/29/14.
+//  Created by Rusty Zarse on 8/31/14.
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
-#import "RZMilestoneAddViewController.h"
+#import "RZActivityStatusPickerViewController.h"
 
-@interface RZMilestoneAddViewController ()
+@interface RZActivityStatusPickerViewController ()
 
 @end
 
-@implementation RZMilestoneAddViewController
+@implementation RZActivityStatusPickerViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,9 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    
+
+    statusArray = @[
+                    @"Not Started",
+                    @"In Progress",
+                    @"Completed",
+                    @"Blocked"
+                    ];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -42,7 +46,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    return [statusArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"statusCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    [[cell textLabel] setText:[statusArray objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,18 +121,4 @@
 
  */
 
-#pragma mark - Bar Button Handlers
-
-- (IBAction)cancel:(id)sender
-{
-	[self.delegate milestoneAddViewControllerDidCancel:self];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-- (IBAction)done:(id)sender
-{
-    // OK, need that interacter class to set values in a testable way...
-    
-	[self.delegate milestoneAddViewControllerDidSave:self];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end

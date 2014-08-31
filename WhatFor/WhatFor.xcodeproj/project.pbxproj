@@ -44,6 +44,8 @@
 		FB40D41119B0CC0F006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D40F19B0CC0F006C6315 /* RZMilestoneAddViewController.m */; };
 		FB40D41419B0D085006C6315 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41319B0D085006C6315 /* UIView+Helpers.m */; };
 		FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41319B0D085006C6315 /* UIView+Helpers.m */; };
+		FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
+		FB40D41A19B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -121,6 +123,8 @@
 		FB40D41219B0D085006C6315 /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
 		FB40D41319B0D085006C6315 /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
 		FB40D41619B0D72A006C6315 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		FB40D41719B34F02006C6315 /* RZActivityStatusPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZActivityStatusPickerViewController.h; sourceTree = "<group>"; };
+		FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZActivityStatusPickerViewController.m; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -212,6 +216,8 @@
 				FB13B28D19AF7089008C2027 /* RZGradientView.m */,
 				FB40D41219B0D085006C6315 /* UIView+Helpers.h */,
 				FB40D41319B0D085006C6315 /* UIView+Helpers.m */,
+				FB40D41719B34F02006C6315 /* RZActivityStatusPickerViewController.h */,
+				FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				FB0FD47B19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
 				FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
 				FB0FD4A019AD740B002AFF9B /* RZTesterViewController.m in Sources */,
+				FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
 				FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FB0FD49819AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */,
 				FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
@@ -473,6 +480,7 @@
 				FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */,
 				FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */,
 				FB0FD49519AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
+				FB40D41A19B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
 				FB0FD49D19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
 				FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
 				FB13B27619AE37A5008C2027 /* RZTempViewController.m in Sources */,
