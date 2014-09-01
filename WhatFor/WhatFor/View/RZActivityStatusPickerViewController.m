@@ -7,6 +7,7 @@
 //
 
 #import "RZActivityStatusPickerViewController.h"
+#import "RZStringsHelper.h"
 
 @interface RZActivityStatusPickerViewController ()
 
@@ -28,10 +29,10 @@
     [super viewDidLoad];
 
     statusArray = @[
-                    @"Not Started",
-                    @"In Progress",
-                    @"Completed",
-                    @"Blocked"
+                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)0], // RZActivityStatusUnknown
+                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)1], // RZActivityStatusBlocked
+                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)2], // RZActivityStatusComplete
+                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)3], // RZActivityStatusBlocked
                     ];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -45,6 +46,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -65,9 +67,31 @@
     static NSString *CellIdentifier = @"statusCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    [[cell textLabel] setText:[statusArray objectAtIndex:indexPath.row]];
+    NSString *statusTitle = [statusArray objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:statusTitle];
+    
+    
+    if ([statusTitle isEqualToString:[RZStringsHelper titleForActivityStatus:[self selectedStatus]]]) {
+        [tableView
+         selectRowAtIndexPath:indexPath
+         animated:TRUE
+         scrollPosition:UITableViewScrollPositionNone
+         ];
+    }
+    
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // safe to do only because the array is defined literally above..  pretty fragile, otherwise :)
+    RZActivityStatus status = (RZActivityStatus)indexPath.row;
+    
+    [self setSelectedStatus:status];
+    if([self delegate] != nil){
+        [[self delegate] rzactivityStatusPickerViewController:self
+                                              didSelectStatus:status];
+    }
 }
 
 /*

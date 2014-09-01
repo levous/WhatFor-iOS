@@ -10,9 +10,12 @@
 #import "Milestone.h"
 #import "Milestone+Enums.h"
 
-@interface RZMilestoneViewModelStatus : NSObject
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) UIColor *color;
+@interface RZMilestoneViewModelStatus : NSObject{
+    RZActivityStatus _status;
+}
+@property (nonatomic) RZActivityStatus status;
+@property (strong, nonatomic, readonly) NSString *title;
+@property (strong, nonatomic, readonly) UIColor *color;
 @end
 
 @interface RZMilestoneViewModel : NSObject

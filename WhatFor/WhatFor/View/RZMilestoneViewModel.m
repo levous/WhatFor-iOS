@@ -7,18 +7,38 @@
 //
 
 #import "RZMilestoneViewModel.h"
-#import "RZUIStyleGuide.h"
+
 #import "NSDateFormatter+RZSharedDateFormatters.h"
+#import "RZUIStyleGuide.h"
+#import "RZStringsHelper.h"
 
 @implementation RZMilestoneViewModelStatus
-@synthesize title, color;
+
+- (void)setStatus:(RZActivityStatus)status {
+    _status = status;
+    _title = [RZStringsHelper titleForActivityStatus:status];
+    _color = [RZUIStyleGuide fontColorForStatus:status];
+}
+
+- (RZActivityStatus) status{
+    return _status;
+}
+
 @end
 
 @implementation RZMilestoneViewModel
 
+- (id)init{
+    self = [super init];
+    if (self) {
+        [self setStatus:[[RZMilestoneViewModelStatus alloc] init]];
+    }
+    return self;
+}
+
 - (id)initWithMilestone:(Milestone *)milestone
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         [self setStatus:[[RZMilestoneViewModelStatus alloc] init]];
         [self populateFromMilestone:milestone];
@@ -29,21 +49,7 @@
 #pragma mark - View Logic
 
 - (NSString *)textForStatus:(RZActivityStatus)status{
-    switch (status){
-            
-        case RZActivityStatusInProgress:
-            return @"In Progress";
-            break;
-        case RZActivityStatusComplete:
-            return @"Completed";
-            break;
-        case RZActivityStatusBlocked:
-            return @"Blocked";
-            break;
-        default:
-            return @"Not Started";
-            break;
-    }
+    return [RZStringsHelper titleForActivityStatus:status];
 }
 
 - (void)populateFromMilestone:(Milestone *)milestone{
@@ -58,8 +64,7 @@
     
     [self setTimeRemaining:@""]; //lazy today.  maybe later
     RZActivityStatus status = [milestone status];
-    [[self status] setTitle:[self textForStatus:status]];
-    [[self status] setColor:[RZUIStyleGuide fontColorForStatus:status]];
+    [[self status] setStatus:status];
 }
 
 @end

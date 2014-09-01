@@ -329,7 +329,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="kxM-4f-g9Y" kind="push" id="afg-p2-JnL"/>
+                                            <segue destination="kxM-4f-g9Y" kind="push" identifier="pickStatusSegue" id="afg-p2-JnL"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

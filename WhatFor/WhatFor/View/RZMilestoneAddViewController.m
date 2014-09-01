@@ -7,6 +7,8 @@
 //
 
 #import "RZMilestoneAddViewController.h"
+#import "RZStringsHelper.h"
+#import "RZActivityStatusPickerViewController.h"
 
 @interface RZMilestoneAddViewController ()
 
@@ -83,17 +85,28 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"pickStatusSegue"]){
+        RZActivityStatusPickerViewController *destinationVC = (RZActivityStatusPickerViewController *)[segue destinationViewController];
+        [destinationVC setDelegate:self];
+        [destinationVC setSelectedStatus:[[[self milestoneViewModel] status] status]];
+    }
 }
 
- */
+ 
+
+
+- (void)rzactivityStatusPickerViewController:(RZActivityStatusPickerViewController *)controller
+                           didSelectStatus:(RZActivityStatus)status{
+    [[[self milestoneViewModel] status] setStatus:status];
+    [[[self statusTableCell] textLabel] setText:[[[self milestoneViewModel] status] title]];
+    [[self navigationController] popViewControllerAnimated:YES];
+}
 
 #pragma mark - Bar Button Handlers
 

@@ -46,6 +46,8 @@
 		FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41319B0D085006C6315 /* UIView+Helpers.m */; };
 		FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
 		FB40D41A19B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
+		FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */; };
+		FB40D41E19B4CC19006C6315 /* RZStringsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -125,6 +127,8 @@
 		FB40D41619B0D72A006C6315 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		FB40D41719B34F02006C6315 /* RZActivityStatusPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZActivityStatusPickerViewController.h; sourceTree = "<group>"; };
 		FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZActivityStatusPickerViewController.m; sourceTree = "<group>"; };
+		FB40D41B19B4CC19006C6315 /* RZStringsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZStringsHelper.h; sourceTree = "<group>"; };
+		FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZStringsHelper.m; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -265,6 +269,8 @@
 				FB13B28119AF6225008C2027 /* RZEnums.h */,
 				FB933CC919AB9D9100B71A64 /* Images.xcassets */,
 				FB933CBB19AB9D9100B71A64 /* Supporting Files */,
+				FB40D41B19B4CC19006C6315 /* RZStringsHelper.h */,
+				FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */,
 			);
 			path = WhatFor;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			files = (
 				FBD4DE4A19AD30A800A4686F /* Goal.m in Sources */,
 				FB0FD47B19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
+				FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
 				FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
 				FB0FD4A019AD740B002AFF9B /* RZTesterViewController.m in Sources */,
 				FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
@@ -490,6 +497,7 @@
 				FBD4DDEB19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
 				FBD4DDF219ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */,
+				FB40D41E19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
 				FB0FD4A919AD7A95002AFF9B /* Milestone.m in Sources */,
 				FB13B28F19AF7089008C2027 /* RZGradientView.m in Sources */,
 				FB13B28919AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */,

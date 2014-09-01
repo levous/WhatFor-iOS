@@ -73,6 +73,7 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel summary]);
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
+    XCTAssertEqual([[viewModel status] status], RZActivityStatusComplete);
     XCTAssertEqualObjects([[viewModel status] title], @"Completed");
     XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusComplete]);
     
@@ -82,6 +83,8 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel summary]);
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
+    
+    XCTAssertEqual([[viewModel status] status], RZActivityStatusInProgress);
     XCTAssertEqualObjects([[viewModel status] title], @"In Progress");
     XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusInProgress]);
     
@@ -91,6 +94,8 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel summary]);
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
+    
+    XCTAssertEqual([[viewModel status] status], RZActivityStatusBlocked);
     XCTAssertEqualObjects([[viewModel status] title], @"Blocked");
     XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusBlocked]);
     
@@ -100,6 +105,8 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel summary]);
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
+    
+    XCTAssertEqual([[viewModel status] status], RZActivityStatusUnknown);
     XCTAssertEqualObjects([[viewModel status] title], @"Not Started");
     XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusUnknown]);
                                                 
