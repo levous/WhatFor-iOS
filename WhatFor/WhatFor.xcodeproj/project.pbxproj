@@ -12,42 +12,49 @@
 		FB0FD48219AD6432002AFF9B /* Milestone+EmumsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48119AD6432002AFF9B /* Milestone+EmumsTests.m */; };
 		FB0FD49019AD6EA1002AFF9B /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */; };
 		FB0FD49119AD6EA1002AFF9B /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */; };
-		FB0FD49219AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */; };
-		FB0FD49319AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */; };
-		FB0FD49419AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48B19AD6EA0002AFF9B /* RZGoalListViewController.m */; };
-		FB0FD49519AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48B19AD6EA0002AFF9B /* RZGoalListViewController.m */; };
-		FB0FD49619AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48D19AD6EA1002AFF9B /* RZGoalListViewModel.m */; };
-		FB0FD49719AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48D19AD6EA1002AFF9B /* RZGoalListViewModel.m */; };
-		FB0FD49819AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */; };
-		FB0FD49919AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */; };
 		FB0FD49C19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */; };
 		FB0FD49D19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */; };
-		FB0FD4A019AD740B002AFF9B /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49F19AD740B002AFF9B /* RZTesterViewController.m */; };
-		FB0FD4A119AD740B002AFF9B /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49F19AD740B002AFF9B /* RZTesterViewController.m */; };
 		FB0FD4A819AD7A95002AFF9B /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD4A719AD7A95002AFF9B /* Milestone.m */; };
 		FB0FD4A919AD7A95002AFF9B /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD4A719AD7A95002AFF9B /* Milestone.m */; };
-		FB13B27519AE37A5008C2027 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27419AE37A5008C2027 /* RZTempViewController.m */; };
-		FB13B27619AE37A5008C2027 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27419AE37A5008C2027 /* RZTempViewController.m */; };
-		FB13B27919AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */; };
-		FB13B27A19AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */; };
 		FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
 		FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
-		FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */; };
-		FB13B28419AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */; };
-		FB13B28519AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */; };
 		FB13B28819AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */; };
 		FB13B28919AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */; };
 		FB13B28B19AF6C22008C2027 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB13B28A19AF6C22008C2027 /* QuartzCore.framework */; };
 		FB13B28E19AF7089008C2027 /* RZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28D19AF7089008C2027 /* RZGradientView.m */; };
 		FB13B28F19AF7089008C2027 /* RZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28D19AF7089008C2027 /* RZGradientView.m */; };
-		FB40D41019B0CC0F006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D40F19B0CC0F006C6315 /* RZMilestoneAddViewController.m */; };
-		FB40D41119B0CC0F006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D40F19B0CC0F006C6315 /* RZMilestoneAddViewController.m */; };
 		FB40D41419B0D085006C6315 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41319B0D085006C6315 /* UIView+Helpers.m */; };
 		FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41319B0D085006C6315 /* UIView+Helpers.m */; };
-		FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
-		FB40D41A19B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */; };
 		FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */; };
 		FB40D41E19B4CC19006C6315 /* RZStringsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */; };
+		FB40D43B19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42A19B61584006C6315 /* RZActivityStatusPickerViewController.m */; };
+		FB40D43C19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42A19B61584006C6315 /* RZActivityStatusPickerViewController.m */; };
+		FB40D43F19B61584006C6315 /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42E19B61584006C6315 /* RZGoalListViewController.m */; };
+		FB40D44019B61584006C6315 /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42E19B61584006C6315 /* RZGoalListViewController.m */; };
+		FB40D44119B61584006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */; };
+		FB40D44219B61584006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */; };
+		FB40D44319B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */; };
+		FB40D44419B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */; };
+		FB40D44519B61584006C6315 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43419B61584006C6315 /* RZTempViewController.m */; };
+		FB40D44619B61584006C6315 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43419B61584006C6315 /* RZTempViewController.m */; };
+		FB40D44719B61584006C6315 /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43619B61584006C6315 /* RZTesterViewController.m */; };
+		FB40D44819B61584006C6315 /* RZTesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43619B61584006C6315 /* RZTesterViewController.m */; };
+		FB40D45119B615B1006C6315 /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D44E19B615B1006C6315 /* RZMilestoneCell.m */; };
+		FB40D45219B615B1006C6315 /* RZMilestoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D44E19B615B1006C6315 /* RZMilestoneCell.m */; };
+		FB40D45319B615B1006C6315 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45019B615B1006C6315 /* RZMilestonesHeaderCell.m */; };
+		FB40D45419B615B1006C6315 /* RZMilestonesHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45019B615B1006C6315 /* RZMilestonesHeaderCell.m */; };
+		FB40D45A19B615E1006C6315 /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45719B615E1006C6315 /* RZGoalListViewModel.m */; };
+		FB40D45B19B615E1006C6315 /* RZGoalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45719B615E1006C6315 /* RZGoalListViewModel.m */; };
+		FB40D45C19B615E1006C6315 /* RZMilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45919B615E1006C6315 /* RZMilestoneViewModel.m */; };
+		FB40D45D19B615E1006C6315 /* RZMilestoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45919B615E1006C6315 /* RZMilestoneViewModel.m */; };
+		FB40D46019B6160B006C6315 /* RZGoalViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45F19B6160B006C6315 /* RZGoalViewModel.m */; };
+		FB40D46119B6160B006C6315 /* RZGoalViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D45F19B6160B006C6315 /* RZGoalViewModel.m */; };
+		FB40D46619B6162C006C6315 /* RZGoalListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D46319B6162C006C6315 /* RZGoalListViewModelTests.m */; };
+		FB40D46819B6162C006C6315 /* RZNSDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D46419B6162C006C6315 /* RZNSDateFormatterTests.m */; };
+		FB40D46A19B61A8F006C6315 /* RZGoalViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D46919B61A8F006C6315 /* RZGoalViewModelTests.m */; };
+		FB40D46B19B624E0006C6315 /* RZGoalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42C19B61584006C6315 /* RZGoalDetailViewController.m */; };
+		FB40D46D19B637E4006C6315 /* MilestoneTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB40D46C19B637E4006C6315 /* MilestoneTableCell.xib */; };
+		FB40D46E19B637E4006C6315 /* MilestoneTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB40D46C19B637E4006C6315 /* MilestoneTableCell.xib */; };
 		FB933CB319AB9D9100B71A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
 		FB933CB519AB9D9100B71A64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */; };
 		FB933CB719AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
@@ -61,7 +68,6 @@
 		FB933CD319AB9D9100B71A64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
 		FB933CD419AB9D9100B71A64 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB819AB9D9100B71A64 /* CoreData.framework */; };
 		FB933CDC19AB9D9100B71A64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB933CDA19AB9D9100B71A64 /* InfoPlist.strings */; };
-		FB933CDE19AB9D9100B71A64 /* WhatForTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB933CDD19AB9D9100B71A64 /* WhatForTests.m */; };
 		FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDE919ACD5A700A4686F /* RZCoreDataRepository.m */; };
 		FBD4DDEB19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDE919ACD5A700A4686F /* RZCoreDataRepository.m */; };
 		FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DDED19ACD95400A4686F /* RZTestingRepository.m */; };
@@ -71,7 +77,6 @@
 		FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */; };
-		FBD4DE3719AD298600A4686F /* RZGoalListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */; };
 		FBD4DE4A19AD30A800A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4919AD30A800A4686F /* Goal.m */; };
 		FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE4919AD30A800A4686F /* Goal.m */; };
 /* End PBXBuildFile section */
@@ -91,44 +96,51 @@
 		FB0FD47A19AD6271002AFF9B /* Milestone+Enums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Milestone+Enums.m"; sourceTree = "<group>"; };
 		FB0FD48119AD6432002AFF9B /* Milestone+EmumsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Milestone+EmumsTests.m"; sourceTree = "<group>"; };
 		FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		FB0FD48819AD6EA0002AFF9B /* RZMilestoneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneViewModel.h; sourceTree = "<group>"; };
-		FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneViewModel.m; sourceTree = "<group>"; };
-		FB0FD48A19AD6EA0002AFF9B /* RZGoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalListViewController.h; sourceTree = "<group>"; };
-		FB0FD48B19AD6EA0002AFF9B /* RZGoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewController.m; sourceTree = "<group>"; };
-		FB0FD48C19AD6EA1002AFF9B /* RZGoalListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalListViewModel.h; sourceTree = "<group>"; };
-		FB0FD48D19AD6EA1002AFF9B /* RZGoalListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewModel.m; sourceTree = "<group>"; };
-		FB0FD48E19AD6EA1002AFF9B /* RZMilestoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneCell.h; sourceTree = "<group>"; };
-		FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneCell.m; sourceTree = "<group>"; };
 		FB0FD49A19AD6EB0002AFF9B /* RZUIStyleGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZUIStyleGuide.h; sourceTree = "<group>"; };
 		FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZUIStyleGuide.m; sourceTree = "<group>"; };
-		FB0FD49E19AD740B002AFF9B /* RZTesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTesterViewController.h; sourceTree = "<group>"; };
-		FB0FD49F19AD740B002AFF9B /* RZTesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTesterViewController.m; sourceTree = "<group>"; };
 		FB0FD4A619AD7A95002AFF9B /* Milestone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestone.h; sourceTree = "<group>"; };
 		FB0FD4A719AD7A95002AFF9B /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
-		FB13B27319AE37A5008C2027 /* RZTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewController.h; sourceTree = "<group>"; };
-		FB13B27419AE37A5008C2027 /* RZTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTempViewController.m; sourceTree = "<group>"; };
-		FB13B27719AEC5CD008C2027 /* RZMilestoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneDetailViewController.h; sourceTree = "<group>"; };
-		FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneDetailViewController.m; sourceTree = "<group>"; };
 		FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RZSharedDateFormatters.h"; sourceTree = "<group>"; };
 		FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RZSharedDateFormatters.m"; sourceTree = "<group>"; };
-		FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNSDateFormatterTests.m; sourceTree = "<group>"; };
 		FB13B28119AF6225008C2027 /* RZEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZEnums.h; sourceTree = "<group>"; };
-		FB13B28219AF656D008C2027 /* RZMilestonesHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestonesHeaderCell.h; sourceTree = "<group>"; };
-		FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestonesHeaderCell.m; sourceTree = "<group>"; };
 		FB13B28619AF6B79008C2027 /* UIView+QuartzEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QuartzEffects.h"; sourceTree = "<group>"; };
 		FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QuartzEffects.m"; sourceTree = "<group>"; };
 		FB13B28A19AF6C22008C2027 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB13B28C19AF7089008C2027 /* RZGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGradientView.h; sourceTree = "<group>"; };
 		FB13B28D19AF7089008C2027 /* RZGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGradientView.m; sourceTree = "<group>"; };
-		FB40D40E19B0CC0F006C6315 /* RZMilestoneAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneAddViewController.h; sourceTree = "<group>"; };
-		FB40D40F19B0CC0F006C6315 /* RZMilestoneAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneAddViewController.m; sourceTree = "<group>"; };
 		FB40D41219B0D085006C6315 /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
 		FB40D41319B0D085006C6315 /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
 		FB40D41619B0D72A006C6315 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
-		FB40D41719B34F02006C6315 /* RZActivityStatusPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZActivityStatusPickerViewController.h; sourceTree = "<group>"; };
-		FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZActivityStatusPickerViewController.m; sourceTree = "<group>"; };
 		FB40D41B19B4CC19006C6315 /* RZStringsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZStringsHelper.h; sourceTree = "<group>"; };
 		FB40D41C19B4CC19006C6315 /* RZStringsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZStringsHelper.m; sourceTree = "<group>"; };
+		FB40D42919B61584006C6315 /* RZActivityStatusPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZActivityStatusPickerViewController.h; sourceTree = "<group>"; };
+		FB40D42A19B61584006C6315 /* RZActivityStatusPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZActivityStatusPickerViewController.m; sourceTree = "<group>"; };
+		FB40D42B19B61584006C6315 /* RZGoalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalDetailViewController.h; sourceTree = "<group>"; };
+		FB40D42C19B61584006C6315 /* RZGoalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalDetailViewController.m; sourceTree = "<group>"; };
+		FB40D42D19B61584006C6315 /* RZGoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalListViewController.h; sourceTree = "<group>"; };
+		FB40D42E19B61584006C6315 /* RZGoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewController.m; sourceTree = "<group>"; };
+		FB40D42F19B61584006C6315 /* RZMilestoneAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneAddViewController.h; sourceTree = "<group>"; };
+		FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneAddViewController.m; sourceTree = "<group>"; };
+		FB40D43119B61584006C6315 /* RZMilestoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneDetailViewController.h; sourceTree = "<group>"; };
+		FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneDetailViewController.m; sourceTree = "<group>"; };
+		FB40D43319B61584006C6315 /* RZTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewController.h; sourceTree = "<group>"; };
+		FB40D43419B61584006C6315 /* RZTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTempViewController.m; sourceTree = "<group>"; };
+		FB40D43519B61584006C6315 /* RZTesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTesterViewController.h; sourceTree = "<group>"; };
+		FB40D43619B61584006C6315 /* RZTesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTesterViewController.m; sourceTree = "<group>"; };
+		FB40D44D19B615B1006C6315 /* RZMilestoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneCell.h; sourceTree = "<group>"; };
+		FB40D44E19B615B1006C6315 /* RZMilestoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneCell.m; sourceTree = "<group>"; };
+		FB40D44F19B615B1006C6315 /* RZMilestonesHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestonesHeaderCell.h; sourceTree = "<group>"; };
+		FB40D45019B615B1006C6315 /* RZMilestonesHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestonesHeaderCell.m; sourceTree = "<group>"; };
+		FB40D45619B615E1006C6315 /* RZGoalListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalListViewModel.h; sourceTree = "<group>"; };
+		FB40D45719B615E1006C6315 /* RZGoalListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewModel.m; sourceTree = "<group>"; };
+		FB40D45819B615E1006C6315 /* RZMilestoneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneViewModel.h; sourceTree = "<group>"; };
+		FB40D45919B615E1006C6315 /* RZMilestoneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneViewModel.m; sourceTree = "<group>"; };
+		FB40D45E19B6160B006C6315 /* RZGoalViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalViewModel.h; sourceTree = "<group>"; };
+		FB40D45F19B6160B006C6315 /* RZGoalViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalViewModel.m; sourceTree = "<group>"; };
+		FB40D46319B6162C006C6315 /* RZGoalListViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewModelTests.m; sourceTree = "<group>"; };
+		FB40D46419B6162C006C6315 /* RZNSDateFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNSDateFormatterTests.m; sourceTree = "<group>"; };
+		FB40D46919B61A8F006C6315 /* RZGoalViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalViewModelTests.m; sourceTree = "<group>"; };
+		FB40D46C19B637E4006C6315 /* MilestoneTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneTableCell.xib; sourceTree = "<group>"; };
 		FB933CAF19AB9D9100B71A64 /* WhatFor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB933CB219AB9D9100B71A64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB933CB419AB9D9100B71A64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,7 +157,6 @@
 		FB933CD019AB9D9100B71A64 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FB933CD919AB9D9100B71A64 /* WhatForTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatForTests-Info.plist"; sourceTree = "<group>"; };
 		FB933CDB19AB9D9100B71A64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FB933CDD19AB9D9100B71A64 /* WhatForTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatForTests.m; sourceTree = "<group>"; };
 		FBD4DDE819ACD5A700A4686F /* RZCoreDataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZCoreDataRepository.h; path = CoreData/RZCoreDataRepository.h; sourceTree = "<group>"; };
 		FBD4DDE919ACD5A700A4686F /* RZCoreDataRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZCoreDataRepository.m; path = CoreData/RZCoreDataRepository.m; sourceTree = "<group>"; };
 		FBD4DDEC19ACD95400A4686F /* RZTestingRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RZTestingRepository.h; path = CoreData/RZTestingRepository.h; sourceTree = "<group>"; };
@@ -156,7 +167,6 @@
 		FBD4DE0619ACE5B000A4686F /* RZCoreDataRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZCoreDataRepositoryTests.m; path = CoreData/RZCoreDataRepositoryTests.m; sourceTree = "<group>"; };
 		FBD4DE1119ACEAD500A4686F /* WhatFor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatFor.xcdatamodel; sourceTree = "<group>"; };
 		FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZSeedDataInserterTests.m; path = CoreData/RZSeedDataInserterTests.m; sourceTree = "<group>"; };
-		FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewModelTests.m; sourceTree = "<group>"; };
 		FBD4DE4819AD30A800A4686F /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		FBD4DE4919AD30A800A4686F /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,40 +198,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB40D42819B61584006C6315 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB40D42919B61584006C6315 /* RZActivityStatusPickerViewController.h */,
+				FB40D42A19B61584006C6315 /* RZActivityStatusPickerViewController.m */,
+				FB40D42B19B61584006C6315 /* RZGoalDetailViewController.h */,
+				FB40D42C19B61584006C6315 /* RZGoalDetailViewController.m */,
+				FB40D42D19B61584006C6315 /* RZGoalListViewController.h */,
+				FB40D42E19B61584006C6315 /* RZGoalListViewController.m */,
+				FB40D42F19B61584006C6315 /* RZMilestoneAddViewController.h */,
+				FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */,
+				FB40D43119B61584006C6315 /* RZMilestoneDetailViewController.h */,
+				FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */,
+				FB40D43319B61584006C6315 /* RZTempViewController.h */,
+				FB40D43419B61584006C6315 /* RZTempViewController.m */,
+				FB40D43519B61584006C6315 /* RZTesterViewController.h */,
+				FB40D43619B61584006C6315 /* RZTesterViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB40D44C19B615B1006C6315 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				FB40D44D19B615B1006C6315 /* RZMilestoneCell.h */,
+				FB40D44E19B615B1006C6315 /* RZMilestoneCell.m */,
+				FB40D44F19B615B1006C6315 /* RZMilestonesHeaderCell.h */,
+				FB40D45019B615B1006C6315 /* RZMilestonesHeaderCell.m */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		FB40D45519B615E1006C6315 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB40D45619B615E1006C6315 /* RZGoalListViewModel.h */,
+				FB40D45719B615E1006C6315 /* RZGoalListViewModel.m */,
+				FB40D45819B615E1006C6315 /* RZMilestoneViewModel.h */,
+				FB40D45919B615E1006C6315 /* RZMilestoneViewModel.m */,
+				FB40D45E19B6160B006C6315 /* RZGoalViewModel.h */,
+				FB40D45F19B6160B006C6315 /* RZGoalViewModel.m */,
+			);
+			name = ViewModel;
+			path = WhatFor/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		FB40D46219B6162C006C6315 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB40D46319B6162C006C6315 /* RZGoalListViewModelTests.m */,
+				FB40D46419B6162C006C6315 /* RZNSDateFormatterTests.m */,
+				FB40D46919B61A8F006C6315 /* RZGoalViewModelTests.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FB69EC7E19ABA2A7005BA0EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB40D44C19B615B1006C6315 /* TableCells */,
+				FB40D42819B61584006C6315 /* ViewControllers */,
 				FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */,
-				FB0FD48A19AD6EA0002AFF9B /* RZGoalListViewController.h */,
-				FB0FD48B19AD6EA0002AFF9B /* RZGoalListViewController.m */,
-				FB0FD48C19AD6EA1002AFF9B /* RZGoalListViewModel.h */,
-				FB0FD48D19AD6EA1002AFF9B /* RZGoalListViewModel.m */,
-				FB0FD48E19AD6EA1002AFF9B /* RZMilestoneCell.h */,
-				FB0FD48F19AD6EA1002AFF9B /* RZMilestoneCell.m */,
-				FB40D40E19B0CC0F006C6315 /* RZMilestoneAddViewController.h */,
-				FB40D40F19B0CC0F006C6315 /* RZMilestoneAddViewController.m */,
-				FB13B27719AEC5CD008C2027 /* RZMilestoneDetailViewController.h */,
-				FB13B27819AEC5CD008C2027 /* RZMilestoneDetailViewController.m */,
-				FB13B28219AF656D008C2027 /* RZMilestonesHeaderCell.h */,
-				FB13B28319AF656D008C2027 /* RZMilestonesHeaderCell.m */,
-				FB0FD48819AD6EA0002AFF9B /* RZMilestoneViewModel.h */,
-				FB0FD48919AD6EA0002AFF9B /* RZMilestoneViewModel.m */,
-				FB13B27319AE37A5008C2027 /* RZTempViewController.h */,
-				FB13B27419AE37A5008C2027 /* RZTempViewController.m */,
-				FB0FD49E19AD740B002AFF9B /* RZTesterViewController.h */,
-				FB0FD49F19AD740B002AFF9B /* RZTesterViewController.m */,
-				FB0FD49A19AD6EB0002AFF9B /* RZUIStyleGuide.h */,
-				FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */,
+				FB40D46C19B637E4006C6315 /* MilestoneTableCell.xib */,
 				FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */,
 				FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */,
-				FB13B28619AF6B79008C2027 /* UIView+QuartzEffects.h */,
-				FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */,
 				FB13B28C19AF7089008C2027 /* RZGradientView.h */,
 				FB13B28D19AF7089008C2027 /* RZGradientView.m */,
+				FB0FD49A19AD6EB0002AFF9B /* RZUIStyleGuide.h */,
+				FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */,
 				FB40D41219B0D085006C6315 /* UIView+Helpers.h */,
 				FB40D41319B0D085006C6315 /* UIView+Helpers.m */,
-				FB40D41719B34F02006C6315 /* RZActivityStatusPickerViewController.h */,
-				FB40D41819B34F02006C6315 /* RZActivityStatusPickerViewController.m */,
+				FB13B28619AF6B79008C2027 /* UIView+QuartzEffects.h */,
+				FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +313,7 @@
 			children = (
 				FBD4DDDD19ACD21200A4686F /* CoreData */,
 				FB69EC7E19ABA2A7005BA0EB /* View */,
+				FB40D45519B615E1006C6315 /* ViewModel */,
 				FB933CC319AB9D9100B71A64 /* RZAppDelegate.h */,
 				FB933CC419AB9D9100B71A64 /* RZAppDelegate.m */,
 				FB13B28119AF6225008C2027 /* RZEnums.h */,
@@ -289,9 +339,8 @@
 		FB933CD719AB9D9100B71A64 /* WhatForTests */ = {
 			isa = PBXGroup;
 			children = (
-				FBD4DE3519AD298600A4686F /* View */,
+				FB40D46219B6162C006C6315 /* ViewModel */,
 				FBD4DDE719ACD55A00A4686F /* CoreData */,
-				FB933CDD19AB9D9100B71A64 /* WhatForTests.m */,
 				FB933CD819AB9D9100B71A64 /* Supporting Files */,
 			);
 			path = WhatForTests;
@@ -344,15 +393,6 @@
 			);
 			name = Model;
 			path = CoreData/Model;
-			sourceTree = "<group>";
-		};
-		FBD4DE3519AD298600A4686F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FBD4DE3619AD298600A4686F /* RZGoalListViewModelTests.m */,
-				FB13B27F19AED31A008C2027 /* RZNSDateFormatterTests.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +474,7 @@
 				FB933CBF19AB9D9100B71A64 /* InfoPlist.strings in Resources */,
 				FB0FD49019AD6EA1002AFF9B /* iPhone.storyboard in Resources */,
 				FB933CCA19AB9D9100B71A64 /* Images.xcassets in Resources */,
+				FB40D46D19B637E4006C6315 /* MilestoneTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB933CDC19AB9D9100B71A64 /* InfoPlist.strings in Resources */,
+				FB40D46E19B637E4006C6315 /* MilestoneTableCell.xib in Resources */,
 				FB0FD49119AD6EA1002AFF9B /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,27 +498,29 @@
 				FBD4DE4A19AD30A800A4686F /* Goal.m in Sources */,
 				FB0FD47B19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
 				FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
+				FB40D43F19B61584006C6315 /* RZGoalListViewController.m in Sources */,
+				FB40D44119B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
 				FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
-				FB0FD4A019AD740B002AFF9B /* RZTesterViewController.m in Sources */,
-				FB40D41919B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
+				FB40D46B19B624E0006C6315 /* RZGoalDetailViewController.m in Sources */,
 				FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
-				FB0FD49819AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */,
 				FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
 				FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
 				FB933CC519AB9D9100B71A64 /* RZAppDelegate.m in Sources */,
-				FB0FD49219AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */,
-				FB40D41019B0CC0F006C6315 /* RZMilestoneAddViewController.m in Sources */,
-				FB0FD49619AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */,
 				FB40D41419B0D085006C6315 /* UIView+Helpers.m in Sources */,
+				FB40D45319B615B1006C6315 /* RZMilestonesHeaderCell.m in Sources */,
+				FB40D46019B6160B006C6315 /* RZGoalViewModel.m in Sources */,
+				FB40D45119B615B1006C6315 /* RZMilestoneCell.m in Sources */,
 				FB0FD4A819AD7A95002AFF9B /* Milestone.m in Sources */,
+				FB40D44719B61584006C6315 /* RZTesterViewController.m in Sources */,
+				FB40D44319B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */,
+				FB40D44519B61584006C6315 /* RZTempViewController.m in Sources */,
+				FB40D45C19B615E1006C6315 /* RZMilestoneViewModel.m in Sources */,
 				FB13B28E19AF7089008C2027 /* RZGradientView.m in Sources */,
 				FB933CC119AB9D9100B71A64 /* main.m in Sources */,
 				FB0FD49C19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
-				FB13B27519AE37A5008C2027 /* RZTempViewController.m in Sources */,
+				FB40D43B19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
 				FB13B28819AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */,
-				FB13B28419AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */,
-				FB13B27919AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */,
-				FB0FD49419AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
+				FB40D45A19B615E1006C6315 /* RZGoalListViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,34 +529,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD4DE4B19AD30A800A4686F /* Goal.m in Sources */,
-				FB13B28019AED31A008C2027 /* RZNSDateFormatterTests.m in Sources */,
-				FB0FD49519AD6EA1002AFF9B /* RZGoalListViewController.m in Sources */,
-				FB40D41A19B34F02006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
 				FB0FD49D19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */,
 				FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
-				FB13B27619AE37A5008C2027 /* RZTempViewController.m in Sources */,
+				FB40D46A19B61A8F006C6315 /* RZGoalViewModelTests.m in Sources */,
+				FB40D44219B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
 				FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */,
 				FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */,
-				FB933CDE19AB9D9100B71A64 /* WhatForTests.m in Sources */,
+				FB40D45419B615B1006C6315 /* RZMilestonesHeaderCell.m in Sources */,
+				FB40D45B19B615E1006C6315 /* RZGoalListViewModel.m in Sources */,
+				FB40D43C19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */,
 				FBD4DDEB19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
+				FB40D45219B615B1006C6315 /* RZMilestoneCell.m in Sources */,
+				FB40D45D19B615E1006C6315 /* RZMilestoneViewModel.m in Sources */,
 				FBD4DDF219ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
 				FBD4DDEE19ACD95400A4686F /* RZTestingRepository.m in Sources */,
 				FB40D41E19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
 				FB0FD4A919AD7A95002AFF9B /* Milestone.m in Sources */,
+				FB40D46819B6162C006C6315 /* RZNSDateFormatterTests.m in Sources */,
+				FB40D44619B61584006C6315 /* RZTempViewController.m in Sources */,
+				FB40D44819B61584006C6315 /* RZTesterViewController.m in Sources */,
+				FB40D44019B61584006C6315 /* RZGoalListViewController.m in Sources */,
+				FB40D44419B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */,
 				FB13B28F19AF7089008C2027 /* RZGradientView.m in Sources */,
 				FB13B28919AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */,
-				FB13B28519AF656D008C2027 /* RZMilestonesHeaderCell.m in Sources */,
-				FB0FD49919AD6EA1002AFF9B /* RZMilestoneCell.m in Sources */,
+				FB40D46119B6160B006C6315 /* RZGoalViewModel.m in Sources */,
 				FB0FD48219AD6432002AFF9B /* Milestone+EmumsTests.m in Sources */,
-				FBD4DE3719AD298600A4686F /* RZGoalListViewModelTests.m in Sources */,
-				FB0FD49319AD6EA1002AFF9B /* RZMilestoneViewModel.m in Sources */,
 				FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */,
+				FB40D46619B6162C006C6315 /* RZGoalListViewModelTests.m in Sources */,
 				FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */,
-				FB0FD4A119AD740B002AFF9B /* RZTesterViewController.m in Sources */,
 				FB0FD47C19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
-				FB13B27A19AEC5CD008C2027 /* RZMilestoneDetailViewController.m in Sources */,
-				FB0FD49719AD6EA1002AFF9B /* RZGoalListViewModel.m in Sources */,
-				FB40D41119B0CC0F006C6315 /* RZMilestoneAddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

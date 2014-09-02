@@ -10,8 +10,8 @@
 #import "ModelHeader.h"
 #import "RZMilestonesHeaderCell.h"
 #import "RZGoalListViewModel.h"
-#import "RZMilestoneCell.h"
 #import "RZMilestoneDetailViewController.h"
+#import "RZGoalDetailViewController.h"
 #import "RZUIStyleGuide.h"
 #import "UIView+Helpers.h"
 
@@ -39,6 +39,9 @@ RZGoalListViewModel *goalListViewModel;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"MilestoneTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"milestoneCell"];
+
+    [self setTitle:@"My Goals"];
     
     goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:[self coreDataRepository] hideCompletedMilestones:self.hideCompleted];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -90,7 +93,8 @@ RZGoalListViewModel *goalListViewModel;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestoneCell defaultReuseIdentifier]];
-	
+	[cell setDelegate:self];
+    
     RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
 
     [[cell titleLabel] setText:[viewModel title]];
@@ -157,7 +161,12 @@ RZGoalListViewModel *goalListViewModel;
 - (void)milestoneAddViewControllerDidCancel:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
 - (void)milestoneAddViewControllerDidSave:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
 
+#pragma mark - RZMilestoneCellDelegate
 
+- (void)didSelectMilestoneCell:(RZMilestoneCell *)cell{
+    //NSIndexPath *path = [[self tableView] indexPathForCell:cell];
+    [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
+}
 
 #pragma mark - Navigation
 
@@ -169,13 +178,19 @@ RZGoalListViewModel *goalListViewModel;
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         RZMilestoneViewModel *milestoneViewModel = [goalListViewModel milestoneViewModelAtIndexPath:selectedRowIndex];
         [vc setMilestoneViewModel:milestoneViewModel];
-    }
-    else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"]){
+    }else if ([[segue identifier] isEqualToString:@"goalDetailSegue"]) {
+        RZGoalDetailViewController *vc = (RZGoalDetailViewController *)[segue destinationViewController];
+        RZMilestonesHeaderCell *cell = (RZMilestonesHeaderCell *)[sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
+        
+        NSInteger selectedSectionIndex = [cell tableViewSectionIndex];
+        RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:selectedSectionIndex];
+        [vc setGoalViewModel:goalVM];
+    }else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"]){
         //EXAMPLE: really good application of delegate pattern using modal add view controller  http://www.raywenderlich.com/5191/beginning-storyboards-in-ios-5-part-2
         
         RZMilestonesHeaderCell *headerCell = (RZMilestonesHeaderCell *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
         NSInteger section = [headerCell tableViewSectionIndex];
-        Goal *goal = [goalListViewModel goalAtIndex:section];
+        RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:section];
         RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] init];
         //NOTE: intent is to pass needed goal title and such but the add milestone does not need any knowledge of core data!  Delegate back to this view controller.
         // Long term, complexity may be refactored out of view model, into an interacter class

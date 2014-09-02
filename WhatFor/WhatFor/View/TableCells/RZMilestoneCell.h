@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RZMilestoneCell;
+
+@protocol RZMilestoneCellDelegate
+- (void)didSelectMilestoneCell:(RZMilestoneCell *)cell;
+@end
 
 @interface RZMilestoneCell : UITableViewCell
+@property (nonatomic) id<RZMilestoneCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 + (NSString *)defaultReuseIdentifier;

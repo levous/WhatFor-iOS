@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RZCoreDataRepository.h"
+#import "RZGoalViewModel.h"
 #import "RZMilestoneViewModel.h"
 @interface RZGoalListViewModel : NSObject
 
@@ -15,7 +16,7 @@
 
 - (id)initWithRepository:(RZCoreDataRepository *)coreDataRepository hideCompletedMilestones:(BOOL)hideCompletedMilestones;
 - (NSInteger)goalCount;
-- (Goal *)goalAtIndex:(NSInteger)index;
+- (RZGoalViewModel *)goalAtIndex:(NSInteger)index;
 - (NSInteger)milestoneCountForGoalAtIndex:(NSInteger)index;
 - (NSString *)titleForGoalAtIndex:(NSInteger)index;
 - (RZMilestoneViewModel *)milestoneViewModelAtIndexPath:(NSIndexPath *)indexPath;

@@ -53,7 +53,7 @@
 }
 
 - (void)populateFromMilestone:(Milestone *)milestone{
-    [self setMilestone:milestone];
+    _milestone = milestone;
     [self setTitle:[milestone title]];
     [self setSummary:[milestone summary]];
     if ([milestone dueDate] == nil) {

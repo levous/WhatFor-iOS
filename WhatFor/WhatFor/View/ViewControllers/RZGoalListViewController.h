@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RZCoreDataRepository.h"
 #import "RZMilestoneAddViewController.h"
+#import "RZMilestoneCell.h"
 
-@interface RZGoalListViewController : UITableViewController<RZMilestoneAddViewControllerDelegate>
+
+@interface RZGoalListViewController : UITableViewController<RZMilestoneAddViewControllerDelegate,RZMilestoneCellDelegate>
 
 @property (strong, nonatomic) RZCoreDataRepository *coreDataRepository;
 @property (nonatomic) BOOL hideCompleted;

@@ -42,7 +42,7 @@ RZSeedDataInserter *seedInserter;
 
 - (void)testViewModelData
 {
-    NSArray *colors = [NSArray arrayWithObjects:[RZUIStyleGuide fontColorForStatus:RZActivityStatusUnknown], [RZUIStyleGuide fontColorForStatus:RZActivityStatusInProgress], [RZUIStyleGuide fontColorForStatus:RZActivityStatusComplete], [RZUIStyleGuide fontColorForStatus:RZActivityStatusBlocked], nil];
+    NSArray *colors = @[[RZUIStyleGuide fontColorForStatus:RZActivityStatusUnknown], [RZUIStyleGuide fontColorForStatus:RZActivityStatusInProgress], [RZUIStyleGuide fontColorForStatus:RZActivityStatusComplete], [RZUIStyleGuide fontColorForStatus:RZActivityStatusBlocked] ];
     
     NSArray *goals = [repos getAllGoals];
     Goal *goal = [goals objectAtIndex:0];
@@ -146,8 +146,9 @@ RZSeedDataInserter *seedInserter;
     
     RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:YES];
     
-    Goal *goal = [listViewModel goalAtIndex:1];
-    XCTAssertEqual(goal, expected);
+    RZGoalViewModel *goal = [listViewModel goalAtIndex:1];
+    XCTAssertEqualObjects([goal title], [expected title]);
+    XCTAssertEqualObjects([goal summary], [expected summary]);
     
 }
 
