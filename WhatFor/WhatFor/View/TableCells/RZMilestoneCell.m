@@ -27,7 +27,7 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-    if([self delegate] != nil){
+    if(selected && [self delegate] != nil){
         [[self delegate] didSelectMilestoneCell:self];
     }
 }

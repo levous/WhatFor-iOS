@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "RZGoalViewModel.h"
 
-@interface RZGoalDetailViewController : UIViewController
+#import "RZMilestoneCell.h"
+
+@interface RZGoalDetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, RZMilestoneCellDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateDueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) RZGoalViewModel *goalViewModel;
 

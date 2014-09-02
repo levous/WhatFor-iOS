@@ -92,7 +92,7 @@ RZGoalListViewModel *goalListViewModel;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestoneCell defaultReuseIdentifier]];
+    RZMilestoneCell *cell = (RZMilestoneCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestoneCell defaultReuseIdentifier] forIndexPath:indexPath];
 	[cell setDelegate:self];
     
     RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];

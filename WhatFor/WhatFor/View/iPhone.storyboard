@@ -680,6 +680,19 @@
                                 <rect key="frame" x="0.0" y="244" width="320" height="324"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="i5v-TZ-Rmo">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i5v-TZ-Rmo">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sVO-ga-Peh" kind="push" identifier="milestoneDetaileSegue" id="r5f-Aw-EnF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -708,6 +721,7 @@
                         <outlet property="dateDueLabel" destination="bxV-4C-Bv9" id="lag-3H-rC3"/>
                         <outlet property="statusLabel" destination="B5a-zj-ttp" id="Iju-ED-opw"/>
                         <outlet property="summaryTextView" destination="yHO-eb-H2H" id="5Xr-rH-wog"/>
+                        <outlet property="tableView" destination="0Ld-p6-t5r" id="Ck1-eU-Vm2"/>
                         <outlet property="timeRemainingLabel" destination="Th5-Ac-K42" id="K8q-vj-w9i"/>
                         <outlet property="titleLabel" destination="1TN-VC-8E0" id="HhE-zo-Msg"/>
                     </connections>
@@ -724,5 +738,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cgd-Ja-ove"/>
+        <segue reference="Our-fR-phR"/>
     </inferredMetricsTieBreakers>
 </document>
