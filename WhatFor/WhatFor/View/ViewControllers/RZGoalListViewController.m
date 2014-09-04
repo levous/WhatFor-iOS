@@ -191,7 +191,10 @@ RZGoalListViewModel *goalListViewModel;
         RZMilestonesHeaderCell *headerCell = (RZMilestonesHeaderCell *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
         NSInteger section = [headerCell tableViewSectionIndex];
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:section];
+        
+        NSString *goalTitle = [goalVM title];
         RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] init];
+        [milestoneVM setGoalTitle:goalTitle];
         //NOTE: intent is to pass needed goal title and such but the add milestone does not need any knowledge of core data!  Delegate back to this view controller.
         // Long term, complexity may be refactored out of view model, into an interacter class
         //  ViewController should contain basic iOS glue stuff; outlets, actions, etc.

@@ -17,6 +17,7 @@
 @end
 
 @interface RZMilestoneAddViewController : UITableViewController<RZActivityStatusPickerViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *goalTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
 @property (weak, nonatomic) IBOutlet UITextField *dueDateTextField;

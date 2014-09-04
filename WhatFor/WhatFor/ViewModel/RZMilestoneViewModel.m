@@ -11,6 +11,7 @@
 #import "NSDateFormatter+RZSharedDateFormatters.h"
 #import "RZUIStyleGuide.h"
 #import "RZStringsHelper.h"
+#import "Goal.h"
 
 @implementation RZMilestoneViewModelStatus
 
@@ -65,6 +66,8 @@
     [self setTimeRemaining:@""]; //lazy today.  maybe later
     RZActivityStatus status = [milestone status];
     [[self status] setStatus:status];
+    
+    [self setGoalTitle:[[milestone milestoneGoal] title]];
 }
 
 @end

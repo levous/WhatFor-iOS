@@ -23,9 +23,11 @@
     Milestone *_milestone;
 }
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *goalTitle;
 @property (strong, nonatomic) NSString *summary;
 @property (strong, nonatomic) NSString *dateDue;
 @property (strong, nonatomic) NSString *timeRemaining;
+
 
 @property (strong, nonatomic) RZMilestoneViewModelStatus *status;
 
