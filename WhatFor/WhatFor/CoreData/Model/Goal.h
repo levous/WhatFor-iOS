@@ -2,7 +2,7 @@
 //  Goal.h
 //  WhatFor
 //
-//  Created by Rusty Zarse on 8/26/14.
+//  Created by Rusty Zarse on 9/5/14.
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 @interface Goal : NSManagedObject
 
-@property (nonatomic, retain) NSDate * createDate;
+@property (nonatomic, retain) NSDate * dateCreated;
+@property (nonatomic, retain) NSNumber * sortOrder;
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSNumber * sortOrder;
 @property (nonatomic, retain) NSOrderedSet *goalMilestones;
 @end
 

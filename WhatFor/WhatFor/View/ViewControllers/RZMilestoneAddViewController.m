@@ -24,11 +24,18 @@
     }
     return self;
 }
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setStatusViewModel:[[RZStatusViewModel alloc] init]];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self setTitle:@"Add Milestone"];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -38,6 +45,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [[self goalTitleLabel] setText:[[self milestoneViewModel] goalTitle]];
+    
+    [self populateFromViewModel];
+}
+
+- (void)populateFromViewModel{
+    [[self titleTextField] setText:[[self milestoneViewModel] title]];
+    [[self summaryTextView] setText:[[self milestoneViewModel] summary]];
+    [[self dueDateTextField] setText:[[self milestoneViewModel] dateDueText]];
+    //[[self pointValueTextField] setText:[[self milestoneViewModel] ???]];
+    [[[self statusTableCell] textLabel] setText:[[[self milestoneViewModel] status] title]];
+    [[[self statusTableCell] textLabel] setTextColor:[[[self milestoneViewModel] status] color]];
+    // copy status value to local status view model for temp storage
+    [[self statusViewModel] setStatus:[[[self milestoneViewModel] status] status]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,13 +120,12 @@
     }
 }
 
- 
-
 
 - (void)rzactivityStatusPickerViewController:(RZActivityStatusPickerViewController *)controller
                            didSelectStatus:(RZActivityStatus)status{
-    [[[self milestoneViewModel] status] setStatus:status];
-    [[[self statusTableCell] textLabel] setText:[[[self milestoneViewModel] status] title]];
+    [[self statusViewModel] setStatus:status];
+    [[[self statusTableCell] textLabel] setText:[[self statusViewModel] title]];
+    [[[self statusTableCell] textLabel] setTextColor:[[self statusViewModel] color]];
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
@@ -119,9 +138,15 @@
 }
 - (IBAction)done:(id)sender
 {
-    // OK, need that interacter class to set values in a testable way...
+    RZMilestoneViewModel *mvm = [self milestoneViewModel];
     
-	[self.delegate milestoneAddViewControllerDidSave:self];
+    [mvm setTitle:[[self titleTextField] text]];
+    [mvm setSummary:[[self summaryTextView] text]];
+    [[mvm status] setStatus:[[self statusViewModel] status]];
+    //[mvm setDateDue:[self dateDue]];
+    [mvm setTitle:[[self titleTextField] text]];
+    
+	[self.delegate milestoneAddViewController:self didUpdateMilestone:[self milestoneViewModel]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

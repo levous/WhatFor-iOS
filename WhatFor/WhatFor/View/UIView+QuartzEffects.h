@@ -14,5 +14,6 @@
 
 -(void) RZGradientGrey;
 -(void) RZGradientBlue;
+- (void)flashElipseWithColor:(UIColor *)color;
 
 @end

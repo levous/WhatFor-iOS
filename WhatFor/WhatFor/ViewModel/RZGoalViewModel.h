@@ -10,16 +10,21 @@
 
 @class Goal;
 #import "RZMilestoneViewModel.h"
-
+#import "RZStatusViewModel.h"
+#import "RZCoreDataRepository.h"
 
 @interface RZGoalViewModel : NSObject{
     Goal *_goal;
+    RZCoreDataRepository *_repository;
 }
 
+@property (strong, nonatomic) RZStatusViewModel *status;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *summary;
 @property (nonatomic, strong) NSArray *milestones;
 @property (nonatomic, strong) NSArray *remainingMilestones;
 
-- (id)initWithGoal:(Goal *)goal;
+- (id)initWithGoal:(Goal *)goal andRepository:(RZCoreDataRepository *)repository;
+- (void)saveMilestone:(RZMilestoneViewModel *)milestoneViewModel;
+
 @end

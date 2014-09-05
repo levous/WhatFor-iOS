@@ -89,7 +89,7 @@
     NSFetchRequest *request = [self fetchRequestForEntityNamed:@"Goal"];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"dueDate" ascending:YES];
+                                        initWithKey:@"dateDue" ascending:YES];
     
     [request setSortDescriptors:@[sortDescriptor]];
     

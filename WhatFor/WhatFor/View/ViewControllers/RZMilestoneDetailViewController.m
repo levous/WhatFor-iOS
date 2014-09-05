@@ -31,7 +31,7 @@
     [[self summaryTextView] setText:[[self milestoneViewModel] summary]];
     [[self statusLabel] setText:[[[self milestoneViewModel] status] title]];
     [[self statusLabel] setTextColor:[[[self milestoneViewModel] status] color]];
-    [[self dateDueLabel] setText:[[self milestoneViewModel] dateDue]];
+    [[self dateDueLabel] setText:[[self milestoneViewModel] dateDueText]];
     [[self timeRemainingLabel] setText:[[self milestoneViewModel] timeRemaining]];
 }
 

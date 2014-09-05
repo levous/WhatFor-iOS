@@ -12,8 +12,11 @@
 #import "RZMilestoneCell.h"
 
 
-@interface RZGoalListViewController : UITableViewController<RZMilestoneAddViewControllerDelegate,RZMilestoneCellDelegate>
+@interface RZGoalListViewController : UITableViewController<RZMilestoneAddViewControllerDelegate,RZMilestoneCellDelegate>{
+    NSInteger _lastSelectedSectionHeaderIndex;
+}
 
 @property (strong, nonatomic) RZCoreDataRepository *coreDataRepository;
 @property (nonatomic) BOOL hideCompleted;
+
 @end

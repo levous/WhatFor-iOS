@@ -2,7 +2,7 @@
 //  Goal.m
 //  WhatFor
 //
-//  Created by Rusty Zarse on 8/26/14.
+//  Created by Rusty Zarse on 9/5/14.
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 
 @implementation Goal
 
-@dynamic createDate;
+@dynamic dateCreated;
+@dynamic sortOrder;
 @dynamic summary;
 @dynamic title;
-@dynamic sortOrder;
 @dynamic goalMilestones;
 
 @end

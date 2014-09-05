@@ -7,6 +7,8 @@
 //
 
 #import "RZGoalDetailViewController.h"
+#import "RZMilestoneDetailViewController.h"
+#import "UIView+QuartzEffects.h"
 
 @interface RZGoalDetailViewController ()
 
@@ -27,6 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [[self tableView] setDelegate:self];
+    [[self tableView] setDataSource:self];
+    
     [self setTitle:@"Goal"];
     
     [[self tableView] registerNib:[UINib nibWithNibName:@"MilestoneTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"milestoneCell"];
@@ -34,8 +40,8 @@
     
     [[self titleLabel] setText:[[self goalViewModel] title]];
     [[self summaryTextView] setText:[[self goalViewModel] summary]];
-    //[[self statusLabel] setText:[[[self goalViewModel] status] title]];
-    //[[self statusLabel] setTextColor:[[[self goalViewModel] status] color]];
+    [[self statusLabel] setText:[[[self goalViewModel] status] title]];
+    [[self statusLabel] setTextColor:[[[self goalViewModel] status] color]];
     //[[self dateDueLabel] setText:[[self goalViewModel] dateDue]];
     //[[self timeRemainingLabel] setText:[[self goalViewModel] timeRemaining]];
 }
@@ -66,6 +72,9 @@
     [[cell statusLabel] setText:[[viewModel status] title]];
     [[cell statusLabel] setTextColor:[[viewModel status] color]];
     
+    if ([[viewModel status] status] == RZActivityStatusBlocked) {
+        [[cell contentView] flashElipseWithColor:[[viewModel status] color]];
+    }
     return cell;
 }
 
@@ -106,6 +115,17 @@
     [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
 }
 
+#pragma mark - Storyboard Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"milestoneDetailSegue"]) {
+        RZMilestoneDetailViewController *vc = (RZMilestoneDetailViewController *)[segue destinationViewController];
+        NSIndexPath *selectedRowIndex = [[self tableView] indexPathForSelectedRow];
+        RZMilestoneViewModel *milestoneViewModel = [[[self goalViewModel] milestones] objectAtIndex:selectedRowIndex.row];
+        [vc setMilestoneViewModel:milestoneViewModel];
+    }
+}
 #pragma mark - Memory
 
 - (void)didReceiveMemoryWarning

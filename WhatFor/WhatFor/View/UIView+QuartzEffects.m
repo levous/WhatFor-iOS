@@ -58,4 +58,45 @@
     
 }
 
+- (void)flashElipseWithColor:(UIColor *)color{
+    // Set up the shape of the circle
+    CAShapeLayer *circle = [CAShapeLayer layer];
+    // Make a circular shape
+    circle.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(3.0, 3.0, self.frame.size.width - 6.0, self.frame.size.height - 6.0)] .CGPath;
+    // Center the shape in self.view
+    circle.position = CGPointMake(0,0);
+    
+    // Configure the apperence of the circle
+    circle.fillColor = [UIColor clearColor].CGColor;
+    circle.strokeColor = color.CGColor;
+    circle.lineWidth = 3;
+    
+    // Add to parent layer
+    [self.layer addSublayer:circle];
+    
+    // Configure animation
+    CABasicAnimation *drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    drawAnimation.duration            = 0.5; // "animate over .5 seconds or so.."
+    drawAnimation.repeatCount         = 1.0;  // Animate only once..
+    
+    // Animate from no part of the stroke being drawn to the entire stroke being drawn
+    drawAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    drawAnimation.toValue   = [NSNumber numberWithFloat:1.0f];
+    
+    // Experiment with timing to get the appearence to look the way you want
+    drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    
+    // Add the animation to the circle
+    [circle addAnimation:drawAnimation forKey:@"drawCircleAnimation"];
+    // then fade the circle
+    CABasicAnimation *fadeOutAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeOutAnimation.fromValue = [NSNumber numberWithInt:1];
+    fadeOutAnimation.toValue = [NSNumber numberWithInt:0];
+    fadeOutAnimation.duration = 1.0;
+    fadeOutAnimation.fillMode = kCAFillModeForwards;
+    fadeOutAnimation.removedOnCompletion = NO;
+    
+    [circle addAnimation:fadeOutAnimation forKey:@"fadeOut"];
+}
+
 @end

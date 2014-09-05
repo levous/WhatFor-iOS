@@ -34,7 +34,7 @@ NSMutableArray *goalViewModels;
     goals = goalArray;
     for (Goal *goal in goals)
     {
-        RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:goal];
+        RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:goal andRepository:repos];
         [goalViewModels addObject:goalVM];
     }
 }

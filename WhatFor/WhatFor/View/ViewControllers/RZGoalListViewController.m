@@ -155,11 +155,19 @@ RZGoalListViewModel *goalListViewModel;
     return YES;
 }
 
-#pragma mark - RZMilestonesHeaderCellDelegate
+#pragma mark - RZMilestoneAddViewControllerDelegate
 
 
 - (void)milestoneAddViewControllerDidCancel:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
-- (void)milestoneAddViewControllerDidSave:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
+
+- (void)milestoneAddViewController:(RZMilestoneAddViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone{
+    
+    RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
+    [goalVM saveMilestone:milestone];
+    
+    [[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];
+
+}
 
 #pragma mark - RZMilestoneCellDelegate
 
@@ -189,12 +197,15 @@ RZGoalListViewModel *goalListViewModel;
         //EXAMPLE: really good application of delegate pattern using modal add view controller  http://www.raywenderlich.com/5191/beginning-storyboards-in-ios-5-part-2
         
         RZMilestonesHeaderCell *headerCell = (RZMilestonesHeaderCell *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
-        NSInteger section = [headerCell tableViewSectionIndex];
-        RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:section];
+        _lastSelectedSectionHeaderIndex = [headerCell tableViewSectionIndex];
         
+        RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
         NSString *goalTitle = [goalVM title];
-        RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] init];
+        
+        RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] initWithMilestone:nil];
+        
         [milestoneVM setGoalTitle:goalTitle];
+        
         //NOTE: intent is to pass needed goal title and such but the add milestone does not need any knowledge of core data!  Delegate back to this view controller.
         // Long term, complexity may be refactored out of view model, into an interacter class
         //  ViewController should contain basic iOS glue stuff; outlets, actions, etc.

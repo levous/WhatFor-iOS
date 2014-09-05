@@ -11,11 +11,13 @@
 
 @implementation RZGoalViewModel
 
-- (id)initWithGoal:(Goal *)goal
+- (id)initWithGoal:(Goal *)goal andRepository:(RZCoreDataRepository *)repository
 {
     self = [super init];
     if (self) {
         _goal = goal;
+        _repository = repository;
+        [self setStatus:[[RZStatusViewModel alloc] init]];
         [self populateFromGoal:goal];
     }
     return self;
@@ -33,6 +35,52 @@
     }
     [self setMilestones:[NSArray arrayWithArray:tempMilestones]];
     [self prepareFilteredMilstones];
+    [self computeGoalStatus];
+}
+
+- (void)computeGoalStatus{
+    RZActivityStatus tempStatus = RZActivityStatusComplete;
+    bool allComplete = YES;
+    for(RZMilestoneViewModel *m in [self milestones]){
+        switch ([[m status] status]){
+            case RZActivityStatusBlocked:
+                // blocked milestone blocks goal
+                tempStatus = RZActivityStatusBlocked;
+                allComplete = NO;
+                break;
+            
+            case RZActivityStatusInProgress:
+                // in progress milestone, goal in progress
+                tempStatus = RZActivityStatusInProgress;
+                allComplete = NO;
+                break;
+            case RZActivityStatusUnknown:
+                // not started milestone, goal may be in progress or not started
+                if (tempStatus != RZActivityStatusInProgress) {
+                    tempStatus = RZActivityStatusUnknown;
+                }
+                allComplete = NO;
+                break;
+            default: // RZActivityStatusComplete
+                if (allComplete)
+                {
+                    // redundant to set but clearer intent
+                    tempStatus = RZActivityStatusComplete;
+                }
+                else
+                {
+                    tempStatus = RZActivityStatusInProgress;
+                }
+                break;
+        }
+        
+        if (tempStatus == RZActivityStatusBlocked) {
+            break; // exit for
+        }
+    }
+    
+    [[self status] setStatus:tempStatus];
+    
 }
 
 - (void)prepareFilteredMilstones{
@@ -45,4 +93,22 @@
     }
     [self setRemainingMilestones:[NSArray arrayWithArray:filteredMilstones]];
 }
+
+
+- (void)saveMilestone:(RZMilestoneViewModel *)milestoneViewModel{
+    Milestone *milestone = [milestoneViewModel milestone];
+    if (milestone == nil)
+    {
+        milestone = [_repository createMilestoneForGoal:_goal];
+        [milestoneViewModel setMilestone:milestone];
+        [milestoneViewModel updateMilestoneFromViewModel];
+    }
+    else if(![[_goal goalMilestones] containsObject:milestone])
+    {
+        [_goal addGoalMilestonesObject:milestone];
+    }
+    [_repository saveContext];
+    
+}
+
 @end

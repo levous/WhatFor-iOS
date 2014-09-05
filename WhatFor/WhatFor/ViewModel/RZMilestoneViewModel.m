@@ -9,30 +9,17 @@
 #import "RZMilestoneViewModel.h"
 
 #import "NSDateFormatter+RZSharedDateFormatters.h"
-#import "RZUIStyleGuide.h"
-#import "RZStringsHelper.h"
+
 #import "Goal.h"
 
-@implementation RZMilestoneViewModelStatus
 
-- (void)setStatus:(RZActivityStatus)status {
-    _status = status;
-    _title = [RZStringsHelper titleForActivityStatus:status];
-    _color = [RZUIStyleGuide fontColorForStatus:status];
-}
-
-- (RZActivityStatus) status{
-    return _status;
-}
-
-@end
 
 @implementation RZMilestoneViewModel
 
 - (id)init{
     self = [super init];
     if (self) {
-        [self setStatus:[[RZMilestoneViewModelStatus alloc] init]];
+        [self setStatus:[[RZStatusViewModel alloc] init]];
     }
     return self;
 }
@@ -41,7 +28,7 @@
 {
     self = [self init];
     if (self) {
-        [self setStatus:[[RZMilestoneViewModelStatus alloc] init]];
+        [self setStatus:[[RZStatusViewModel alloc] init]];
         [self populateFromMilestone:milestone];
     }
     return self;
@@ -49,18 +36,16 @@
 
 #pragma mark - View Logic
 
-- (NSString *)textForStatus:(RZActivityStatus)status{
-    return [RZStringsHelper titleForActivityStatus:status];
-}
 
 - (void)populateFromMilestone:(Milestone *)milestone{
-    _milestone = milestone;
+    [self setMilestone:milestone];
     [self setTitle:[milestone title]];
     [self setSummary:[milestone summary]];
-    if ([milestone dueDate] == nil) {
-        [self setDateDue:@"no due date"];
+    [self setDateDue:[milestone dateDue]];
+    if ([milestone dateDue] == nil) {
+        [self setDateDueText:@"no due date"];
     }else{
-        [self setDateDue:[NSDateFormatter shortStringFromDate:[milestone dueDate]]];
+        [self setDateDueText:[NSDateFormatter shortStringFromDate:[milestone dateDue]]];
     }
     
     [self setTimeRemaining:@""]; //lazy today.  maybe later
@@ -69,5 +54,14 @@
     
     [self setGoalTitle:[[milestone milestoneGoal] title]];
 }
+
+- (void)updateMilestoneFromViewModel{
+    [[self milestone] setTitle:[self title]];
+    [[self milestone] setSummary:[self summary]];
+    [[self milestone] setStatus:[[self status] status]];
+    [[self milestone] setDateDue:[self dateDue]];
+    
+}
+
 
 @end

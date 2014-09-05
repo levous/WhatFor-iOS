@@ -10,26 +10,22 @@
 @class Milestone;
 
 #import "Milestone+Enums.h"
-
-@interface RZMilestoneViewModelStatus : NSObject{
-    RZActivityStatus _status;
-}
-@property (nonatomic) RZActivityStatus status;
-@property (strong, nonatomic, readonly) NSString *title;
-@property (strong, nonatomic, readonly) UIColor *color;
-@end
+#import "RZStatusViewModel.h"
+#import "RZCoreDataRepository.h"
 
 @interface RZMilestoneViewModel : NSObject{
-    Milestone *_milestone;
+    //RZCoreDataRepository *_repository;
 }
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *goalTitle;
 @property (strong, nonatomic) NSString *summary;
-@property (strong, nonatomic) NSString *dateDue;
+@property (strong, nonatomic) NSString *dateDueText;
+@property (strong, nonatomic) NSDate *dateDue;
 @property (strong, nonatomic) NSString *timeRemaining;
+@property (strong, nonatomic) RZStatusViewModel *status;
 
-
-@property (strong, nonatomic) RZMilestoneViewModelStatus *status;
+@property (strong, nonatomic) Milestone *milestone;
 
 - (id)initWithMilestone:(Milestone *)milestone;
+- (void)updateMilestoneFromViewModel;
 @end
