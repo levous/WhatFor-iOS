@@ -101,12 +101,13 @@
     {
         milestone = [_repository createMilestoneForGoal:_goal];
         [milestoneViewModel setMilestone:milestone];
-        [milestoneViewModel updateMilestoneFromViewModel];
     }
     else if(![[_goal goalMilestones] containsObject:milestone])
     {
         [_goal addGoalMilestonesObject:milestone];
     }
+    
+    [milestoneViewModel updateMilestoneFromViewModel];
     [_repository saveContext];
     
 }

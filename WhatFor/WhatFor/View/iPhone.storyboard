@@ -193,7 +193,13 @@
                             <constraint firstItem="ULm-ia-nL6" firstAttribute="leading" secondItem="4Yc-er-0hq" secondAttribute="leading" constant="135" id="yqu-eI-DsG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="i7M-FI-4tY"/>
+                    <navigationItem key="navigationItem" id="i7M-FI-4tY">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="lcd-Rh-qyA">
+                            <connections>
+                                <segue destination="4el-N4-3EG" kind="modal" identifier="editMilestoneSegue" id="8x9-TM-KIe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateDueLabel" destination="ULm-ia-nL6" id="geT-eN-ZfX"/>
                         <outlet property="statusLabel" destination="xab-ls-2Jc" id="dkz-bO-JGV"/>
@@ -221,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="1391" y="605"/>
         </scene>
-        <!--Milestone Add View Controller-->
+        <!--Milestone Edit View Controller-->
         <scene sceneID="rDJ-ug-YPC">
             <objects>
-                <tableViewController id="NIf-Gt-6Jb" customClass="RZMilestoneAddViewController" sceneMemberID="viewController">
+                <tableViewController id="NIf-Gt-6Jb" customClass="RZMilestoneEditViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="h26-rK-ZxZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -750,7 +756,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cgd-Ja-ove"/>
         <segue reference="Our-fR-phR"/>
+        <segue reference="cgd-Ja-ove"/>
+        <segue reference="8x9-TM-KIe"/>
     </inferredMetricsTieBreakers>
 </document>

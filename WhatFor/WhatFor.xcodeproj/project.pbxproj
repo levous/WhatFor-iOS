@@ -29,8 +29,8 @@
 		FB40D43C19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42A19B61584006C6315 /* RZActivityStatusPickerViewController.m */; };
 		FB40D43F19B61584006C6315 /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42E19B61584006C6315 /* RZGoalListViewController.m */; };
 		FB40D44019B61584006C6315 /* RZGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D42E19B61584006C6315 /* RZGoalListViewController.m */; };
-		FB40D44119B61584006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */; };
-		FB40D44219B61584006C6315 /* RZMilestoneAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */; };
+		FB40D44119B61584006C6315 /* RZMilestoneEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneEditViewController.m */; };
+		FB40D44219B61584006C6315 /* RZMilestoneEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43019B61584006C6315 /* RZMilestoneEditViewController.m */; };
 		FB40D44319B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */; };
 		FB40D44419B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */; };
 		FB40D44519B61584006C6315 /* RZTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB40D43419B61584006C6315 /* RZTempViewController.m */; };
@@ -121,8 +121,8 @@
 		FB40D42C19B61584006C6315 /* RZGoalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalDetailViewController.m; sourceTree = "<group>"; };
 		FB40D42D19B61584006C6315 /* RZGoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZGoalListViewController.h; sourceTree = "<group>"; };
 		FB40D42E19B61584006C6315 /* RZGoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZGoalListViewController.m; sourceTree = "<group>"; };
-		FB40D42F19B61584006C6315 /* RZMilestoneAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RZMilestoneAddViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RZMilestoneAddViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		FB40D42F19B61584006C6315 /* RZMilestoneEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RZMilestoneEditViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		FB40D43019B61584006C6315 /* RZMilestoneEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RZMilestoneEditViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		FB40D43119B61584006C6315 /* RZMilestoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMilestoneDetailViewController.h; sourceTree = "<group>"; };
 		FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneDetailViewController.m; sourceTree = "<group>"; };
 		FB40D43319B61584006C6315 /* RZTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewController.h; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 				FB40D42C19B61584006C6315 /* RZGoalDetailViewController.m */,
 				FB40D42D19B61584006C6315 /* RZGoalListViewController.h */,
 				FB40D42E19B61584006C6315 /* RZGoalListViewController.m */,
-				FB40D42F19B61584006C6315 /* RZMilestoneAddViewController.h */,
-				FB40D43019B61584006C6315 /* RZMilestoneAddViewController.m */,
+				FB40D42F19B61584006C6315 /* RZMilestoneEditViewController.h */,
+				FB40D43019B61584006C6315 /* RZMilestoneEditViewController.m */,
 				FB40D43119B61584006C6315 /* RZMilestoneDetailViewController.h */,
 				FB40D43219B61584006C6315 /* RZMilestoneDetailViewController.m */,
 				FB40D43319B61584006C6315 /* RZTempViewController.h */,
@@ -511,7 +511,7 @@
 				FBF3B2F219BF4A5D00C7331B /* RZDatePickerCell.m in Sources */,
 				FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
 				FB40D43F19B61584006C6315 /* RZGoalListViewController.m in Sources */,
-				FB40D44119B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
+				FB40D44119B61584006C6315 /* RZMilestoneEditViewController.m in Sources */,
 				FBD4DDEA19ACD5A700A4686F /* RZCoreDataRepository.m in Sources */,
 				FB40D46B19B624E0006C6315 /* RZGoalDetailViewController.m in Sources */,
 				FBD4DDF119ACDF5600A4686F /* RZSeedDataInserter.m in Sources */,
@@ -546,7 +546,7 @@
 				FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */,
 				FB40D46A19B61A8F006C6315 /* RZGoalViewModelTests.m in Sources */,
 				FB44D7CA19BA6281009841CA /* Milestone.m in Sources */,
-				FB40D44219B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
+				FB40D44219B61584006C6315 /* RZMilestoneEditViewController.m in Sources */,
 				FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */,
 				FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */,
 				FBF3B2F319BF4A5D00C7331B /* RZDatePickerCell.m in Sources */,

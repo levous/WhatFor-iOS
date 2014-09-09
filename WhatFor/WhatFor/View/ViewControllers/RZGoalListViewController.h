@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RZCoreDataRepository.h"
-#import "RZMilestoneAddViewController.h"
+#import "RZMilestoneEditViewController.h"
 #import "RZMilestoneCell.h"
 
 
-@interface RZGoalListViewController : UITableViewController<RZMilestoneAddViewControllerDelegate,RZMilestoneCellDelegate>{
+@interface RZGoalListViewController : UITableViewController<RZMilestoneEditViewControllerDelegate,RZMilestoneCellDelegate>{
     NSInteger _lastSelectedSectionHeaderIndex;
 }
 

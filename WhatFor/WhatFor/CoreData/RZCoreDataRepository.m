@@ -141,12 +141,12 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WhatFor.sqlite"];
     
     // handle db upgrade
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+   /* NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil]; */
     
     //NOTE: auto upgrade annoying me during development!  disable
-    options = nil;
+    NSDictionary *options = nil;
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[RZCoreDataRepository managedObjectModel]];

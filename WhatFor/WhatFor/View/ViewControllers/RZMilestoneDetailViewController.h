@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RZMilestoneViewModel.h"
+#import "RZGoalViewModel.h"
 
 @interface RZMilestoneDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateDueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (strong, nonatomic) RZMilestoneViewModel *milestoneViewModel;
+@property (strong, nonatomic) RZGoalViewModel *goalViewModel;
 
 @end

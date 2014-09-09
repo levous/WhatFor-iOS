@@ -11,14 +11,14 @@
 #import "RZStatusViewModel.h"
 #import "RZStatusViewModel.h"
 #import "RZActivityStatusPickerViewController.h"
-@class RZMilestoneAddViewController;
+@class RZMilestoneEditViewController;
 
-@protocol RZMilestoneAddViewControllerDelegate
-- (void)milestoneAddViewControllerDidCancel:(RZMilestoneAddViewController *)controller;
-- (void)milestoneAddViewController:(RZMilestoneAddViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone;
+@protocol RZMilestoneEditViewControllerDelegate
+- (void)milestoneEditViewControllerDidCancel:(RZMilestoneEditViewController *)controller;
+- (void)milestoneEditViewController:(RZMilestoneEditViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone;
 @end
 
-@interface RZMilestoneAddViewController : UITableViewController<RZActivityStatusPickerViewControllerDelegate>
+@interface RZMilestoneEditViewController : UITableViewController<RZActivityStatusPickerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *goalTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
@@ -28,7 +28,7 @@
 @property (nonatomic, strong) RZMilestoneViewModel *milestoneViewModel;
 @property (nonatomic, strong) RZStatusViewModel *statusViewModel;
 @property (nonatomic, strong) NSDate *dateDue;
-@property (nonatomic, weak) id<RZMilestoneAddViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<RZMilestoneEditViewControllerDelegate> delegate;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;

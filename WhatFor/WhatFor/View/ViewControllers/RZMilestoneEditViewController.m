@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Levous, LLC. All rights reserved.
 //
 
-#import "RZMilestoneAddViewController.h"
+#import "RZMilestoneEditViewController.h"
 #import "RZStringsHelper.h"
 #import "RZActivityStatusPickerViewController.h"
 #import "RZDatePickerCell.h"
-@interface RZMilestoneAddViewController ()
+@interface RZMilestoneEditViewController ()
 
 @end
 
-@implementation RZMilestoneAddViewController
+@implementation RZMilestoneEditViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,7 +51,7 @@
                                                  name:NSCurrentLocaleDidChangeNotification
                                                object:nil];
     
-    [(RZDatePickerCell *)[self dueDateCell] setDelegate:self];
+    [(RZDatePickerCell *)[self dueDateCell] setDelegate:(id<RZDatePickerCellDelegate>)self];
     
     [self populateFromViewModel];
 }
@@ -122,7 +122,7 @@
 
 - (IBAction)cancel:(id)sender
 {
-	[self.delegate milestoneAddViewControllerDidCancel:self];
+	[self.delegate milestoneEditViewControllerDidCancel:self];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)done:(id)sender
@@ -135,7 +135,7 @@
     //[mvm setDateDue:[self dateDue]];
     [mvm setTitle:[[self titleTextField] text]];
     [mvm setDateDue:[self dateDue]];
-	[self.delegate milestoneAddViewController:self didUpdateMilestone:[self milestoneViewModel]];
+	[self.delegate milestoneEditViewController:self didUpdateMilestone:[self milestoneViewModel]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

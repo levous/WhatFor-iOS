@@ -155,18 +155,18 @@ RZGoalListViewModel *goalListViewModel;
     return YES;
 }
 
-#pragma mark - RZMilestoneAddViewControllerDelegate
+#pragma mark - RZMilestoneEditViewControllerDelegate
 
 
-- (void)milestoneAddViewControllerDidCancel:(RZMilestoneAddViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
+- (void)milestoneEditViewControllerDidCancel:(RZMilestoneEditViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
 
-- (void)milestoneAddViewController:(RZMilestoneAddViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone{
+- (void)milestoneEditViewController:(RZMilestoneEditViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone{
     
     RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
     [goalVM saveMilestone:milestone];
     
-    [[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];
-
+    [[self tableView] reloadData];
+    
 }
 
 #pragma mark - RZMilestoneCellDelegate
@@ -185,7 +185,9 @@ RZGoalListViewModel *goalListViewModel;
         RZMilestoneDetailViewController *vc = (RZMilestoneDetailViewController *)[segue destinationViewController];
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         RZMilestoneViewModel *milestoneViewModel = [goalListViewModel milestoneViewModelAtIndexPath:selectedRowIndex];
+        RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:selectedRowIndex.section];
         [vc setMilestoneViewModel:milestoneViewModel];
+        [vc setGoalViewModel:goalVM];
     }else if ([[segue identifier] isEqualToString:@"goalDetailSegue"]) {
         RZGoalDetailViewController *vc = (RZGoalDetailViewController *)[segue destinationViewController];
         RZMilestonesHeaderCell *cell = (RZMilestonesHeaderCell *)[sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
@@ -213,7 +215,7 @@ RZGoalListViewModel *goalListViewModel;
         //  Interactor should implement the business logic, aka use cases. It maps model data to the form needed by the Presenter and/or ViewController.
         // http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/
         UINavigationController *navigationController = [segue destinationViewController];
-        RZMilestoneAddViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
+        RZMilestoneEditViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
         [destinationVC setDelegate:self];
         [destinationVC setMilestoneViewModel:milestoneVM];
         
