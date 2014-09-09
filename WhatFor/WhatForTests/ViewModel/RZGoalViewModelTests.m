@@ -11,6 +11,8 @@
 #import "RZSeedDataInserter.h"
 #import "Goal.h"
 #import "RZGoalViewModel.h"
+#import "Milestone+Enums.h"
+
 
 
 @interface RZGoalViewModelTests : XCTestCase
@@ -100,6 +102,30 @@ RZSeedDataInserter *seedInserter;
     
     XCTAssertEqual([[goalVM status] status], RZActivityStatusInProgress);
     
+}
+
+- (void)testSaveMilestone{
+    Goal *goal = [[repos getAllGoals] objectAtIndex:0];
+    RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:goal andRepository:repos];
+    
+    Milestone *milestone = [[goal goalMilestones] objectAtIndex:0];
+    
+    RZMilestoneViewModel *mvm = [[goalVM milestones] objectAtIndex:0];
+    
+    XCTAssertEqual(milestone, [mvm milestone]);
+    
+    [mvm setTitle:@"Testing a Title Change"];
+    [mvm setSummary:@"Testing a Summary Change"];
+    [[mvm status] setStatus:RZActivityStatusBlocked];
+    
+    XCTAssertNotEqualObjects([milestone title], @"Testing a Title Change");
+    
+    [goalVM saveMilestone:mvm];
+
+    XCTAssertEqualObjects([milestone title], @"Testing a Title Change");
+    XCTAssertEqualObjects([milestone summary], @"Testing a Summary Change");
+    XCTAssertEqual ([milestone status], RZActivityStatusBlocked);
+
 }
 
 @end
