@@ -81,6 +81,8 @@
 		FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */; };
+		FBF3B2F219BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
+		FBF3B2F319BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,8 @@
 		FBD4DE0619ACE5B000A4686F /* RZCoreDataRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZCoreDataRepositoryTests.m; path = CoreData/RZCoreDataRepositoryTests.m; sourceTree = "<group>"; };
 		FBD4DE1119ACEAD500A4686F /* WhatFor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatFor.xcdatamodel; sourceTree = "<group>"; };
 		FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZSeedDataInserterTests.m; path = CoreData/RZSeedDataInserterTests.m; sourceTree = "<group>"; };
+		FBF3B2F019BF4A5D00C7331B /* RZDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZDatePickerCell.h; sourceTree = "<group>"; };
+		FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZDatePickerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,8 @@
 				FB40D44E19B615B1006C6315 /* RZMilestoneCell.m */,
 				FB40D44F19B615B1006C6315 /* RZMilestonesHeaderCell.h */,
 				FB40D45019B615B1006C6315 /* RZMilestonesHeaderCell.m */,
+				FBF3B2F019BF4A5D00C7331B /* RZDatePickerCell.h */,
+				FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0FD47B19AD6271002AFF9B /* Milestone+Enums.m in Sources */,
+				FBF3B2F219BF4A5D00C7331B /* RZDatePickerCell.m in Sources */,
 				FB40D41D19B4CC19006C6315 /* RZStringsHelper.m in Sources */,
 				FB40D43F19B61584006C6315 /* RZGoalListViewController.m in Sources */,
 				FB40D44119B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
@@ -542,6 +549,7 @@
 				FB40D44219B61584006C6315 /* RZMilestoneAddViewController.m in Sources */,
 				FB40D41519B0D085006C6315 /* UIView+Helpers.m in Sources */,
 				FBD4DE0719ACE5B000A4686F /* RZCoreDataRepositoryTests.m in Sources */,
+				FBF3B2F319BF4A5D00C7331B /* RZDatePickerCell.m in Sources */,
 				FB40D45419B615B1006C6315 /* RZMilestonesHeaderCell.m in Sources */,
 				FB40D45B19B615E1006C6315 /* RZGoalListViewModel.m in Sources */,
 				FB40D43C19B61584006C6315 /* RZActivityStatusPickerViewController.m in Sources */,

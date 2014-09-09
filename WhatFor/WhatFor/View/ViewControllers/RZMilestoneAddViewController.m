@@ -9,7 +9,7 @@
 #import "RZMilestoneAddViewController.h"
 #import "RZStringsHelper.h"
 #import "RZActivityStatusPickerViewController.h"
-
+#import "RZDatePickerCell.h"
 @interface RZMilestoneAddViewController ()
 
 @end
@@ -46,13 +46,42 @@
     
     [[self goalTitleLabel] setText:[[self milestoneViewModel] goalTitle]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(localeChanged:)
+                                                 name:NSCurrentLocaleDidChangeNotification
+                                               object:nil];
+    
+    [(RZDatePickerCell *)[self dueDateCell] setDelegate:self];
+    
     [self populateFromViewModel];
 }
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSCurrentLocaleDidChangeNotification
+                                                  object:nil];
+}
+
+#pragma mark - Locale
+
+/*! Responds to region format or locale changes.
+ */
+- (void)localeChanged:(NSNotification *)notif
+{
+    // the user changed the locale (region format) in Settings, so we are notified here to
+    // update the date format in the table view cells
+    //
+    [self.tableView reloadData];
+}
+
+
+#pragma mark - Populate data
 
 - (void)populateFromViewModel{
     [[self titleTextField] setText:[[self milestoneViewModel] title]];
     [[self summaryTextView] setText:[[self milestoneViewModel] summary]];
-    [[self dueDateTextField] setText:[[self milestoneViewModel] dateDueText]];
+    [self setDateDue:[[self milestoneViewModel] dateDue]];
+    [[[self dueDateCell] textLabel] setText:[[self milestoneViewModel] dateDueText]];
     //[[self pointValueTextField] setText:[[self milestoneViewModel] ???]];
     [[[self statusTableCell] textLabel] setText:[[[self milestoneViewModel] status] title]];
     [[[self statusTableCell] textLabel] setTextColor:[[[self milestoneViewModel] status] color]];
@@ -60,52 +89,12 @@
     [[self statusViewModel] setStatus:[[[self milestoneViewModel] status] status]];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - RZDatePickerCell Delegate
+- (void)datePickerCell:(RZDatePickerCell *)iCell didEndEditingWithDate:(NSDate *)iDate{
+    [self setDateDue:iDate];
+    
 }
-
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -145,8 +134,17 @@
     [[mvm status] setStatus:[[self statusViewModel] status]];
     //[mvm setDateDue:[self dateDue]];
     [mvm setTitle:[[self titleTextField] text]];
-    
+    [mvm setDateDue:[self dateDue]];
 	[self.delegate milestoneAddViewController:self didUpdateMilestone:[self milestoneViewModel]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end

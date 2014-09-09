@@ -318,26 +318,21 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Due Date" id="Mnk-S6-pLC">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tN2-zq-thv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="IZp-A9-T5X" style="IBUITableViewCellStyleDefault" id="fdi-fY-zaf" customClass="RZDatePickerCell">
                                         <rect key="frame" x="0.0" y="423" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tN2-zq-thv" id="Hl0-vN-63b">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fdi-fY-zaf" id="aB1-pS-TPe">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="optional due date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-BI-D8h">
-                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IZp-A9-T5X">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ovU-BI-D8h" secondAttribute="trailing" constant="20" id="37Y-BX-0eI"/>
-                                                <constraint firstAttribute="bottom" secondItem="ovU-BI-D8h" secondAttribute="bottom" constant="6" id="dLg-z3-0fF"/>
-                                                <constraint firstItem="ovU-BI-D8h" firstAttribute="top" secondItem="Hl0-vN-63b" secondAttribute="top" constant="7" id="hza-dt-8gn"/>
-                                                <constraint firstItem="ovU-BI-D8h" firstAttribute="leading" secondItem="Hl0-vN-63b" secondAttribute="leading" constant="20" id="i9F-uz-x4q"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -405,7 +400,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dueDateTextField" destination="ovU-BI-D8h" id="cJg-K0-StG"/>
+                        <outlet property="dueDateCell" destination="fdi-fY-zaf" id="bAk-md-OGn"/>
                         <outlet property="goalTitleLabel" destination="apU-jy-ZCV" id="xGV-P2-3dN"/>
                         <outlet property="pointValueTextField" destination="HsC-GL-DNU" id="UlZ-me-j3u"/>
                         <outlet property="statusTableCell" destination="uQp-fQ-9j7" id="Mee-pS-ULm"/>
@@ -756,6 +751,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cgd-Ja-ove"/>
-        <segue reference="r5f-Aw-EnF"/>
+        <segue reference="Our-fR-phR"/>
     </inferredMetricsTieBreakers>
 </document>

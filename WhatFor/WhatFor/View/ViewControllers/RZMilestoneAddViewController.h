@@ -22,11 +22,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *goalTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
-@property (weak, nonatomic) IBOutlet UITextField *dueDateTextField;
+@property (weak, nonatomic) IBOutlet UITableViewCell *dueDateCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *statusTableCell;
 @property (weak, nonatomic) IBOutlet UITextField *pointValueTextField;
 @property (nonatomic, strong) RZMilestoneViewModel *milestoneViewModel;
 @property (nonatomic, strong) RZStatusViewModel *statusViewModel;
+@property (nonatomic, strong) NSDate *dateDue;
 @property (nonatomic, weak) id<RZMilestoneAddViewControllerDelegate> delegate;
 
 - (IBAction)cancel:(id)sender;
