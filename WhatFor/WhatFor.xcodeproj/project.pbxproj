@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3395362978497D9FE69A84 /* libPods-Acceptance Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F079A07F76440FAF230298 /* libPods-Acceptance Tests.a */; };
 		FB0FD47B19AD6271002AFF9B /* Milestone+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD47A19AD6271002AFF9B /* Milestone+Enums.m */; };
 		FB0FD47C19AD6271002AFF9B /* Milestone+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD47A19AD6271002AFF9B /* Milestone+Enums.m */; };
 		FB0FD48219AD6432002AFF9B /* Milestone+EmumsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD48119AD6432002AFF9B /* Milestone+EmumsTests.m */; };
@@ -14,6 +15,10 @@
 		FB0FD49119AD6EA1002AFF9B /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */; };
 		FB0FD49C19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */; };
 		FB0FD49D19AD6EB0002AFF9B /* RZUIStyleGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */; };
+		FB1330D119C0D063000D4218 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CD019AB9D9100B71A64 /* XCTest.framework */; };
+		FB1330D219C0D063000D4218 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB219AB9D9100B71A64 /* Foundation.framework */; };
+		FB1330D319C0D063000D4218 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB933CB619AB9D9100B71A64 /* UIKit.framework */; };
+		FB1330D919C0D063000D4218 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1330D719C0D063000D4218 /* InfoPlist.strings */; };
 		FB13B27D19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
 		FB13B27E19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */; };
 		FB13B28819AF6B79008C2027 /* UIView+QuartzEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FB13B28719AF6B79008C2027 /* UIView+QuartzEffects.m */; };
@@ -81,11 +86,19 @@
 		FBD4DE1219ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1319ACEAD500A4686F /* WhatFor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1019ACEAD500A4686F /* WhatFor.xcdatamodeld */; };
 		FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */; };
+		FBEC870C19C0D14900189255 /* RZTempViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEC870B19C0D14900189255 /* RZTempViewControllerTests.m */; };
 		FBF3B2F219BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
 		FBF3B2F319BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FB1330DD19C0D063000D4218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB933CA719AB9D9100B71A64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB933CAE19AB9D9100B71A64;
+			remoteInfo = WhatFor;
+		};
 		FB933CD519AB9D9100B71A64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FB933CA719AB9D9100B71A64 /* Project object */;
@@ -96,12 +109,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DB5592857FF425BB5649330 /* Pods-Acceptance Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acceptance Tests.xcconfig"; path = "Pods/Pods-Acceptance Tests.xcconfig"; sourceTree = "<group>"; };
+		89F079A07F76440FAF230298 /* libPods-Acceptance Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Acceptance Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0FD47919AD6271002AFF9B /* Milestone+Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Milestone+Enums.h"; sourceTree = "<group>"; };
 		FB0FD47A19AD6271002AFF9B /* Milestone+Enums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Milestone+Enums.m"; sourceTree = "<group>"; };
 		FB0FD48119AD6432002AFF9B /* Milestone+EmumsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Milestone+EmumsTests.m"; sourceTree = "<group>"; };
 		FB0FD48719AD6EA0002AFF9B /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		FB0FD49A19AD6EB0002AFF9B /* RZUIStyleGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZUIStyleGuide.h; sourceTree = "<group>"; };
 		FB0FD49B19AD6EB0002AFF9B /* RZUIStyleGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZUIStyleGuide.m; sourceTree = "<group>"; };
+		FB1330D019C0D063000D4218 /* Acceptance Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acceptance Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1330D619C0D063000D4218 /* Acceptance Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acceptance Tests-Info.plist"; sourceTree = "<group>"; };
+		FB1330D819C0D063000D4218 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB1330DC19C0D063000D4218 /* Acceptance Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acceptance Tests-Prefix.pch"; sourceTree = "<group>"; };
 		FB13B27B19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RZSharedDateFormatters.h"; sourceTree = "<group>"; };
 		FB13B27C19AECC38008C2027 /* NSDateFormatter+RZSharedDateFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RZSharedDateFormatters.m"; sourceTree = "<group>"; };
 		FB13B28119AF6225008C2027 /* RZEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZEnums.h; sourceTree = "<group>"; };
@@ -175,11 +194,24 @@
 		FBD4DE0619ACE5B000A4686F /* RZCoreDataRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZCoreDataRepositoryTests.m; path = CoreData/RZCoreDataRepositoryTests.m; sourceTree = "<group>"; };
 		FBD4DE1119ACEAD500A4686F /* WhatFor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatFor.xcdatamodel; sourceTree = "<group>"; };
 		FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RZSeedDataInserterTests.m; path = CoreData/RZSeedDataInserterTests.m; sourceTree = "<group>"; };
+		FBEC870A19C0D14900189255 /* RZTempViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewControllerTests.h; sourceTree = "<group>"; };
+		FBEC870B19C0D14900189255 /* RZTempViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTempViewControllerTests.m; sourceTree = "<group>"; };
 		FBF3B2F019BF4A5D00C7331B /* RZDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZDatePickerCell.h; sourceTree = "<group>"; };
 		FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZDatePickerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FB1330CD19C0D063000D4218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1330D119C0D063000D4218 /* XCTest.framework in Frameworks */,
+				FB1330D319C0D063000D4218 /* UIKit.framework in Frameworks */,
+				FB1330D219C0D063000D4218 /* Foundation.framework in Frameworks */,
+				1A3395362978497D9FE69A84 /* libPods-Acceptance Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB933CAC19AB9D9100B71A64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +238,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB1330D419C0D063000D4218 /* Acceptance Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FB1330D519C0D063000D4218 /* Supporting Files */,
+				FBEC870A19C0D14900189255 /* RZTempViewControllerTests.h */,
+				FBEC870B19C0D14900189255 /* RZTempViewControllerTests.m */,
+			);
+			path = "Acceptance Tests";
+			sourceTree = "<group>";
+		};
+		FB1330D519C0D063000D4218 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB1330D619C0D063000D4218 /* Acceptance Tests-Info.plist */,
+				FB1330D719C0D063000D4218 /* InfoPlist.strings */,
+				FB1330DC19C0D063000D4218 /* Acceptance Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FB40D42819B61584006C6315 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,9 +344,11 @@
 			children = (
 				FB933CBA19AB9D9100B71A64 /* WhatFor */,
 				FB933CD719AB9D9100B71A64 /* WhatForTests */,
+				FB1330D419C0D063000D4218 /* Acceptance Tests */,
 				FB933CB119AB9D9100B71A64 /* Frameworks */,
 				FB933CB019AB9D9100B71A64 /* Products */,
 				FB40D41619B0D72A006C6315 /* Notes.txt */,
+				1DB5592857FF425BB5649330 /* Pods-Acceptance Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,6 +357,7 @@
 			children = (
 				FB933CAF19AB9D9100B71A64 /* WhatFor.app */,
 				FB933CCF19AB9D9100B71A64 /* WhatForTests.xctest */,
+				FB1330D019C0D063000D4218 /* Acceptance Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +371,7 @@
 				FB933CB619AB9D9100B71A64 /* UIKit.framework */,
 				FB933CB819AB9D9100B71A64 /* CoreData.framework */,
 				FB933CD019AB9D9100B71A64 /* XCTest.framework */,
+				89F079A07F76440FAF230298 /* libPods-Acceptance Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -410,6 +466,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FB1330CF19C0D063000D4218 /* Acceptance Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1330E119C0D063000D4218 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */;
+			buildPhases = (
+				4B20165F6CD14F38B569FAE4 /* Check Pods Manifest.lock */,
+				FB1330CC19C0D063000D4218 /* Sources */,
+				FB1330CD19C0D063000D4218 /* Frameworks */,
+				FB1330CE19C0D063000D4218 /* Resources */,
+				0A7157E755B24480831A3073 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1330DE19C0D063000D4218 /* PBXTargetDependency */,
+			);
+			name = "Acceptance Tests";
+			productName = "Acceptance Tests";
+			productReference = FB1330D019C0D063000D4218 /* Acceptance Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FB933CAE19AB9D9100B71A64 /* WhatFor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB933CE119AB9D9100B71A64 /* Build configuration list for PBXNativeTarget "WhatFor" */;
@@ -455,6 +531,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Levous, LLC";
 				TargetAttributes = {
+					FB1330CF19C0D063000D4218 = {
+						TestTargetID = FB933CAE19AB9D9100B71A64;
+					};
 					FB933CCE19AB9D9100B71A64 = {
 						TestTargetID = FB933CAE19AB9D9100B71A64;
 					};
@@ -474,11 +553,20 @@
 			targets = (
 				FB933CAE19AB9D9100B71A64 /* WhatFor */,
 				FB933CCE19AB9D9100B71A64 /* WhatForTests */,
+				FB1330CF19C0D063000D4218 /* Acceptance Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FB1330CE19C0D063000D4218 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1330D919C0D063000D4218 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB933CAD19AB9D9100B71A64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,7 +590,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A7157E755B24480831A3073 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Acceptance Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B20165F6CD14F38B569FAE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		FB1330CC19C0D063000D4218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBEC870C19C0D14900189255 /* RZTempViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB933CAB19AB9D9100B71A64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,6 +709,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FB1330DE19C0D063000D4218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB933CAE19AB9D9100B71A64 /* WhatFor */;
+			targetProxy = FB1330DD19C0D063000D4218 /* PBXContainerItemProxy */;
+		};
 		FB933CD619AB9D9100B71A64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB933CAE19AB9D9100B71A64 /* WhatFor */;
@@ -588,6 +722,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FB1330D719C0D063000D4218 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1330D819C0D063000D4218 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FB933CBD19AB9D9100B71A64 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -607,6 +749,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FB1330DF19C0D063000D4218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB5592857FF425BB5649330 /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhatFor.app/WhatFor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB1330E019C0D063000D4218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB5592857FF425BB5649330 /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhatFor.app/WhatFor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		FB933CDF19AB9D9100B71A64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -752,6 +938,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FB1330E119C0D063000D4218 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1330DF19C0D063000D4218 /* Debug */,
+				FB1330E019C0D063000D4218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FB933CAA19AB9D9100B71A64 /* Build configuration list for PBXProject "WhatFor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
