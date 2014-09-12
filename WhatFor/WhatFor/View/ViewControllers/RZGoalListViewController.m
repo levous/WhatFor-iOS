@@ -48,6 +48,10 @@ RZGoalListViewModel *goalListViewModel;
     
 }
 
+- (void)reloadData{
+    [[self tableView] reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -97,11 +101,18 @@ RZGoalListViewModel *goalListViewModel;
     
     RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
 
+    //NOTE: should this logic be moved into the cell by passing the whole view model?
     [[cell titleLabel] setText:[viewModel title]];
     [[cell statusLabel] setText:[[viewModel status] title]];
     [[cell statusLabel] setTextColor:[[viewModel status] color]];
+    BOOL isCompleted = ( [[viewModel status] status] == RZActivityStatusComplete );
+    [[cell completeButton] setHidden:isCompleted];
     
     return cell;
+}
+
+- (void)milestoneCompletePressed{
+    
 }
 
 /*
@@ -165,7 +176,7 @@ RZGoalListViewModel *goalListViewModel;
     RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
     [goalVM saveMilestone:milestone];
     
-    [[self tableView] reloadData];
+    [self reloadData];
     
 }
 
@@ -174,6 +185,17 @@ RZGoalListViewModel *goalListViewModel;
 - (void)didSelectMilestoneCell:(RZMilestoneCell *)cell{
     //NSIndexPath *path = [[self tableView] indexPathForCell:cell];
     [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
+}
+
+- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell{
+    NSIndexPath *path = [[self tableView] indexPathForCell:cell];
+    RZMilestoneViewModel *mvm = [goalListViewModel milestoneViewModelAtIndexPath:path];
+    [[mvm status] setStatus:RZActivityStatusComplete];
+    RZGoalViewModel *goal = [goalListViewModel goalAtIndex:path.section];
+    [goal saveMilestone:mvm];
+    [cell animateCompletion];
+    [[cell statusLabel] setText:[[mvm status] title]];
+    [[cell statusLabel] setTextColor:[[mvm status] color]];
 }
 
 #pragma mark - Navigation

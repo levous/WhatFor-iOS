@@ -11,11 +11,14 @@
 
 @protocol RZMilestoneCellDelegate
 - (void)didSelectMilestoneCell:(RZMilestoneCell *)cell;
+- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell;
 @end
 
 @interface RZMilestoneCell : UITableViewCell
 @property (nonatomic) id<RZMilestoneCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *completeButton;
 + (NSString *)defaultReuseIdentifier;
+- (void)animateCompletion;
 @end

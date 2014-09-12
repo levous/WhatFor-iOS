@@ -14,37 +14,59 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="20" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-IG-kke">
-                        <rect key="frame" x="20" y="4" width="262" height="20"/>
+                        <rect key="frame" x="45" y="4" width="237" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="14" text="Status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-La-aKn">
-                        <rect key="frame" x="20" y="24" width="262" height="14"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="14" text="Status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="237" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-La-aKn">
+                        <rect key="frame" x="45" y="24" width="237" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-LZ-e2j">
+                        <rect key="frame" x="8" y="7" width="29" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="29" id="DNp-Sf-Nla"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="29" id="JMt-Zu-o89"/>
+                            <constraint firstAttribute="height" constant="31" id="LQH-Sv-EQl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" image="CheckIconImage">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="milestoneComplete:" destination="42K-nM-yOJ" eventType="touchUpInside" id="eTH-Ig-GwX"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="Zmk-IG-kke" firstAttribute="leading" secondItem="ny5-rw-AeG" secondAttribute="leading" constant="20" id="1Bg-qM-K9B"/>
+                    <constraint firstItem="Zmk-IG-kke" firstAttribute="leading" secondItem="ny5-rw-AeG" secondAttribute="leading" constant="45" id="1Bg-qM-K9B"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SUj-La-aKn" secondAttribute="bottom" id="2wX-o5-EYF"/>
                     <constraint firstItem="SUj-La-aKn" firstAttribute="top" secondItem="Zmk-IG-kke" secondAttribute="bottom" id="7rZ-KI-lj9"/>
-                    <constraint firstItem="SUj-La-aKn" firstAttribute="leading" secondItem="ny5-rw-AeG" secondAttribute="leading" constant="20" id="Sq3-kB-t3E"/>
+                    <constraint firstAttribute="centerY" secondItem="hSd-LZ-e2j" secondAttribute="centerY" constant="-1" id="D97-Ut-Rue"/>
+                    <constraint firstItem="SUj-La-aKn" firstAttribute="leading" secondItem="ny5-rw-AeG" secondAttribute="leading" constant="45" id="Sq3-kB-t3E"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SUj-La-aKn" secondAttribute="trailing" constant="5" id="YKZ-ed-YL5"/>
                     <constraint firstItem="Zmk-IG-kke" firstAttribute="top" secondItem="ny5-rw-AeG" secondAttribute="top" constant="4" id="d50-j4-RSC"/>
+                    <constraint firstAttribute="centerX" secondItem="hSd-LZ-e2j" secondAttribute="centerX" constant="121" id="efR-UH-n7M"/>
                     <constraint firstAttribute="trailing" secondItem="Zmk-IG-kke" secondAttribute="trailing" constant="5" id="iVh-9P-cEo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="completeButton" destination="hSd-LZ-e2j" id="e5l-Dn-dZ4"/>
                 <outlet property="statusLabel" destination="SUj-La-aKn" id="jHO-Gp-bW2"/>
                 <outlet property="titleLabel" destination="Zmk-IG-kke" id="4fk-QD-oey"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="CheckIconImage" width="30" height="30"/>
+    </resources>
 </document>
