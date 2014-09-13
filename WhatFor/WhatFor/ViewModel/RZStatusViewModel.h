@@ -14,5 +14,6 @@
 @property (nonatomic) RZActivityStatus status;
 @property (strong, nonatomic, readonly) NSString *title;
 @property (strong, nonatomic, readonly) UIColor *color;
+@property (strong, nonatomic, readonly) UIColor *backgroundColor;
 
 @end

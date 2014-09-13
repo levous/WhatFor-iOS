@@ -25,7 +25,27 @@
         case RZActivityStatusBlocked:
             return [UIColor colorWithRed:207.0/255 green:0 blue:15.0/255 alpha:1.0];
             break;
-        
+            
+        default:
+            break;
+    }
+}
+
++ (UIColor *)backgroundColorForStatus:(RZActivityStatus)status{
+    switch (status) {
+        case RZActivityStatusUnknown:
+            return [UIColor clearColor];
+            break;
+        case RZActivityStatusInProgress:
+            return [UIColor colorWithRed:75.0/255 green:119.0/255 blue:190.0/255 alpha:0.1];
+            break;
+        case RZActivityStatusComplete:
+            return [UIColor colorWithRed:30.0/255 green:130.0/255 blue:76.0/255 alpha:0.1];
+            break;
+        case RZActivityStatusBlocked:
+            return [UIColor colorWithRed:207.0/255 green:0 blue:15.0/255 alpha:0.1];
+            break;
+            
         default:
             break;
     }

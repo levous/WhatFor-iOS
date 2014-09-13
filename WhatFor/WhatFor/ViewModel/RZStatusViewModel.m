@@ -16,6 +16,7 @@
     _status = status;
     _title = [RZStringsHelper titleForActivityStatus:status];
     _color = [RZUIStyleGuide fontColorForStatus:status];
+    _backgroundColor = [RZUIStyleGuide backgroundColorForStatus:status];
 }
 
 - (RZActivityStatus) status{

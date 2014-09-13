@@ -8,7 +8,6 @@
 
 #import "RZGoalDetailViewController.h"
 #import "RZMilestoneDetailViewController.h"
-#import "UIView+QuartzEffects.h"
 
 @interface RZGoalDetailViewController ()
 
@@ -67,14 +66,7 @@
 	[cell setDelegate:self];
     
     RZMilestoneViewModel *viewModel = [[[self goalViewModel] milestones] objectAtIndex:indexPath.row];
-    
-    [[cell titleLabel] setText:[viewModel title]];
-    [[cell statusLabel] setText:[[viewModel status] title]];
-    [[cell statusLabel] setTextColor:[[viewModel status] color]];
-    
-    if ([[viewModel status] status] == RZActivityStatusBlocked) {
-        [[cell contentView] flashElipseWithColor:[[viewModel status] color]];
-    }
+    [cell setMilestoneViewModel:viewModel];
     return cell;
 }
 
@@ -114,6 +106,18 @@
     //NSIndexPath *path = [[self tableView] indexPathForCell:cell];
     [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
 }
+
+- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell{
+    NSIndexPath *path = [[self tableView] indexPathForCell:cell];
+    RZMilestoneViewModel *mvm = [[[self goalViewModel] milestones] objectAtIndex:path.row];
+    [[mvm status] setStatus:RZActivityStatusComplete];
+    RZGoalViewModel *goal = [self goalViewModel];
+    [goal saveMilestone:mvm];
+    [cell animateCompletion];
+    [[cell statusLabel] setText:[[mvm status] title]];
+    [[cell statusLabel] setTextColor:[[mvm status] color]];
+}
+
 
 #pragma mark - Storyboard Navigation
 

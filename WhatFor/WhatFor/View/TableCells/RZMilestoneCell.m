@@ -7,6 +7,8 @@
 //
 
 #import "RZMilestoneCell.h"
+#import "RZMilestoneViewModel.h"
+#import "UIView+QuartzEffects.h"
 
 @implementation RZMilestoneCell
 
@@ -26,6 +28,28 @@
 - (void)awakeFromNib{
     [self addRoundBorder:[self completeButton]];
 }
+
+//NOTE: weak reference.  Used to populate other data and then discarded
+- (RZMilestoneViewModel *)milestoneViewModel{
+    return _milestoneViewModel;
+}
+
+- (void)setMilestoneViewModel:(RZMilestoneViewModel *)milestoneViewModel{
+    _milestoneViewModel = milestoneViewModel;
+    
+    [[self titleLabel] setText:[milestoneViewModel title]];
+    [[self statusLabel] setText:[[milestoneViewModel status] title]];
+    [[self statusLabel] setTextColor:[[milestoneViewModel status] color]];
+    //[[self contentView] setBackgroundColor:[[milestoneViewModel status] backgroundColor]];
+    
+    if ([[milestoneViewModel status] status] == RZActivityStatusBlocked) {
+        [[self contentView] flashElipseWithColor:[[milestoneViewModel status] color]];
+    }
+    
+    BOOL isCompleted = ( [[milestoneViewModel status] status] == RZActivityStatusComplete );
+    [[self completeButton] setHidden:isCompleted];
+}
+   
 
 - (void)addRoundBorder:(UIView *)view{
     view.layer.cornerRadius = 5;

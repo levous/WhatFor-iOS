@@ -101,12 +101,7 @@ RZGoalListViewModel *goalListViewModel;
     
     RZMilestoneViewModel *viewModel = [goalListViewModel milestoneViewModelAtIndexPath:indexPath];
 
-    //NOTE: should this logic be moved into the cell by passing the whole view model?
-    [[cell titleLabel] setText:[viewModel title]];
-    [[cell statusLabel] setText:[[viewModel status] title]];
-    [[cell statusLabel] setTextColor:[[viewModel status] color]];
-    BOOL isCompleted = ( [[viewModel status] status] == RZActivityStatusComplete );
-    [[cell completeButton] setHidden:isCompleted];
+    [cell setMilestoneViewModel:viewModel];
     
     return cell;
 }
