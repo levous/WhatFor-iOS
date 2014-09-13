@@ -9,6 +9,9 @@
 #import "RZGoalDetailViewController.h"
 #import "RZMilestoneDetailViewController.h"
 
+//TODO: RZ 20140912 Recreatable crash!  If you drag the milestone table view up so that the cells disappear under the top view, and also trigger the cell select, causing a navigation event, a nested push causes an application crash.  It's repeatable even though it's difficult to trigger.  Just keep dragging the tableview up.  My guess is that it has to do with the setSelected triggering the segue but no idea why that is.  
+
+
 @interface RZGoalDetailViewController ()
 
 @end
@@ -43,6 +46,17 @@
     [[self statusLabel] setTextColor:[[[self goalViewModel] status] color]];
     //[[self dateDueLabel] setText:[[self goalViewModel] dateDue]];
     //[[self timeRemainingLabel] setText:[[self goalViewModel] timeRemaining]];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // this UIViewController is about to re-appear, if the selection persists, it can cause trouble with selecting the next cell and triggering disapplowed nested segues
+    NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:tableSelection animated:YES];
+    
 }
 
 
