@@ -26,5 +26,6 @@
 
 - (id)initWithGoal:(Goal *)goal andRepository:(RZCoreDataRepository *)repository;
 - (void)saveMilestone:(RZMilestoneViewModel *)milestoneViewModel;
+- (void)save;
 
 @end

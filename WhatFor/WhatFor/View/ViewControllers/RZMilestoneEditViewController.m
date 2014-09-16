@@ -132,8 +132,6 @@
     [mvm setTitle:[[self titleTextField] text]];
     [mvm setSummary:[[self summaryTextView] text]];
     [[mvm status] setStatus:[[self statusViewModel] status]];
-    //[mvm setDateDue:[self dateDue]];
-    [mvm setTitle:[[self titleTextField] text]];
     [mvm setDateDue:[self dateDue]];
 	[self.delegate milestoneEditViewController:self didUpdateMilestone:[self milestoneViewModel]];
     [self dismissViewControllerAnimated:YES completion:nil];

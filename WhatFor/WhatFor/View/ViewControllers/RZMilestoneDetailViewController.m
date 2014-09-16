@@ -63,6 +63,7 @@
         RZMilestoneEditViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
         [destinationVC setDelegate:(id<RZMilestoneEditViewControllerDelegate>)self];
         [destinationVC setMilestoneViewModel:[self milestoneViewModel]];
+        [destinationVC setTitle:@"Edit Milestone"];
         
     }
     

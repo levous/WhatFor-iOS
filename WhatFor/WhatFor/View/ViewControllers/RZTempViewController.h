@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RZTempViewController : UIViewController
+#import "RZGoalEditViewController.h"
+
+@interface RZTempViewController : UIViewController<RZGoalEditViewControllerDelegate>
 
 @end

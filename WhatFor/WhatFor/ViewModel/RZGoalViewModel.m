@@ -112,4 +112,19 @@
     
 }
 
+- (void)updateGoalFromViewModel{
+    [_goal setTitle:[self title]];
+    [_goal setSummary:[self summary]];
+      
+}
+
+- (void)save{
+    if (_goal == nil)
+    {
+        _goal = [_repository createGoal];
+    }
+    [self updateGoalFromViewModel];
+    [_repository saveContext];
+}
+
 @end

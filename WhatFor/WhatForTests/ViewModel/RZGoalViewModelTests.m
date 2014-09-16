@@ -128,4 +128,43 @@ RZSeedDataInserter *seedInserter;
 
 }
 
+- (void)testSaveGoal{
+    Goal *goal = [[repos getAllGoals] objectAtIndex:0];
+    RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:goal andRepository:repos];
+    
+    XCTAssertEqualObjects([goal title], [goalVM title]);
+    
+    [goalVM setTitle:@"Testing a Title Change"];
+    [goalVM setSummary:@"Testing a Summary Change"];
+    
+    XCTAssertNotEqualObjects([goal title], [goalVM title]);
+    
+    [goalVM save];
+    
+    XCTAssertEqualObjects([goal title], @"Testing a Title Change");
+    XCTAssertEqualObjects([goal summary], @"Testing a Summary Change");
+    
+    
+}
+
+- (void)testAddGoal{
+    NSArray *allGoals = [repos getAllGoals];
+    NSUInteger initialCount = [allGoals count];
+    RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:nil andRepository:repos];
+
+    
+    [goalVM setTitle:@"New Goal"];
+    [goalVM setSummary:@"New Goal Summary"];
+    [goalVM save];
+    
+    allGoals = [repos getAllGoals];
+    NSUInteger finalCount = [allGoals count];
+
+    
+    XCTAssertEqual(finalCount, initialCount + 1);
+    
+    
+}
+
+
 @end

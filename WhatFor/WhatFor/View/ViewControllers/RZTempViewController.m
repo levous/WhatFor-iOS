@@ -38,6 +38,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - RZGoalEditViewControllerDelegate
+
+- (void)goalEditViewControllerDidCancel:(RZGoalEditViewController *)controller{
+    
+}
+- (void)goalEditViewController:(RZGoalEditViewController *)controller didUpdateGoal:(RZGoalViewModel *)goal{
+    [goal save];
+}
+
+#pragma  mark - Navigation
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -54,6 +65,14 @@
         RZGoalListViewController *vc = (RZGoalListViewController *)[segue destinationViewController];
         [vc setHideCompleted:YES];
         [vc setCoreDataRepository:repos];
+    }else if([[segue identifier] isEqualToString:@"addGoalSegue"]){
+      
+        RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:nil andRepository:repos];
+        UINavigationController *navigationController = [segue destinationViewController];
+        RZGoalEditViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
+        [destinationVC setDelegate:self];
+        [destinationVC setGoalViewModel:goalVM];
+        
     }
 }
 
