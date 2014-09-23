@@ -51,6 +51,8 @@
     
     BOOL isCompleted = ( [[milestoneViewModel status] status] == RZActivityStatusComplete );
     [[self completeButton] setHidden:isCompleted];
+    [[self completeIconImage] setHidden:!isCompleted];
+
 }
    
 
@@ -80,6 +82,8 @@
 
 - (void)animateCompletion {
     UIView *buttonView = self.completeButton;
+    UIView *imageView = self.completeIconImage;
+    
     buttonView.transform = CGAffineTransformIdentity;
     CGRect buttonFrame = [buttonView frame];
     UIView *cellView = self;
@@ -98,6 +102,15 @@
             [buttonView setHidden:YES];
             [buttonView setFrame:buttonFrame];
             buttonView.alpha = 1.0;
+            
+            imageView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            imageView.hidden = NO;
+            
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                // animate it to the identity transform (100% scale)
+                imageView.transform = CGAffineTransformIdentity;
+            } completion:nil];
+
         }];
     }];
 }

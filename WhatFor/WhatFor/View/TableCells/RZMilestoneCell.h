@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *completeButton;
+@property (weak, nonatomic) IBOutlet UIImageView *completeIconImage;
 
 @property (weak, nonatomic) IBOutlet RZMilestoneViewModel *milestoneViewModel;
 

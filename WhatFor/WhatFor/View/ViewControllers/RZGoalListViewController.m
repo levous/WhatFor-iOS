@@ -42,14 +42,14 @@ RZGoalListViewModel *goalListViewModel;
     [self.tableView registerNib:[UINib nibWithNibName:[RZGoalMilestonesListHeaderView defaultNibName] bundle:nil] forHeaderFooterViewReuseIdentifier:[RZGoalMilestonesListHeaderView defaultReuseIdentifier]];
 
     [self setTitle:@"My Goals"];
+    [self loadData];
     
-    goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:[self coreDataRepository] hideCompletedMilestones:self.hideCompleted];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
 
-- (void)reloadData{
-    [[self tableView] reloadData];
+- (void)loadData{
+    goalListViewModel = [[RZGoalListViewModel alloc] initWithRepository:[self coreDataRepository] hideCompletedMilestones:self.hideCompleted];
 }
 
 - (void)didReceiveMemoryWarning
@@ -173,7 +173,9 @@ RZGoalListViewModel *goalListViewModel;
     RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
     [goalVM saveMilestone:milestone];
     
-    [self reloadData];
+    [self loadData];
+    [[self tableView] reloadSections:[NSIndexSet indexSetWithIndex:_lastSelectedSectionHeaderIndex] withRowAnimation:UITableViewRowAnimationFade];
+    
     
 }
 

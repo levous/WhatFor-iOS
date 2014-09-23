@@ -677,10 +677,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="40" text="Goal Detail" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="1TN-VC-8E0">
-                                <rect key="frame" x="20" y="69" width="280" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-EM-2Fb">
+                                <rect key="frame" x="6" y="74" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="40" text="Goal Detail" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="1TN-VC-8E0">
+                                <rect key="frame" x="33" y="69" width="267" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="69" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHO-eb-H2H">
@@ -731,9 +735,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yHO-eb-H2H" secondAttribute="trailing" constant="20" id="2Tn-lA-gdc"/>
+                            <constraint firstItem="Uki-EM-2Fb" firstAttribute="centerY" secondItem="1TN-VC-8E0" secondAttribute="centerY" id="5jV-H7-Lcy"/>
                             <constraint firstItem="0Ld-p6-t5r" firstAttribute="top" secondItem="8fJ-Z1-mBV" secondAttribute="bottom" constant="-1" id="6fk-qA-mlo"/>
                             <constraint firstAttribute="trailing" secondItem="1TN-VC-8E0" secondAttribute="trailing" constant="20" id="8DU-50-oER"/>
-                            <constraint firstItem="1TN-VC-8E0" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="20" id="8pt-QY-hpq"/>
+                            <constraint firstItem="1TN-VC-8E0" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="33" id="8pt-QY-hpq"/>
                             <constraint firstItem="dlT-oX-beQ" firstAttribute="top" secondItem="0Ld-p6-t5r" secondAttribute="bottom" constant="-44" id="9W3-H7-PMh"/>
                             <constraint firstItem="B5a-zj-ttp" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="20" id="BfP-zC-oNo"/>
                             <constraint firstItem="8fJ-Z1-mBV" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="20" id="D9H-9Z-rV3"/>
@@ -743,6 +748,7 @@
                             <constraint firstItem="B5a-zj-ttp" firstAttribute="top" secondItem="yHO-eb-H2H" secondAttribute="bottom" constant="8" id="UT2-uT-hxd"/>
                             <constraint firstItem="1TN-VC-8E0" firstAttribute="top" secondItem="XAE-NG-KG3" secondAttribute="bottom" constant="5" id="VPU-EB-rul"/>
                             <constraint firstItem="0Ld-p6-t5r" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" id="VTK-55-hKX"/>
+                            <constraint firstItem="Uki-EM-2Fb" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="6" id="YRh-ad-KH9"/>
                             <constraint firstAttribute="trailing" secondItem="0Ld-p6-t5r" secondAttribute="trailing" id="goJ-2n-S6r"/>
                             <constraint firstItem="yHO-eb-H2H" firstAttribute="leading" secondItem="FSr-Bp-jcm" secondAttribute="leading" constant="20" id="h2B-23-kDY"/>
                             <constraint firstAttribute="trailing" secondItem="B5a-zj-ttp" secondAttribute="trailing" constant="20" id="rrF-vP-6X6"/>
@@ -876,15 +882,18 @@
             <point key="canvasLocation" x="2369" y="-822"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="targetIconImage" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cgd-Ja-ove"/>
-        <segue reference="am9-YQ-6oO"/>
-        <segue reference="Our-fR-phR"/>
         <segue reference="byb-v8-EnP"/>
+        <segue reference="cgd-Ja-ove"/>
+        <segue reference="r5f-Aw-EnF"/>
+        <segue reference="fhM-Nq-hJC"/>
     </inferredMetricsTieBreakers>
 </document>
