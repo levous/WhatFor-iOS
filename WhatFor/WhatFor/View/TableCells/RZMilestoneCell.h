@@ -28,5 +28,6 @@
 
 
 + (NSString *)defaultReuseIdentifier;
++ (NSString *)defaultNibName;
 - (void)animateCompletion;
 @end

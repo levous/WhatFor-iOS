@@ -882,9 +882,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="am9-YQ-6oO"/>
         <segue reference="cgd-Ja-ove"/>
+        <segue reference="am9-YQ-6oO"/>
+        <segue reference="Our-fR-phR"/>
         <segue reference="byb-v8-EnP"/>
-        <segue reference="r5f-Aw-EnF"/>
     </inferredMetricsTieBreakers>
 </document>

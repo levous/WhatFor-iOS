@@ -14,6 +14,7 @@
 
 
 + (NSString *)defaultReuseIdentifier{ return @"milestoneCell"; }
++ (NSString *)defaultNibName{ return @"MilestoneTableCell"; }
 
 
 

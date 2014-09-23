@@ -8,7 +8,6 @@
 
 #import "RZGoalListViewController.h"
 #import "ModelHeader.h"
-#import "RZMilestonesHeaderCell.h"
 #import "RZGoalListViewModel.h"
 #import "RZMilestoneDetailViewController.h"
 #import "RZGoalDetailViewController.h"
@@ -39,7 +38,8 @@ RZGoalListViewModel *goalListViewModel;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"MilestoneTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"milestoneCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:[RZMilestoneCell defaultNibName] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RZMilestoneCell defaultReuseIdentifier]];
+    [self.tableView registerNib:[UINib nibWithNibName:[RZGoalMilestonesListHeaderView defaultNibName] bundle:nil] forHeaderFooterViewReuseIdentifier:[RZGoalMilestonesListHeaderView defaultReuseIdentifier]];
 
     [self setTitle:@"My Goals"];
     
@@ -81,17 +81,19 @@ RZGoalListViewModel *goalListViewModel;
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    RZMilestonesHeaderCell *sectionHeaderCell = (RZMilestonesHeaderCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestonesHeaderCell defaultReuseIdentifier]];
-    return [sectionHeaderCell frame].size.height;
+    //RZGoalMilestonesListHeaderView *sectionHeaderCell = (RZGoalMilestonesListHeaderView *)[tableView dequeueReusableCellWithIdentifier:[RZGoalMilestonesListHeaderView defaultReuseIdentifier]];
+    RZGoalMilestonesListHeaderView *sectionHeaderView = (RZGoalMilestonesListHeaderView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:[RZGoalMilestonesListHeaderView defaultReuseIdentifier]];
+    return [sectionHeaderView frame].size.height;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    RZMilestonesHeaderCell *sectionHeaderCell = (RZMilestonesHeaderCell *)[tableView dequeueReusableCellWithIdentifier:[RZMilestonesHeaderCell defaultReuseIdentifier]];
-    [[sectionHeaderCell titleButton] setTitle:[goalListViewModel titleForGoalAtIndex:section] forState:UIControlStateNormal];
-    [sectionHeaderCell setTableViewSectionIndex:section];
-    [RZUIStyleGuide addGradientBackgroundLightToView:sectionHeaderCell.contentView];
-    return sectionHeaderCell;
+    RZGoalMilestonesListHeaderView *sectionHeaderView = (RZGoalMilestonesListHeaderView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:[RZGoalMilestonesListHeaderView defaultReuseIdentifier]];
+    [[sectionHeaderView titleButton] setTitle:[goalListViewModel titleForGoalAtIndex:section] forState:UIControlStateNormal];
+    [sectionHeaderView setTableViewSectionIndex:section];
+    [sectionHeaderView setDelegate:self];
+    [RZUIStyleGuide addGradientBackgroundLightToView:sectionHeaderView];
+    return sectionHeaderView;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -193,6 +195,16 @@ RZGoalListViewModel *goalListViewModel;
     [[cell statusLabel] setTextColor:[[mvm status] color]];
 }
 
+#pragma mark - RZGoalMilestonesListHeaderViewDelegate
+
+- (void)rzGoalMilestonesListHeaderView:(RZGoalMilestonesListHeaderView *)headerView didTapGoalTitle:(id)sender{
+    [self performSegueWithIdentifier:@"goalDetailSegue" sender:sender];
+}
+- (void)rzGoalMilestonesListHeaderView:(RZGoalMilestonesListHeaderView *)headerView didTapAddMilestone:(id)sender{
+    [self performSegueWithIdentifier:@"addMilestoneToGoalSegue" sender:sender];
+    
+}
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -207,7 +219,7 @@ RZGoalListViewModel *goalListViewModel;
         [vc setGoalViewModel:goalVM];
     }else if ([[segue identifier] isEqualToString:@"goalDetailSegue"]) {
         RZGoalDetailViewController *vc = (RZGoalDetailViewController *)[segue destinationViewController];
-        RZMilestonesHeaderCell *cell = (RZMilestonesHeaderCell *)[sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
+        RZGoalMilestonesListHeaderView *cell = (RZGoalMilestonesListHeaderView *)[sender rzFirstSuperviewOfClassType:[RZGoalMilestonesListHeaderView class]];
         
         NSInteger selectedSectionIndex = [cell tableViewSectionIndex];
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:selectedSectionIndex];
@@ -215,7 +227,7 @@ RZGoalListViewModel *goalListViewModel;
     }else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"]){
         //EXAMPLE: really good application of delegate pattern using modal add view controller  http://www.raywenderlich.com/5191/beginning-storyboards-in-ios-5-part-2
         
-        RZMilestonesHeaderCell *headerCell = (RZMilestonesHeaderCell *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZMilestonesHeaderCell class]];
+        RZGoalMilestonesListHeaderView *headerCell = (RZGoalMilestonesListHeaderView *)[(UIView *)sender rzFirstSuperviewOfClassType:[RZGoalMilestonesListHeaderView class]];
         _lastSelectedSectionHeaderIndex = [headerCell tableViewSectionIndex];
         
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
