@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RZGoalViewModel.h"
 
+@protocol RZMilestoneDetailViewControllerDelegate
+- (void)rzMilestoneDetailViewController:(id)viewController milestoneDataDidChange:(RZMilestoneViewModel *)milestoneViewModel;
+@end
+
 @interface RZMilestoneDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
@@ -17,5 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (strong, nonatomic) RZMilestoneViewModel *milestoneViewModel;
 @property (strong, nonatomic) RZGoalViewModel *goalViewModel;
+@property (weak, nonatomic)  id<RZMilestoneDetailViewControllerDelegate> delegate;
 
 @end

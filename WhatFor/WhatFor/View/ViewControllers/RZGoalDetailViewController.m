@@ -114,6 +114,36 @@
     
 }
 
+
+#pragma mark - RZMilestoneEditViewControllerDelegate / RZMilestoneDetailViewControllerDelegate
+
+
+- (void)milestoneEditViewControllerDidCancel:(RZMilestoneEditViewController *)controller{
+    // really nothing to do here
+}
+
+- (void)rzMilestoneDetailViewController:(id)viewController milestoneDataDidChange:(RZMilestoneViewModel *)milestoneViewModel{
+    [self updateViewModelForMilestone:milestoneViewModel];
+}
+
+- (void)milestoneEditViewController:(RZMilestoneEditViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestoneViewModel{
+    [self updateViewModelForMilestone:milestoneViewModel];
+}
+
+- (void)updateViewModelForMilestone:(RZMilestoneViewModel *)milestoneViewModel{
+    RZGoalViewModel *goalVM = [self goalViewModel];
+    [goalVM saveMilestone:milestoneViewModel];
+    // Refresh the view model and reload the table view
+    [self setGoalViewModel:[goalVM refreshedCopy]];
+    [[self tableView] reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    if( [self delegate] != nil){
+        [[self delegate] rzGoalDetailViewController:self goalDataDidChange:goalVM];
+    }
+}
+
+
+
+
 #pragma mark - RZMilestoneCellDelegate
 
 - (void)didSelectMilestoneCell:(RZMilestoneCell *)cell{
@@ -142,7 +172,22 @@
         NSIndexPath *selectedRowIndex = [[self tableView] indexPathForSelectedRow];
         RZMilestoneViewModel *milestoneViewModel = [[[self goalViewModel] milestones] objectAtIndex:selectedRowIndex.row];
         [vc setMilestoneViewModel:milestoneViewModel];
+        [vc setDelegate:self];
     }
+    else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"])
+    {
+
+        RZGoalViewModel *goalVM = [self goalViewModel];
+        NSString *goalTitle = [goalVM title];
+        RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] initWithMilestone:nil];
+        [milestoneVM setGoalTitle:goalTitle];
+        UINavigationController *navigationController = [segue destinationViewController];
+        RZMilestoneEditViewController *destinationVC = [[navigationController viewControllers] objectAtIndex:0];
+        [destinationVC setDelegate:self];
+        [destinationVC setMilestoneViewModel:milestoneVM];
+
+    }
+    
 }
 #pragma mark - Memory
 

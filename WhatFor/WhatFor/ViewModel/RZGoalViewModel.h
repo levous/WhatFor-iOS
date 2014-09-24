@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSArray *remainingMilestones;
 
 - (id)initWithGoal:(Goal *)goal andRepository:(RZCoreDataRepository *)repository;
+- (id)refreshedCopy;
 - (void)saveMilestone:(RZMilestoneViewModel *)milestoneViewModel;
 - (void)save;
 

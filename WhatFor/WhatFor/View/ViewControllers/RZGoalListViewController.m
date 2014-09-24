@@ -9,7 +9,6 @@
 #import "RZGoalListViewController.h"
 #import "ModelHeader.h"
 #import "RZGoalListViewModel.h"
-#import "RZMilestoneDetailViewController.h"
 #import "RZGoalDetailViewController.h"
 #import "RZUIStyleGuide.h"
 #import "UIView+Helpers.h"
@@ -163,7 +162,7 @@ RZGoalListViewModel *goalListViewModel;
     return YES;
 }
 
-#pragma mark - RZMilestoneEditViewControllerDelegate
+#pragma mark - RZMilestoneEditViewControllerDelegate / RZMilestoneDetailViewController
 
 
 - (void)milestoneEditViewControllerDidCancel:(RZMilestoneEditViewController *)controller{[[[UIAlertView alloc] initWithTitle:@"Not Implemented!" message:@"This method requires further development.  It's simply a placeholder" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil] show];}
@@ -177,6 +176,12 @@ RZGoalListViewModel *goalListViewModel;
     [[self tableView] reloadSections:[NSIndexSet indexSetWithIndex:_lastSelectedSectionHeaderIndex] withRowAnimation:UITableViewRowAnimationFade];
     
     
+}
+
+- (void)rzMilestoneDetailViewController:(id)viewController milestoneDataDidChange:(RZMilestoneViewModel *)milestoneViewModel{
+    [self loadData];
+    // this occurs while the detail view is still pushed
+    [[self tableView] reloadData];
 }
 
 #pragma mark - RZMilestoneCellDelegate
@@ -207,6 +212,14 @@ RZGoalListViewModel *goalListViewModel;
     
 }
 
+#pragma mark - RZGoalDetailViewControllerDelegate
+
+- (void)rzGoalDetailViewController:(id)viewController goalDataDidChange:(RZGoalViewModel *)goalViewModel{
+    // this is coming from a view controller that was pushed so just refresh and be done with it
+    [self loadData];
+    [[self tableView] reloadData];
+}
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -219,6 +232,7 @@ RZGoalListViewModel *goalListViewModel;
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:selectedRowIndex.section];
         [vc setMilestoneViewModel:milestoneViewModel];
         [vc setGoalViewModel:goalVM];
+        [vc setDelegate:self];
     }else if ([[segue identifier] isEqualToString:@"goalDetailSegue"]) {
         RZGoalDetailViewController *vc = (RZGoalDetailViewController *)[segue destinationViewController];
         RZGoalMilestonesListHeaderView *cell = (RZGoalMilestonesListHeaderView *)[sender rzFirstSuperviewOfClassType:[RZGoalMilestonesListHeaderView class]];
@@ -226,6 +240,7 @@ RZGoalListViewModel *goalListViewModel;
         NSInteger selectedSectionIndex = [cell tableViewSectionIndex];
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:selectedSectionIndex];
         [vc setGoalViewModel:goalVM];
+        [vc setDelegate:self];
     }else if([[segue identifier] isEqualToString:@"addMilestoneToGoalSegue"]){
         //EXAMPLE: really good application of delegate pattern using modal add view controller  http://www.raywenderlich.com/5191/beginning-storyboards-in-ios-5-part-2
         

@@ -94,6 +94,10 @@
     [self setRemainingMilestones:[NSArray arrayWithArray:filteredMilstones]];
 }
 
+- (id)refreshedCopy{
+    RZGoalViewModel *copyVM = [[RZGoalViewModel alloc] initWithGoal:_goal andRepository:_repository];
+    return copyVM;
+}
 
 - (void)saveMilestone:(RZMilestoneViewModel *)milestoneViewModel{
     Milestone *milestone = [milestoneViewModel milestone];

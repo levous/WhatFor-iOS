@@ -48,9 +48,13 @@
 
 - (void)milestoneEditViewController:(RZMilestoneEditViewController *)controller didUpdateMilestone:(RZMilestoneViewModel *)milestone{
     [[self goalViewModel] saveMilestone:milestone];
-    
     [self refreshData];
+    if( [self delegate] != nil){
+        [[self delegate] rzMilestoneDetailViewController:self milestoneDataDidChange:milestone];
+    }
 }
+
+
 
 #pragma mark - Navigation
 
@@ -64,7 +68,6 @@
         [destinationVC setDelegate:(id<RZMilestoneEditViewControllerDelegate>)self];
         [destinationVC setMilestoneViewModel:[self milestoneViewModel]];
         [destinationVC setTitle:@"Edit Milestone"];
-        
     }
     
 }
