@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="targetIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-BT-QOn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TargetIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-BT-QOn">
                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="targetIconImage" width="30" height="30"/>
+        <image name="TargetIconImage" width="30" height="30"/>
     </resources>
 </document>
