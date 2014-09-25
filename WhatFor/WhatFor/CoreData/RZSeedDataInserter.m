@@ -56,7 +56,7 @@ RZCoreDataRepository *_repos;
     milestone = [_repos createMilestoneForGoal:goal];
     [milestone setTitle:@"Milestone 1.4 author stories"];
     [milestone setSummary:@"Cras porttitor nulla libero."];
-    [milestone setStatus:RZActivityStatusUnknown];
+    [milestone setStatus:RZActivityStatusNotStarted];
     [milestone setDateDue:[NSDate dateWithTimeIntervalSinceNow:(60*60*24*-3)]];
     
     goal = _repos.createGoal;

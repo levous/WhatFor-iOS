@@ -54,10 +54,10 @@
                 tempStatus = RZActivityStatusInProgress;
                 allComplete = NO;
                 break;
-            case RZActivityStatusUnknown:
+            case RZActivityStatusNotStarted:
                 // not started milestone, goal may be in progress or not started
                 if (tempStatus != RZActivityStatusInProgress) {
-                    tempStatus = RZActivityStatusUnknown;
+                    tempStatus = RZActivityStatusNotStarted;
                 }
                 allComplete = NO;
                 break;

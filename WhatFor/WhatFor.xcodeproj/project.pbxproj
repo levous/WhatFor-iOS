@@ -91,6 +91,7 @@
 		FBD4DE1519ACEB8300A4686F /* RZSeedDataInserterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4DE1419ACEB8300A4686F /* RZSeedDataInserterTests.m */; };
 		FBEC870C19C0D14900189255 /* RZTempViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEC870B19C0D14900189255 /* RZTempViewControllerTests.m */; };
 		FBF03C2D19D203CE004E5D8B /* GoalMilestonesListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF03C2C19D203CE004E5D8B /* GoalMilestonesListHeaderView.xib */; };
+		FBF03C2F19D3BF9D004E5D8B /* RZMilestoneViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF03C2E19D3BF9D004E5D8B /* RZMilestoneViewModelTests.m */; };
 		FBF3B2F219BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
 		FBF3B2F319BF4A5D00C7331B /* RZDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */; };
 /* End PBXBuildFile section */
@@ -203,6 +204,7 @@
 		FBEC870A19C0D14900189255 /* RZTempViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTempViewControllerTests.h; sourceTree = "<group>"; };
 		FBEC870B19C0D14900189255 /* RZTempViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTempViewControllerTests.m; sourceTree = "<group>"; };
 		FBF03C2C19D203CE004E5D8B /* GoalMilestonesListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalMilestonesListHeaderView.xib; sourceTree = "<group>"; };
+		FBF03C2E19D3BF9D004E5D8B /* RZMilestoneViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMilestoneViewModelTests.m; sourceTree = "<group>"; };
 		FBF3B2F019BF4A5D00C7331B /* RZDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZDatePickerCell.h; sourceTree = "<group>"; };
 		FBF3B2F119BF4A5D00C7331B /* RZDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZDatePickerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +325,7 @@
 				FB40D46319B6162C006C6315 /* RZGoalListViewModelTests.m */,
 				FB40D46419B6162C006C6315 /* RZNSDateFormatterTests.m */,
 				FB40D46919B61A8F006C6315 /* RZGoalViewModelTests.m */,
+				FBF03C2E19D3BF9D004E5D8B /* RZMilestoneViewModelTests.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				FB44D7C619BA6281009841CA /* Goal.m in Sources */,
 				FB40D46819B6162C006C6315 /* RZNSDateFormatterTests.m in Sources */,
 				FB40D44619B61584006C6315 /* RZTempViewController.m in Sources */,
+				FBF03C2F19D3BF9D004E5D8B /* RZMilestoneViewModelTests.m in Sources */,
 				FB40D44819B61584006C6315 /* RZTesterViewController.m in Sources */,
 				FB40D44019B61584006C6315 /* RZGoalListViewController.m in Sources */,
 				FB40D44419B61584006C6315 /* RZMilestoneDetailViewController.m in Sources */,

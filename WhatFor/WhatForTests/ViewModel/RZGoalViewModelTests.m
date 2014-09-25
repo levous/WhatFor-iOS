@@ -64,13 +64,13 @@ RZSeedDataInserter *seedInserter;
     Goal *goal = [[repos getAllGoals] objectAtIndex:0];
     
     for(Milestone *m in [goal goalMilestones]){
-        [m setStatus:RZActivityStatusUnknown];
+        [m setStatus:RZActivityStatusNotStarted];
     }
     
     RZGoalViewModel *goalVM = [[RZGoalViewModel alloc] initWithGoal:goal andRepository:repos];
     
     // all not started, goal not started
-    XCTAssertEqual([[goalVM status] status], RZActivityStatusUnknown);
+    XCTAssertEqual([[goalVM status] status], RZActivityStatusNotStarted);
 
     
     // any not unknown, goal in progress

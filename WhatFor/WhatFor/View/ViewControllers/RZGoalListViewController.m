@@ -107,9 +107,6 @@ RZGoalListViewModel *goalListViewModel;
     return cell;
 }
 
-- (void)milestoneCompletePressed{
-    
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -190,16 +187,12 @@ RZGoalListViewModel *goalListViewModel;
     //NSIndexPath *path = [[self tableView] indexPathForCell:cell];
     [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
 }
-
-- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell{
-    NSIndexPath *path = [[self tableView] indexPathForCell:cell];
+- (void)rzMilestoneCell:(id)milestoneCell didUpdateStatusOnMilestone:(RZMilestoneViewModel *)milestoneViewModel{
+    NSIndexPath *path = [[self tableView] indexPathForCell:milestoneCell];
     RZMilestoneViewModel *mvm = [goalListViewModel milestoneViewModelAtIndexPath:path];
-    [[mvm status] setStatus:RZActivityStatusComplete];
     RZGoalViewModel *goal = [goalListViewModel goalAtIndex:path.section];
     [goal saveMilestone:mvm];
-    [cell animateCompletion];
-    [[cell statusLabel] setText:[[mvm status] title]];
-    [[cell statusLabel] setTextColor:[[mvm status] color]];
+    [milestoneCell animateTransitionToCurrentStatus];
 }
 
 #pragma mark - RZGoalMilestonesListHeaderViewDelegate
@@ -250,7 +243,7 @@ RZGoalListViewModel *goalListViewModel;
         RZGoalViewModel *goalVM = [goalListViewModel goalAtIndex:_lastSelectedSectionHeaderIndex];
         NSString *goalTitle = [goalVM title];
         
-        RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] initWithMilestone:nil];
+        RZMilestoneViewModel *milestoneVM = [[RZMilestoneViewModel alloc] init]; // intentionally calling parameterless init to avoid zeroing out status
         
         [milestoneVM setGoalTitle:goalTitle];
         

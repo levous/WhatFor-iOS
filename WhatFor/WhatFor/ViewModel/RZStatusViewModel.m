@@ -23,4 +23,13 @@
     return _status;
 }
 
+- (id)init{
+    self = [super init];
+    if (self) {
+        // default value
+        [self setStatus:RZActivityStatusNotStarted];
+    }
+    return self;
+}
+
 @end

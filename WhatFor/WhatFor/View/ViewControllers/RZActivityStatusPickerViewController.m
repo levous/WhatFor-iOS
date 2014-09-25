@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     statusArray = @[
-                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)0], // RZActivityStatusUnknown
+                    [RZStringsHelper titleForActivityStatus:(RZActivityStatus)0], // RZActivityStatusNotStarted
                     [RZStringsHelper titleForActivityStatus:(RZActivityStatus)1], // RZActivityStatusBlocked
                     [RZStringsHelper titleForActivityStatus:(RZActivityStatus)2], // RZActivityStatusComplete
                     [RZStringsHelper titleForActivityStatus:(RZActivityStatus)3], // RZActivityStatusBlocked

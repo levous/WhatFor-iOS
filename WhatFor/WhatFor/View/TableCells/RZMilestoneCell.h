@@ -12,23 +12,23 @@
 
 @protocol RZMilestoneCellDelegate
 - (void)didSelectMilestoneCell:(RZMilestoneCell *)cell;
-- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell;
+- (void)rzMilestoneCell:(id)milestoneCell didUpdateStatusOnMilestone:(RZMilestoneViewModel *)milestoneViewModel;
 @end
 
 @interface RZMilestoneCell : UITableViewCell{
     RZMilestoneViewModel *_milestoneViewModel;
 }
 
-@property (nonatomic) id<RZMilestoneCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *completeButton;
 @property (weak, nonatomic) IBOutlet UIImageView *completeIconImage;
 
-@property (weak, nonatomic) IBOutlet RZMilestoneViewModel *milestoneViewModel;
+@property (nonatomic) id<RZMilestoneCellDelegate> delegate;
+@property (weak, nonatomic) RZMilestoneViewModel *milestoneViewModel;
 
 
 + (NSString *)defaultReuseIdentifier;
 + (NSString *)defaultNibName;
-- (void)animateCompletion;
+- (void)animateTransitionToCurrentStatus;
 @end

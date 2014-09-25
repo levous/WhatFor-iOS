@@ -2,9 +2,9 @@
 
 #ifdef __OBJC__
 typedef NS_ENUM(NSUInteger, RZActivityStatus) {
-    RZActivityStatusUnknown,
+    RZActivityStatusBlocked,
+    RZActivityStatusNotStarted,
     RZActivityStatusInProgress,
-    RZActivityStatusComplete,
-    RZActivityStatusBlocked
+    RZActivityStatusComplete
 };
 #endif

@@ -28,7 +28,6 @@
 {
     self = [self init];
     if (self) {
-        [self setStatus:[[RZStatusViewModel alloc] init]];
         [self populateFromMilestone:milestone];
     }
     return self;
@@ -49,6 +48,8 @@
     }
     
     [self setTimeRemaining:@""]; //lazy today.  maybe later
+    
+    // if milestone is nil, then status will interpret as 0:Blocked  ...just sayin'
     RZActivityStatus status = [milestone status];
     [[self status] setStatus:status];
     
@@ -61,6 +62,13 @@
     [[self milestone] setStatus:[[self status] status]];
     [[self milestone] setDateDue:[self dateDue]];
     
+}
+
+- (void)promoteToNextStatus{
+    RZActivityStatus status = [[self status] status];
+    if (status < RZActivityStatusComplete) {
+        [[self status] setStatus:++status];
+    }
 }
 
 

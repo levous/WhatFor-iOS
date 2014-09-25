@@ -28,4 +28,5 @@
 
 - (id)initWithMilestone:(Milestone *)milestone;
 - (void)updateMilestoneFromViewModel;
+- (void)promoteToNextStatus;
 @end

@@ -13,7 +13,7 @@
 
 + (UIColor *)fontColorForStatus:(RZActivityStatus)status{
     switch (status) {
-        case RZActivityStatusUnknown:
+        case RZActivityStatusNotStarted:
             return [UIColor grayColor];
             break;
         case RZActivityStatusInProgress:
@@ -33,7 +33,7 @@
 
 + (UIColor *)backgroundColorForStatus:(RZActivityStatus)status{
     switch (status) {
-        case RZActivityStatusUnknown:
+        case RZActivityStatusNotStarted:
             return [UIColor clearColor];
             break;
         case RZActivityStatusInProgress:

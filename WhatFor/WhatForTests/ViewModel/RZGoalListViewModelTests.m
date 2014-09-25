@@ -42,7 +42,7 @@ RZSeedDataInserter *seedInserter;
 
 - (void)testViewModelData
 {
-    NSArray *colors = @[[RZUIStyleGuide fontColorForStatus:RZActivityStatusUnknown], [RZUIStyleGuide fontColorForStatus:RZActivityStatusInProgress], [RZUIStyleGuide fontColorForStatus:RZActivityStatusComplete], [RZUIStyleGuide fontColorForStatus:RZActivityStatusBlocked] ];
+    NSArray *colors = @[[RZUIStyleGuide fontColorForStatus:0], [RZUIStyleGuide fontColorForStatus:1], [RZUIStyleGuide fontColorForStatus:2], [RZUIStyleGuide fontColorForStatus:3] ];
     
     NSArray *goals = [repos getAllGoals];
     Goal *goal = [goals objectAtIndex:0];
@@ -57,7 +57,7 @@ RZSeedDataInserter *seedInserter;
     milestone = [[goal goalMilestones]objectAtIndex:2];
     [milestone setStatus:RZActivityStatusBlocked];
     milestone = [[goal goalMilestones]objectAtIndex:3];
-    [milestone setStatus:RZActivityStatusUnknown];
+    [milestone setStatus:RZActivityStatusNotStarted];
     
     RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:NO];
     XCTAssertEqual((NSInteger)2, [listViewModel goalCount]);
@@ -106,9 +106,9 @@ RZSeedDataInserter *seedInserter;
     XCTAssertNotNil([viewModel dateDue]);
     XCTAssertNotNil([viewModel timeRemaining]);
     
-    XCTAssertEqual([[viewModel status] status], RZActivityStatusUnknown);
+    XCTAssertEqual([[viewModel status] status], RZActivityStatusNotStarted);
     XCTAssertEqualObjects([[viewModel status] title], @"Not Started");
-    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusUnknown]);
+    XCTAssertEqualObjects([[viewModel status] color], [colors objectAtIndex:RZActivityStatusNotStarted]);
                                                 
     
     
@@ -130,7 +130,7 @@ RZSeedDataInserter *seedInserter;
     milestone = [[goal goalMilestones]objectAtIndex:2];
     [milestone setStatus:RZActivityStatusBlocked];
     milestone = [[goal goalMilestones]objectAtIndex:3];
-    [milestone setStatus:RZActivityStatusUnknown];
+    [milestone setStatus:RZActivityStatusNotStarted];
     
     RZGoalListViewModel *listViewModel = [[RZGoalListViewModel alloc] initWithRepository:repos hideCompletedMilestones:YES];
 

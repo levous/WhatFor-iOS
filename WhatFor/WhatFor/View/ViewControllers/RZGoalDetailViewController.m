@@ -151,15 +151,11 @@
     [self performSegueWithIdentifier:@"milestoneDetailSegue" sender:self];
 }
 
-- (void)didCompleteMilestoneCell:(RZMilestoneCell *)cell{
-    NSIndexPath *path = [[self tableView] indexPathForCell:cell];
-    RZMilestoneViewModel *mvm = [[[self goalViewModel] milestones] objectAtIndex:path.row];
-    [[mvm status] setStatus:RZActivityStatusComplete];
+- (void)rzMilestoneCell:(id)milestoneCell didUpdateStatusOnMilestone:(RZMilestoneViewModel *)milestoneViewModel{
     RZGoalViewModel *goal = [self goalViewModel];
-    [goal saveMilestone:mvm];
-    [cell animateCompletion];
-    [[cell statusLabel] setText:[[mvm status] title]];
-    [[cell statusLabel] setTextColor:[[mvm status] color]];
+    [goal saveMilestone:milestoneViewModel];
+    RZMilestoneCell *cell = (RZMilestoneCell *)milestoneCell;
+    [cell animateTransitionToCurrentStatus];
 }
 
 

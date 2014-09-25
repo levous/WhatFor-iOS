@@ -677,7 +677,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-EM-2Fb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TargetIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-EM-2Fb">
                                 <rect key="frame" x="6" y="74" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -896,7 +896,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="targetIconImage" width="30" height="30"/>
+        <image name="TargetIconImage" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
